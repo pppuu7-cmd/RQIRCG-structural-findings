@@ -6,7 +6,7 @@ RSEL=[60,160,400]
 TAUSEL=[0.05,0.1,0.2]
 EPS=[1e-2,1e-4,1e-6,1e-8]
 
-with open('SF029_CHECKS.json') as f:
+with open('results/raw/SF029_CHECKS.json') as f:
     D=json.load(f)
 
 def coeffs(R):
@@ -86,5 +86,5 @@ out={
 }
 raw=json.dumps(out,indent=2,sort_keys=True)
 print(raw)
-with open('SF030_CHECKS.json','w') as f: f.write(raw+'\n')
+with open('results/raw/SF030_CHECKS.json','w') as f: f.write(raw+'\n')
 with open(__file__,'rb') as f: print('SCRIPT_SHA256',hashlib.sha256(f.read()).hexdigest())
