@@ -1,0 +1,69 @@
+{
+  "prereg_commit": "f825f57e4a57b47effed68e34d2ab747a4881d15",
+  "sf029_source_commit": "fc11740ea476253b6755d2af90a0cd763ee6ee36",
+  "design": {
+    "R_over_ell": [60, 160, 400],
+    "tau": [0.05, 0.1, 0.2],
+    "epsilon_PN": [0.01, 0.0001, 1e-06, 1e-08]
+  },
+  "rank_method": "column-normalized SVD; CRLB from normalized Gram matrix rescaled by physical column norms",
+  "implementation_note": "A preliminary unnormalized-SVD rank test was rejected before terminalization because multiplying a nonzero PN column by small epsilon_PN cannot change mathematical rank.",
+  "normalized_condition_numbers": {
+    "A_iid": 5.565925079849339,
+    "B_plus_offset": 20.25779859822652,
+    "C_plus_tau_linear": 1007.65020930006,
+    "D_plus_offset_and_tau_linear": 1113.46254860052
+  },
+  "normalized_ranks_all_epsilon": {
+    "A_iid": 3,
+    "B_plus_offset": 4,
+    "C_plus_tau_linear": 4,
+    "D_plus_offset_and_tau_linear": 5
+  },
+  "PN_variance_inflation": {
+    "A_iid": 1.0,
+    "B_plus_offset": 11.695227646826,
+    "C_plus_tau_linear": 21341.285042163,
+    "D_plus_offset_and_tau_linear": 21341.285044
+  },
+  "sigma_y_SNR1_over_epsilon_PN": {
+    "A_iid": 0.0003089285555609274,
+    "B_plus_offset": 0.000090334514322578,
+    "C_plus_tau_linear": 0.000002114695156567239,
+    "D_plus_offset_and_tau_linear": 0.00000211469515649
+  },
+  "sigma_y_SNR5_over_epsilon_PN": {
+    "A_iid": 0.0000617857111121855,
+    "B_plus_offset": 0.000018066902864516,
+    "C_plus_tau_linear": 0.000000422939031313448,
+    "D_plus_offset_and_tau_linear": 0.0000004229390313
+  },
+  "epsilon_cells": {
+    "0.01": {
+      "A": {"rank": 3, "g_PN": 323699.438591645, "sigma_y_SNR1": 3.089285555609274e-06, "sigma_y_SNR5": 6.178571111218547e-07, "VIF_PN": 1.0},
+      "B": {"rank": 4, "g_PN": 1106996.5975895685, "sigma_y_SNR1": 9.033451432257801e-07, "sigma_y_SNR5": 1.8066902864515602e-07, "VIF_PN": 11.695227646826018},
+      "C": {"rank": 4, "g_PN": 47288139.7063059, "sigma_y_SNR1": 2.1146951565672384e-08, "sigma_y_SNR5": 4.229390313134477e-09, "VIF_PN": 21341.285042162857},
+      "D": {"rank": 5, "g_PN": 47288139.70810115, "sigma_y_SNR1": 2.114695156486956e-08, "sigma_y_SNR5": 4.2293903129739115e-09, "VIF_PN": 21341.28504378326}
+    },
+    "0.0001": {
+      "A": {"rank": 3, "g_PN": 32369943.8591645, "sigma_y_SNR1": 3.089285555609274e-08, "sigma_y_SNR5": 6.178571111218548e-09, "VIF_PN": 1.0},
+      "B": {"rank": 4, "g_PN": 110699659.75895756, "sigma_y_SNR1": 9.033451432257743e-09, "sigma_y_SNR5": 1.8066902864515483e-09, "VIF_PN": 11.695227646826169},
+      "C": {"rank": 4, "g_PN": 4728813970.6305895, "sigma_y_SNR1": 2.1146951565672387e-10, "sigma_y_SNR5": 4.229390313134477e-11, "VIF_PN": 21341.285042162857},
+      "D": {"rank": 5, "g_PN": 4728813970.8512, "sigma_y_SNR1": 2.114695156468583e-10, "sigma_y_SNR5": 4.229390312937166e-11, "VIF_PN": 21341.285044154098}
+    },
+    "1e-06": {
+      "A": {"rank": 3, "g_PN": 3236994385.916449, "sigma_y_SNR1": 3.0892855556092747e-10, "sigma_y_SNR5": 6.178571111218549e-11, "VIF_PN": 1.0},
+      "B": {"rank": 4, "g_PN": 11069965975.89566, "sigma_y_SNR1": 9.03345143225782e-11, "sigma_y_SNR5": 1.8066902864515643e-11, "VIF_PN": 11.695227646825971},
+      "C": {"rank": 4, "g_PN": 472881397063.05884, "sigma_y_SNR1": 2.1146951565672392e-12, "sigma_y_SNR5": 4.2293903131344785e-13, "VIF_PN": 21341.285042162857},
+      "D": {"rank": 5, "g_PN": 472881397081.0093, "sigma_y_SNR1": 2.114695156486966e-12, "sigma_y_SNR5": 4.229390312973932e-13, "VIF_PN": 21341.28504378307}
+    },
+    "1e-08": {
+      "A": {"rank": 3, "g_PN": 323699438591.64496, "sigma_y_SNR1": 3.089285555609274e-12, "sigma_y_SNR5": 6.178571111218548e-13, "VIF_PN": 1.0},
+      "B": {"rank": 4, "g_PN": 1106996597589.5757, "sigma_y_SNR1": 9.033451432257742e-13, "sigma_y_SNR5": 1.8066902864515483e-13, "VIF_PN": 11.695227646826172},
+      "C": {"rank": 4, "g_PN": 47288139706305.89, "sigma_y_SNR1": 2.114695156567239e-14, "sigma_y_SNR5": 4.229390313134478e-15, "VIF_PN": 21341.285042162857},
+      "D": {"rank": 5, "g_PN": 47288139708511.99, "sigma_y_SNR1": 2.1146951564685834e-14, "sigma_y_SNR5": 4.2293903129371664e-15, "VIF_PN": 21341.285044154098}
+    }
+  },
+  "classification": "PN_CALIBRATION_REMAINS_ESTIMABLE_UNDER_FROZEN_COMMON_MODE_NUISANCES_SCOPED",
+  "secondary": "COMMON_MODE_NUISANCE_STRONGLY_INFLATES_PN_PRECISION_SCOPED"
+}
