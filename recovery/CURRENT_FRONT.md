@@ -1,6 +1,6 @@
 # RQIRCGSF current authoritative front
 
-Updated: 2026-09-15, after SF032.
+Updated: 2026-09-15, after SF033.
 
 ## Repository role
 
@@ -22,17 +22,19 @@ Retain `QUANTUM_STATE_MEASURE_SELECTION != QUANTUM_LAW_ON_SHELL_MATCHING_SELECTI
 
 SF027: `QCA_PERTURBATIVE_RANK_ZERO_EXACT_MAP_BLOCKED_SCOPED` and `ANOMALY_FREEDOM_IS_CONSISTENCY_NOT_PHYSICAL_MATCHING_SELECTION_SCOPED`.
 
-Theory-track blocker remains:
+Theory frontier:
 
 `GENUINELY_NEW_MICROSCOPIC_MATCHING_PRINCIPLE_WITH_EXPLICIT_PHYSICAL_MAP_REQUIRED`.
 
-## Operational object authority
+Do not continue generic covariance/unitarity/positivity/anomaly-free selector stacking without a new physical matching map.
+
+## Retained operational object
 
 SF028 remains terminal-invalid:
 
 `INVALID_FROZEN_PROTOCOL_1D_POINT_GAUSSIAN_GRAVITATIONAL_OBJECT_SCOPED`.
 
-SF028B remains the boundary-complete physical-object authority:
+SF028B remains the physical-object authority:
 
 `PASS_BOUNDARY_COMPLETE_KNOWN_PHYSICS_COHERENCE_BASELINE_SCOPED`.
 
@@ -40,7 +42,7 @@ Physical chain:
 
 `NORMALIZED 3-QUBIT + 4-BODY 3D MOTIONAL STATE -> COM-CLOSED U_PREP -> FULL FREE ALL-BODY EVOLUTION -> U_PREP^dagger RECOMBINATION -> TRACE MOTION -> QUBIT TOMOGRAPHY`.
 
-Connected readout:
+Physical connected readout:
 
 `C3=Log K_111-Log K_110-Log K_101-Log K_011+Log K_100+Log K_010+Log K_001`,
 
@@ -52,138 +54,138 @@ Retain:
 
 `NONZERO_CONNECTED_SIGNAL != NEW_THREE_BODY_GRAVITATIONAL_VERTEX`.
 
-## SF029 robustness authority
+## SF029 robustness
 
 Terminal `33660feffa3cf9c3ad1dc6d3cd75c73fea7f5887`.
 
 `ROBUST_KNOWN_PHYSICS_COHERENCE_BASELINE_HIERARCHY_SCOPED`.
 
-Distinct finite-R/time/packet-width scalings and crossover surfaces are now explicit. Large-R diagnostics agree with inherited analytic hierarchy: Newtonian apparatus and feedback apparatus corrections approximately `R^-4`; 1PN apparatus correction approximately `R^-2`. Full frozen `tau<=0.2` family remains inside preregistered short-time controls.
+The known baseline has distinct finite-R/time/packet-width scalings and explicit crossover surfaces. Large-R diagnostics match inherited analytic multipole hierarchy. Full frozen `tau<=0.2` family remains inside fixed short-time validity bounds.
 
-## SF030 identifiability authority
+## SF030 component identifiability
 
 Terminal `6a7d5e9455441a1182c260913da79ed5c4f3abd9`.
 
 `KNOWN_PHYSICS_COHERENCE_COMPONENTS_STRUCTURALLY_IDENTIFIABLE_SCOPED`.
 
-Full normalized 9-row joint `R,T` design has rank 3 and `kappa=5.5659`.
+Full joint R+T normalized design rank 3, `kappa=5.5659`.
 
-Each fixed-R design has rank 2: time alone cannot separate Newtonian apparatus and 1PN because both are linear in `tau`.
-
-Each fixed-tau R-only design is rank 3 but poorly conditioned (`kappa~867.74`). Joint R+T leverage is essential.
+Fixed-R time scans have rank 2; fixed-tau R scans formally rank 3 but are ill-conditioned (`kappa~867.74`). Joint R+T variation is required for useful separation.
 
 Retain `IDENTIFIABILITY != ESTIMABILITY` and `IDENTIFIABILITY != DYNAMICS`.
 
-## SF031 noise-aware estimability authority
+## SF031 noise-aware estimability
 
-Preregistration `f825f57e4a57b47effed68e34d2ab747a4881d15`.
 Terminal `ac0ec512a109c51ae7fbee2f9006548d05fac5bc`.
 
 `PN_CALIBRATION_REMAINS_ESTIMABLE_UNDER_FROZEN_COMMON_MODE_NUISANCES_SCOPED`.
 
-`COMMON_MODE_NUISANCE_STRONGLY_INFLATES_PN_PRECISION_SCOPED`.
-
 `TAU_LINEAR_COMMON_MODE_NEAR_DEGENERACY_DOMINATES_PN_PRECISION_SCOPED`.
 
-All frozen nuisance models remain full mathematical rank after the pre-terminal numerical-rank firewall correction. The generic R-independent `tau`-linear nuisance raises normalized condition number to `~1008` and PN variance by `~2.1341e4`; with both offset and tau-linear nuisance `kappa~1113` and the same variance penalty.
+An R-independent tau-linear nuisance keeps full algebraic rank but inflates PN variance by `~2.1341e4`. Required dimensionless SNR1 phase-noise ceiling with offset+tau nuisance is
 
-Required dimensionless SNR1 phase-noise ceiling under both nuisances is
+`sigma_y <= 2.11469516e-6 epsilon_PN`
 
-`sigma_y <= 2.11469516e-6 epsilon_PN`,
+relative to unspecified phase scale `Phi0`.
 
-relative to an unspecified common phase scale `Phi0`.
+Retain `STRUCTURAL_IDENTIFIABILITY != ESTIMABILITY != FEASIBILITY`.
 
-Retain:
+## SF032 matched null-control calibration
 
-`STRUCTURAL_IDENTIFIABILITY != ESTIMABILITY != FEASIBILITY`.
-
-## Latest gate — SF032 matched null-control calibration
-
-Prospective preregistration:
-
-`66e7b301200ca7b450f0bba38b4edce872166762`.
-
-Script:
-
-`bc6b7c4c723c1fb3334679180d0793b55c56763b`.
-
-Canonical raw:
-
-`bf0b266f54a1f19153d1b19a5dcbba09e8278e66`.
-
-Terminal:
-
-`e8dc5ca051e5f5c8669d6a0a1fe99e6c93b1ff4e`.
-
-Ledger:
-
-`3eadfdbedfa257b280e21c205db98ae1d8d7dc1b`.
-
-Primary classification:
+Terminal `e8dc5ca051e5f5c8669d6a0a1fe99e6c93b1ff4e`.
 
 `MATCHED_NULL_CONTROL_BREAKS_COMMON_MODE_PN_NEAR_DEGENERACY_SCOPED`.
 
-Mandatory qualification:
+With one matched delete-A connected-null row per science row and shared offset+tau nuisance:
+
+- normalized `kappa` improves from `~1113` to `9.948`;
+- PN VIF improves from `~2.1341e4` to `1.658`;
+- PN variance improves by `~1.2870e4` relative to the science-only common-mode model.
+
+Ablations show the shared tau-linear channel carries the calibration power. Shared offset alone gives essentially no improvement. No nuisance sharing gives exactly no benefit.
+
+Retain mandatory qualification:
 
 `NULL_CONTROL_CALIBRATION_BLOCKED_BY_UNVALIDATED_SHARED_NUISANCE_MAP`.
 
+## Latest gate — SF033 science/null nuisance transferability
+
+Prospective preregistration:
+
+`518409ca497882baa3bad546a01836d4c075139d`.
+
+Authority audit:
+
+`297168c2d7a8a411f582110ea4ba5d8c7dfa88eb`.
+
+Terminal:
+
+`a5f7069407f7b28adba5bf0eeef97cbb79a49880`.
+
+Ledger:
+
+`13777932f1d11858c6c9bf1391855ff47c52e968`.
+
+Primary classification:
+
+`BLOCKED_MISSING_CONTROL_TRANSFER_MODEL`.
+
 Secondary:
 
-`SHARED_TAU_LINEAR_CONTROL_CHANNEL_PROVIDES_DOMINANT_CALIBRATION_INFORMATION_SCOPED`.
+`NULL_CONTROL_HAS_CALIBRATION_POWER_BUT_SHARED_NUISANCE_IS_NEW_OPERATIONAL_MODEL_CONTENT_SCOPED`.
 
-### Frozen control
+### Transfer-map audit
 
-One matched delete-A connected-null row is added for every science `(R,tau)` row. The inherited exact connected finite-difference theorem makes the known gravity columns exactly zero in these controls.
+SF028B defines ideal branch translations, ideal inverse readout, known-gravity free evolution and tomography.
 
-### Calibration result
+It explicitly does not define material branch-generation stresses, pulse hardware or finite-time control implementation.
 
-Science-only SF031 common-mode model:
+Delete-A is an exact gravitational connected null, but
 
-`PN VIF ~ 2.1341e4`, `kappa~1113`.
+`GRAVITATIONAL NULL != SHARED CONTROL NUISANCE`.
 
-Matched null control with shared offset and shared tau-linear nuisance:
+The SF033 PASS contract required six physical transfer-map elements: nuisance generator; science action; control action; equality/symmetry reason; fixed-versus-changed implementation variables; falsification test.
 
-`PN VIF=1.658`, `kappa=9.948`.
+Current physical transfer-map elements present:
 
-PN variance improves by `~1.2870e4` relative to the science-only common-mode model.
+`0/6`.
 
-Sharing only the offset gives essentially no improvement.
-
-Sharing only the tau-linear nuisance gives PN VIF `12.31` and variance improvement `~1.7339e3`.
-
-No-sharing negative control gives no improvement to numerical precision.
-
-Thus the SF031 bottleneck is not irreducible white noise: it is calibratable if the dominant tau-linear nuisance is genuinely shared between science and null-control configurations.
-
-### Physical promotion blocker
-
-Current protocol authority does **not** yet derive that a laboratory/control nuisance coefficient is unchanged when the A branch displacement is disabled.
+Therefore common-mode transferability is not derived and may not be assumed from the SF032 Fisher benefit.
 
 Retain:
 
 `CONTROL_CALIBRATION != PHYSICAL_TRANSFERABILITY`.
 
-The algebraic calibration PASS is conditional on the shared-nuisance map.
+`BLOCKED != FAIL`.
 
-## Highest-information next operational gate
+## Operational frontier
 
-**`SF033_SCIENCE_NULL_CONTROL_NUISANCE_TRANSFERABILITY_PREOUTCOME_GATE`.**
+`EXPLICIT_CONTROL_READOUT_IMPLEMENTATION_MODEL_REQUIRED`.
 
-Prospectively audit the minimal science/control implementation map. The gate must identify whether any nuisance sharing is guaranteed by the current abstract protocol versus requiring new pulse/readout/hardware physics.
+Further neighboring R/T/noise/Fisher scans are low-information and should not be opened until a prospectively specified physical control/readout implementation exists.
 
-If no explicit transfer map is already supplied by current authority, terminalize as
+A future admissible repair must define at least:
 
-`BLOCKED_MISSING_CONTROL_TRANSFER_MODEL`
+- the physical source-displacement operation;
+- what changes in delete-A mode;
+- timing/phase reference;
+- readout/control nuisance generator;
+- shared versus configuration-specific parameters;
+- independent transfer/falsification test.
 
-rather than assuming common mode.
+Do not invent these objects post hoc.
 
-Do not invent a pulse sequence, detector, electronics model or material response merely to rescue SF032.
-
-## Theory track remains separate
+## Theory frontier remains separate
 
 `GENUINELY_NEW_MICROSCOPIC_MATCHING_PRINCIPLE_WITH_EXPLICIT_PHYSICAL_MAP_REQUIRED`.
 
-Operational calibration cannot select SF025/SF027 quantum-law matching data.
+Operational calibration information cannot choose the SF025/SF027 quantum-law matching datum.
+
+## Parent frontier remains separate
+
+`EXPLICIT_PROGRAMME_DISPOSITION_AUTHORITY_REQUIRED`.
+
+RQIRCGSF does not choose D1/D2/D3 for parent RQIRCG.
 
 ## Claim locks
 
@@ -191,7 +193,7 @@ Operational calibration cannot select SF025/SF027 quantum-law matching data.
 - no raw connected signal equals new three-body vertex;
 - no apparatus/feedback baseline called new physics;
 - no full rank or finite CRLB promoted to detector feasibility;
-- no null-control calibration promoted to physical transferability without a map;
+- no null-control calibration promoted to transferability without a physical map;
 - no identifiability/estimability promoted to dynamics;
 - no state/preparation freedom relabelled as quantum-law matching freedom;
 - no new quantum principle selected;
