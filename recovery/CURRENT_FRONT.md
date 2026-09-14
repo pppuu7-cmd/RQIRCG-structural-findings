@@ -1,66 +1,44 @@
 # RQIRCGSF current authoritative front
 
-Updated: 2026-09-15, after SF030.
+Updated: 2026-09-15, after SF031.
 
 ## Repository role
 
-`pppuu7-cmd/RQIRCG-structural-findings` remains an independent
-
-`PROSPECTIVE NEW-PRINCIPLE / SUCCESSOR SEARCH`.
+`pppuu7-cmd/RQIRCG-structural-findings` remains an independent `PROSPECTIVE NEW-PRINCIPLE / SUCCESSOR SEARCH`.
 
 It is not an in-place repair of historical RCG-002 and does not inherit programme-disposition authority from parent RQIRCG.
 
-Parent `pppuu7-cmd/RQIR-Candidate-Gravity` remains blocked on
-
-`EXPLICIT_PROGRAMME_DISPOSITION_AUTHORITY_REQUIRED`.
+Parent `pppuu7-cmd/RQIR-Candidate-Gravity` remains blocked on `EXPLICIT_PROGRAMME_DISPOSITION_AUTHORITY_REQUIRED`.
 
 RQIRCGSF science may continue independently; its results remain successor authority until separately imported/promoted.
 
-## Retained scientific authorities
+## Retained theory authorities
 
-### SF021 classical law
+SF021: `RHPI_SELECTED_AS_CLASSICAL_GRAVITATIONAL_LAW_PRINCIPLE_SCOPED`.
 
-`RHPI_SELECTED_AS_CLASSICAL_GRAVITATIONAL_LAW_PRINCIPLE_SCOPED`.
+SF025: `POST_RHPI_QUANTUM_COMPOSITION_DOES_NOT_FIX_FINITE_ON_SHELL_MATCHING_SCOPED`.
 
-Scoped sufficient classical reconstruction only; not complete quantum theory and not historical RCG-002 authority.
+Retain `QUANTUM_STATE_MEASURE_SELECTION != QUANTUM_LAW_ON_SHELL_MATCHING_SELECTION`.
 
-### SF025 quantum matching
-
-`POST_RHPI_QUANTUM_COMPOSITION_DOES_NOT_FIX_FINITE_ON_SHELL_MATCHING_SCOPED`.
-
-Retain:
-
-`QUANTUM_STATE_MEASURE_SELECTION != QUANTUM_LAW_ON_SHELL_MATCHING_SELECTION`.
-
-### SF026 self-consistent baseline
-
-`PAIRWISE_NULL_NOT_STABLE_UNDER_SELF_CONSISTENT_HISTORY_PULLBACK_SCOPED`.
-
-Factorized-history pairwise-null remains exact in its scope. SF026 open-action coefficients remain diagnostics only.
-
-### SF027 quantum-constraint selector
-
-`QCA_PERTURBATIVE_RANK_ZERO_EXACT_MAP_BLOCKED_SCOPED`.
-
-`ANOMALY_FREEDOM_IS_CONSISTENCY_NOT_PHYSICAL_MATCHING_SELECTION_SCOPED`.
+SF027: `QCA_PERTURBATIVE_RANK_ZERO_EXACT_MAP_BLOCKED_SCOPED` and `ANOMALY_FREEDOM_IS_CONSISTENCY_NOT_PHYSICAL_MATCHING_SELECTION_SCOPED`.
 
 Theory-track blocker remains:
 
 `GENUINELY_NEW_MICROSCOPIC_MATCHING_PRINCIPLE_WITH_EXPLICIT_PHYSICAL_MAP_REQUIRED`.
 
-## SF028 / SF028B object history
+## Retained operational object
 
-SF028 remains terminal-invalid:
+SF028 is terminal-invalid:
 
 `INVALID_FROZEN_PROTOCOL_1D_POINT_GAUSSIAN_GRAVITATIONAL_OBJECT_SCOPED`.
 
 No SF028 coefficient is authoritative.
 
-SF028B remains the boundary-complete operational authority:
+SF028B remains the boundary-complete physical-object authority:
 
 `PASS_BOUNDARY_COMPLETE_KNOWN_PHYSICS_COHERENCE_BASELINE_SCOPED`.
 
-Physical object:
+Physical chain:
 
 `NORMALIZED 3-QUBIT + 4-BODY 3D MOTIONAL STATE`
 `-> COM-CLOSED U_PREP`
@@ -75,158 +53,136 @@ Connected readout:
 
 `Theta3=Im C3`, `Gamma3=-Re C3`.
 
-Retain:
+Retain `OPEN_ACTION != MEASURED_REDUCED_COHERENCE`.
 
-`OPEN_ACTION != MEASURED_REDUCED_COHERENCE`.
+Known-physics decomposition remains:
 
-Known-physics decomposition:
+`RAW CONNECTED COHERENCE = FINITE-R NEWTONIAN APPARATUS/COM + SELF-CONSISTENT NEWTONIAN FORCE/COHERENCE PULLBACK + ORDINARY EIH 1PN NONLINEAR GRAVITY + HIGHER ORDERS/NUISANCES`.
 
-`RAW CONNECTED COHERENCE`
-`= FINITE-R NEWTONIAN APPARATUS/COM`
-`+ SELF-CONSISTENT NEWTONIAN FORCE/COHERENCE PULLBACK`
-`+ ORDINARY EIH 1PN NONLINEAR GRAVITY`
-`+ HIGHER ORDERS / NUISANCES`.
-
-Retain:
-
-`NONZERO_CONNECTED_SIGNAL != NEW_THREE_BODY_GRAVITATIONAL_VERTEX`.
+Retain `NONZERO_CONNECTED_SIGNAL != NEW_THREE_BODY_GRAVITATIONAL_VERTEX`.
 
 ## SF029 robustness terminal
 
-Preregistration: `ee392560debda35c0fbe51ca65112d1939fb3cfb`.
-
-Terminal: `33660feffa3cf9c3ad1dc6d3cd75c73fea7f5887`.
+Preregistration `ee392560debda35c0fbe51ca65112d1939fb3cfb`.
+Terminal `33660feffa3cf9c3ad1dc6d3cd75c73fea7f5887`.
 
 Classification:
 
 `ROBUST_KNOWN_PHYSICS_COHERENCE_BASELINE_HIERARCHY_SCOPED`.
 
-Key structural result:
+Distinct nuisance scalings and crossover surfaces were established on the frozen grid. Large-R diagnostics agree with inherited analytic scaling: Newtonian apparatus and Newtonian-feedback apparatus corrections approximately `R^-4`; 1PN apparatus correction approximately `R^-2`. All frozen `tau<=0.2` cells pass the prospectively fixed short-time controls.
 
-`DISTINCT_NUISANCE_SCALINGS_CREATE_BASELINE_CROSSOVER_SURFACES_SCOPED`.
+## SF030 identifiability terminal
 
-On the frozen R grid, no sign crossings occur. Delete-one-label controls are exact zero. The complete frozen `tau<=0.2` range remains within preregistered short-time control bounds.
+Preregistration `0fa7251021afc5c230578c5c933b1e11d78c3a3d`.
+Terminal `6a7d5e9455441a1182c260913da79ed5c4f3abd9`.
 
-Large-R hierarchy is numerically consistent with the inherited analytic multipole structure:
-
-`Newtonian apparatus O(T) ~ R^-4`,
-
-`Newtonian feedback apparatus correction ~ R^-4`,
-
-`1PN apparatus correction ~ R^-2`,
-
-while Newtonian feedback and 1PN source terms each approach nonzero source-only limits.
-
-The finite-R/raw-baseline crossover surfaces are now explicit functions of `epsilon_PN`, R and tau.
-
-## Latest gate — SF030 known-physics component identifiability
-
-Prospective preregistration:
-
-`0fa7251021afc5c230578c5c933b1e11d78c3a3d`.
-
-Corrected pre-terminal script authority:
-
-`d197fbbbe6560fb3cf919ce04ad8533afaae786e`.
-
-Canonical raw:
-
-`f60946d712192313a2fccd18d7642b57ed9e0cee`.
-
-Terminal:
-
-`6a7d5e9455441a1182c260913da79ed5c4f3abd9`.
-
-Ledger:
-
-`96d488adc6ba7f92d775b0315dc6041e5d922b8a`.
-
-Primary classification:
+Classification:
 
 `KNOWN_PHYSICS_COHERENCE_COMPONENTS_STRUCTURALLY_IDENTIFIABLE_SCOPED`.
 
+Full normalized 9-row design `R={60,160,400} x tau={0.05,0.1,0.2}` has rank 3, singular values `(1.53862,0.74581,0.27644)`, and `kappa_shape=5.5659`.
+
+Every single-R multi-tau control has rank 2, proving time variation alone cannot split the two `tau`-linear apparatus and 1PN terms. Single-tau R-only designs are rank 3 but ill-conditioned (`kappa~867.74`). Joint R+T variation is the productive calibration lever.
+
+Retain `IDENTIFIABILITY != ESTIMABILITY` and `IDENTIFIABILITY != DYNAMICS`.
+
+## Latest gate — SF031 noise-aware estimability
+
+Prospective preregistration:
+
+`f825f57e4a57b47effed68e34d2ab747a4881d15`.
+
+Stable script:
+
+`aa8313baf931b4b390ac81c4853647d5cca95c5a`.
+
+Canonical raw:
+
+`18342c91acfbc89e235c3994e0b19859cbc6a2da`.
+
+Terminal:
+
+`ac0ec512a109c51ae7fbee2f9006548d05fac5bc`.
+
+Ledger:
+
+`43a0e567f24a06d624100a0989cef388fc29f6f2`.
+
+Primary classification:
+
+`PN_CALIBRATION_REMAINS_ESTIMABLE_UNDER_FROZEN_COMMON_MODE_NUISANCES_SCOPED`.
+
 Secondary:
 
-`R_VARIATION_REQUIRED_TO_BREAK_T_LINEAR_APPARATUS_VS_1PN_DEGENERACY_SCOPED`.
+`COMMON_MODE_NUISANCE_STRONGLY_INFLATES_PN_PRECISION_SCOPED`.
 
-`JOINT_R_AND_T_DESIGN_STRONGLY_IMPROVES_CONDITIONING_SCOPED`.
+Localization:
 
-`STRUCTURAL_IDENTIFIABILITY_DOES_NOT_REMOVE_SMALL_EPSILON_PN_DYNAMIC_RANGE_SCOPED`.
+`TAU_LINEAR_COMMON_MODE_NEAR_DEGENERACY_DOMINATES_PN_PRECISION_SCOPED`.
 
-### Frozen design
+### Numerical-rank firewall
 
-9 rows:
+A preliminary unnormalized-SVD rank check was rejected before terminalization because making a nonzero PN column small via nonzero `epsilon_PN` cannot change mathematical rank. Stable authority uses column-normalized SVD for rank and normalized-Gram rescaling for CRLB.
 
-`R/ell={60,160,400}` x `tau={0.05,0.1,0.2}`.
+No scientific contract changed.
 
-Known basis only:
+### Frozen nuisance models
 
-`x_app=-Delta3 V_N(R) tau`,
+A: iid homoscedastic phase noise.
 
-`x_fb=[Delta3 A_N(R)/12] tau^3`,
+B: A + additive constant offset.
 
-`x_1PN=-Delta3 V_static^1PN(R) tau`.
+C: A + global R-independent `tau`-linear common phase.
 
-No successor/quantum basis column was allowed.
+D: A + both nuisances.
 
-### Structural result
+All remain full column rank at `epsilon_PN={1e-2,1e-4,1e-6,1e-8}`.
 
-Column-normalized full design:
+Normalized condition numbers:
 
-`rank=3`,
+- A: `5.5659`;
+- B: `20.2578`;
+- C: `1007.6502`;
+- D: `1113.4625`.
 
-singular values `(1.53862,0.74581,0.27644)`,
+PN variance-inflation factors relative to A:
 
-`kappa_shape=5.5659`.
+- B: `11.695`;
+- C: `~2.1341e4`;
+- D: `~2.1341e4`.
 
-All leave-one-R subsets remain rank 3 with `kappa<5.91`.
+Thus the generic R-independent `tau`-linear nuisance is the dominant calibration bottleneck. The PN amplitude remains mathematically estimable because finite-R R-dependence breaks exact degeneracy, but only weakly.
 
-All leave-one-tau subsets remain rank 3 with `kappa<9.56`.
+### Precision scaling
 
-### Decisive ablations
+Required dimensionless per-row phase-noise ceilings for nominal PN SNR 1 scale exactly linearly with `epsilon_PN`:
 
-Each fixed-R, multi-tau design has `rank=2` exactly/numerically: the Newtonian apparatus and 1PN columns are both proportional to `tau`, so time variation alone cannot separate them.
+- A: `sigma_y <= 3.08928556e-4 epsilon_PN`;
+- B: `sigma_y <= 9.03345143e-5 epsilon_PN`;
+- C/D: `sigma_y <= 2.11469516e-6 epsilon_PN`.
 
-Each fixed-tau, multi-R design has formal rank 3 but poor `kappa~867.74`.
+For SNR 5 divide by five.
 
-Thus R variation is required to break the exact two-linear-T degeneracy, while T variation is required for useful conditioning of the feedback/1PN separation.
+These are requirements relative to an unspecified common phase scale `Phi0`, not achieved laboratory sensitivities.
 
-### Identifiability versus estimability
+Retain:
 
-The unnormalized physical matrix remains rank 3 but becomes badly conditioned when the 1PN scale is very small. Frozen diagnostics give
-
-`kappa_phys~27.8` at `epsilon_PN=1e-4`,
-
-`~2.50e3` at `1e-6`,
-
-`~2.50e5` at `1e-8`.
-
-Therefore retain strictly:
-
-`IDENTIFIABILITY != ESTIMABILITY`.
-
-And:
-
-`IDENTIFIABILITY != DYNAMICS`.
-
-No detector/noise precision claim is yet authorized.
+`STRUCTURAL_IDENTIFIABILITY != ESTIMABILITY != FEASIBILITY`.
 
 ## Highest-information next operational gate
 
-**`SF031_NOISE_AWARE_KNOWN_BASELINE_ESTIMABILITY_PREOUTCOME_GATE`.**
+**`SF032_NULL_CONTROL_COMMON_MODE_CALIBRATION_PREOUTCOME_GATE`.**
 
-Prospectively freeze one minimal statistical model before computing precision requirements.
+Prospectively freeze matched delete-one-label connected-null controls using the same `tau` schedule/readout. Under an explicit shared-nuisance hypothesis, test whether the exactly zero known-physics connected control rows can directly calibrate the additive and `tau`-linear nuisance terms and reduce PN variance inflation.
 
-Recommended structure:
+Required safeguards:
 
-1. same 9 SF030 `Theta3` rows;
-2. independent homoscedastic phase-noise control;
-3. one additive common-offset nuisance;
-4. one global `tau`-linear common-mode nuisance adversary;
-5. Fisher/Cramer-Rao precision requirement for the known 1PN calibration amplitude as a function of `epsilon_PN` and phase-noise scale;
-6. explicit nuisance-rank and variance-inflation audit.
-
-The gate may quantify required precision but may not call that precision experimentally achievable without a separate detector/noise model.
+- control science columns are exactly zero by the already-validated connected finite-difference deletion theorem;
+- nuisance sharing between science and control rows must be a prospectively stated hypothesis and separately ablated;
+- no gravity component may be subtracted from science rows by assumption;
+- report full rank, condition number, PN VIF and phase-noise requirement;
+- include a negative control where nuisance is not shared, which should provide no calibration benefit.
 
 No successor residual column is authorized.
 
@@ -234,15 +190,15 @@ No successor residual column is authorized.
 
 `GENUINELY_NEW_MICROSCOPIC_MATCHING_PRINCIPLE_WITH_EXPLICIT_PHYSICAL_MAP_REQUIRED`.
 
-Do not use operational rank/conditioning to choose the SF025/SF027 quantum-law matching datum.
+Operational calibration information may not choose SF025/SF027 quantum-law matching data.
 
 ## Claim locks
 
 - no open action equals measured `Theta3`;
 - no raw connected signal equals new three-body vertex;
 - no apparatus/feedback baseline called new physics;
-- no full rank promoted to detector feasibility;
-- no identifiability promoted to dynamics;
+- no full rank or finite CRLB promoted to detector feasibility;
+- no identifiability/estimability promoted to dynamics;
 - no state/preparation freedom relabelled as quantum-law matching freedom;
 - no new quantum principle selected;
 - no matching coefficient selected;
