@@ -1,0 +1,58 @@
+{
+  "frozen_inputs": {
+    "R_over_ell": 100,
+    "M_D_over_m": 5,
+    "sigma_over_ell": "1/100",
+    "source_centers": "A=a, B=4+2b, C=10+3c",
+    "D_center": "100-(a+2b+3c)/5"
+  },
+  "finite_R_primary": {
+    "delta3_VN_in_Gm2_over_ell": "-245650240087618570155880305020803/713848460260895020160016568850010651840",
+    "delta3_VN_float": -3.441209917267863e-7,
+    "delta3_A_in_G2m3_over_ell4": "-55382116178820037792093702937090983213292349387024468462365874280993107691709295271940904723582459144100408128521596138618676464454269312214903581521467/416140053552863281389407833865970285189710490505387590238022119681202624950751958088944918362701030998100423804822038377659655771068229418551737712640000000",
+    "delta3_A_float": -1.3308528151997442e-4,
+    "delta3_W1_in_G2m3_over_c2ell2": "251163800183140743786741490237826218299104622823770525112217729308672611923/121328481956393003998538041438196095591827487412035684015304161543205165568000",
+    "delta3_W1_float": 0.002070114091375611,
+    "delta3_force_difference_square_Q": "-33229174591146375251443880574066338810766371759904813234226438487810170002257370015186318869562447099204393589281395425625978447696674720341016206342383/249684032131717968833644700319582171113826294303232554142813271808721574970451174853366951017620618598860254282893223026595793462640937651131042627584000000",
+    "delta3_Q_float": -1.3308490057392498e-4
+  },
+  "source_only_R_infinity_control": {
+    "delta3_VN": "0",
+    "delta3_A": "-82/616005",
+    "delta3_A_float": -1.3311580263147214e-4,
+    "delta3_W1": "2/945",
+    "delta3_W1_float": 0.0021164021164021165
+  },
+  "delete_one_displacement_controls": {
+    "delete_A": {"delta3_VN":"0","delta3_A":"0","delta3_W1":"0","delta3_Q":"0"},
+    "delete_B": {"delta3_VN":"0","delta3_A":"0","delta3_W1":"0","delta3_Q":"0"},
+    "delete_C": {"delta3_VN":"0","delta3_A":"0","delta3_W1":"0","delta3_Q":"0"}
+  },
+  "R_ladder_control": {
+    "50": {"delta3_VN_float":-7.96074568973514e-6,"delta3_A_float":-1.3252302543975247e-4,"delta3_W1_float":0.001916956602803314},
+    "100": {"delta3_VN_float":-3.441209917267863e-7,"delta3_A_float":-1.3308528151997442e-4,"delta3_W1_float":0.002070114091375611},
+    "200": {"delta3_VN_float":-1.850445429099339e-8,"delta3_A_float":-1.3311406469037763e-4,"delta3_W1_float":0.002105345182235358},
+    "1000": {"delta3_VN_float":-2.658569749501056e-11,"delta3_A_float":-1.3311580005144155e-4,"delta3_W1_float":0.002115976138263376}
+  },
+  "analytic_coherence_formula": {
+    "Theta3_N": "-(T/hbar) Delta3[V_N] + (T^3/(12 hbar)) Delta3[A_N] + higher orders at leading semiclassical eta^0",
+    "Gamma3_N": "(sigma^2 T^2/(2 hbar^2)) Delta3[sum_I |grad V_s-grad V_000|^2] + O(T^4, eta-dependent stability corrections)",
+    "Delta1PN_Theta3": "-(T/hbar) Delta3[V_static_1PN] + O(G^3 T^3/(hbar c^2), c^-4, eta^2 epsilon_PN)"
+  },
+  "power_counting": {
+    "initial_branch_velocities": "zero",
+    "v_N_scaling": "O(G T)",
+    "EIH_velocity_terms": "O(G^3 T^3/c^2) after time integration",
+    "v4_term": "O(G^4 T^5/c^2) after time integration",
+    "static_1PN_trajectory_pullback": "O(G^3 T^3/c^2)",
+    "1PN_trajectory_correction_inside_LN": "O(G^3 T^3/c^2)",
+    "retained_1PN_difference": "only initial static EIH potential at O(G^2 T/c^2)"
+  },
+  "domain_controls": {
+    "3D_1_over_r": "PASS",
+    "3D_1_over_r2": "PASS",
+    "delete_one_bit": "PASS",
+    "R_to_infinity": "PASS"
+  },
+  "script_commit": "46a6743f7f718b07e4fa452f53ebb61b31f8e9ae"
+}
