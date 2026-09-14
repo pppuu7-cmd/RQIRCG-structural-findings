@@ -1,0 +1,24 @@
+{
+  "classification": "RHPI_ADM_DERIVES_PARAMETER_FREE_1PN_CONNECTED_THREE_SOURCE_KERNEL_SCOPED",
+  "control_geometry_values_F_times_ell2": {
+    "000": "2/15",
+    "001": "2/21",
+    "010": "1/8",
+    "011": "1/12",
+    "100": "1/5",
+    "101": "1/7",
+    "110": "1/6",
+    "111": "1/9"
+  },
+  "delta3_F_times_ell2": "13/2520",
+  "expected_delta3": "13/2520",
+  "positive_control_pass": true,
+  "pairwise_polynomial_delta3": "0",
+  "pairwise_null_pass": true,
+  "no_A_displacement_delta3": "0",
+  "no_A_displacement_null_pass": true,
+  "derived_energy_kernel": "V_ABC^(1PN)=+(G^2 m_A m_B m_C/c^2) F_ABC",
+  "derived_phase_rate_kernel": "dot_chi_ABC=-(G^2 m_A m_B m_C/(hbar c^2)) Delta3[F_ABC]",
+  "positive_control_phase_rate": "-13 G^2 m_A m_B m_C/(2520 hbar c^2 ell^2)",
+  "claim_ceiling": "point-source instantaneous conservative EIH representative only; apparatus/support closure and gauge/boundary audit deferred"
+}
