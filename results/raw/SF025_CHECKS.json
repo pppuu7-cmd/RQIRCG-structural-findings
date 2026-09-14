@@ -1,0 +1,40 @@
+{
+  "amplitude_control": "s=4 E^2,t=-E^2,u=-3 E^2; stu=12 E^6",
+  "base": "b588d8e47c24c6bc12976d54f0a976dc9df099d3",
+  "checks": {
+    "R3_action_engineering_dimension_zero": true,
+    "composition_exact": true,
+    "fixed_scheme_matching_direction_visible": true,
+    "massless_mandelstam_sum_zero": true,
+    "on_shell_polynomial_control_nonzero": true,
+    "same_state_different_prediction": true,
+    "same_state_normalized_positive": true,
+    "scheme_compensation_identity": true,
+    "unitary_exact": true
+  },
+  "failures": [],
+  "gate": "SF025",
+  "not_computed": [
+    "chi_ABC",
+    "quantum HDA",
+    "full BRST loop derivation",
+    "exact gravity CP",
+    "UV completion"
+  ],
+  "preregistration": "9ef45ce5858f9271a450abef4adcb798d8dd2c85",
+  "provenance": {
+    "execution": "local container, not GitHub Actions",
+    "numpy": "2.3.5",
+    "python": "3.13.5",
+    "scipy": "1.17.0",
+    "script_sha256": "c9bea62cdb327cf7841959204b9f656163fd71a284f00176361f0a24da3399f8",
+    "sympy": "1.14.0"
+  },
+  "scope": "Exact finite-dimensional logical controls; R3 physical content is primary-source-grounded, not numerically derived here.",
+  "toy_H": "H_b=(1+epsilon^2*b)*sigma_z; epsilon=1/2, b=0 versus b=1",
+  "toy_initial_state": "|+x><+x|; same |+x><+x| readout, t=pi/2",
+  "toy_probabilities": [
+    "0",
+    "1/2 - sqrt(2)/4"
+  ]
+}
