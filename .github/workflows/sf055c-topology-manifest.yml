@@ -1,0 +1,28 @@
+name: SF055C topology manifest
+
+on:
+  pull_request:
+    paths:
+      - 'prereg/SF055C_IMPLEMENTED_THREE_POINT_FLOW_TOPOLOGY_MANIFEST_PREOUTCOME.md'
+      - 'results/raw/SF055C_THREE_POINT_FLOW_TOPOLOGY_MANIFEST.json'
+      - 'scripts/sf055c_topology_manifest_check.py'
+      - '.github/workflows/sf055c-topology-manifest.yml'
+  workflow_dispatch:
+
+jobs:
+  topology-manifest:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run prospectively frozen topology checker
+        run: python scripts/sf055c_topology_manifest_check.py
+      - name: Upload manifest and check result
+        uses: actions/upload-artifact@v4
+        with:
+          name: sf055c-topology-manifest
+          path: |
+            results/raw/SF055C_THREE_POINT_FLOW_TOPOLOGY_MANIFEST.json
+            results/raw/SF055C_THREE_POINT_FLOW_TOPOLOGY_CHECK.json
