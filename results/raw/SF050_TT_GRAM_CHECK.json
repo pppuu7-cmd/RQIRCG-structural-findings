@@ -1,0 +1,23 @@
+{
+  "gate": "SF050_C3_EUCLIDEAN_OFFSHELL_EMBEDDING_PREOUTCOME_GATE",
+  "kinematics": {
+    "p1": [1, 0, 0, 0],
+    "p2": ["-1/2", "sqrt(3)/2", 0, 0],
+    "p3": ["-1/2", "-sqrt(3)/2", 0, 0],
+    "p_i_squared": [1, 1, 1],
+    "offdiagonal_dot_products": "-1/2"
+  },
+  "tt_basis_dimension_per_leg": 5,
+  "operators": {
+    "C3": "C_{rho sigma}^{mu nu} C_{mu nu}^{alpha beta} C_{alpha beta}^{rho sigma}",
+    "Ric3_control": "R_mu^nu R_nu^rho R_rho^mu"
+  },
+  "exact_gram": {
+    "norm_C3_squared": "95/768",
+    "norm_Ric3_squared": "5/192",
+    "inner_C3_Ric3": "-35/768",
+    "naive_C3_projection_of_unit_Ric3": "-7/19"
+  },
+  "interpretation": "At a real Euclidean symmetric point the TT C3 tensor is not orthogonal to an on-shell-redundant Ricci-cubic p^6 tensor. A one-template Euclidean C3 contraction is therefore not automatically the physical on-shell C3 matching projector.",
+  "claim_ceiling": "This is an off-shell tensor-space contamination witness, not a physical coefficient or FRG flow."
+}
