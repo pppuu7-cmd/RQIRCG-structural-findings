@@ -1,0 +1,48 @@
+{
+  "gate": "SF052_DERIVATIVE_REDUNDANT_C3_PROJECTOR_COMPLETION_PREOUTCOME_GATE",
+  "geometry": {
+    "dimension": 4,
+    "p_i_squared": 1,
+    "p_i_dot_p_j_offdiag": "-1/2",
+    "tt_polarizations_per_leg": 5,
+    "tt_triples": 125
+  },
+  "source_authorized_derivative_directions": [
+    "R Delta R",
+    "S_mu_nu Delta S^mu_nu"
+  ],
+  "controls": {
+    "linearized_scalar_curvature_on_all_tt_legs": 0,
+    "R_Delta_R_cubic_tt_tensor": 0,
+    "SF051_Gram_block_reproduced": [
+      ["95/768", "-35/768", "7/512"],
+      ["-35/768", "5/192", "-1/128"],
+      ["7/512", "-1/128", "15/1024"]
+    ]
+  },
+  "basis_nonzero": ["C3", "S3", "SSC", "SDeltaS"],
+  "Gram": [
+    ["95/768", "-35/768", "7/512", "-259/768"],
+    ["-35/768", "5/192", "-1/128", "121/768"],
+    ["7/512", "-1/128", "15/1024", "-71/512"],
+    ["-259/768", "121/768", "-71/512", "1403/768"]
+  ],
+  "redundant_basis": ["S3", "SSC", "SDeltaS"],
+  "redundant_Gram_det": "4185/67108864",
+  "redundant_rank": 3,
+  "projection_subtraction_coefficients_for_T_E_minus_sum_c_i_T_Ri": ["-84/155", "-364/155", "-49/155"],
+  "essentialized_tensor": "T_C3_perp = T_C3 + (84/155) T_S3 + (364/155) T_SSC + (49/155) T_SDeltaS",
+  "residual_norm": "243/9920",
+  "residual_norm_positive": true,
+  "full_Gram_det": "6561/4294967296",
+  "final_redundant_overlaps": [0, 0, 0],
+  "normalized_projector_responses": {
+    "C3": 1,
+    "S3": 0,
+    "SSC": 0,
+    "RDeltaR": 0,
+    "SDeltaS": 0
+  },
+  "method_note": "The covariant S Delta S cubic TT tensor is evaluated from int sqrt(g) nabla S nabla S using the full O(h^2) Ricci/S expansion, Gamma^(1) S^(1) connection terms, and all three inverse-metric O(h) contractions. The displayed Gram entries are simple-rational reconstructions of the executed floating calculation; the inherited SF051 exact block is reproduced identically, and the reconstructed matrix gives the displayed rank, determinants, coefficients and exact-zero quotient overlaps algebraically.",
+  "classification": "PASS_COMPLETE_SIX_DERIVATIVE_TT_QUOTIENT_SCOPED"
+}
