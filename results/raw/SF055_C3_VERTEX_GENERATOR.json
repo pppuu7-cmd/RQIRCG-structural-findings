@@ -1,0 +1,88 @@
+{
+  "Gamma2_control": {
+    "pass": true,
+    "tt_quality": {
+      "max_abs_trace": 1.1102230246251565e-16,
+      "max_transversality_norm": 0.0,
+      "momentum_conservation_norm": 0.0
+    },
+    "value": 0.0
+  },
+  "Gamma3_4_5_common_origin_controls": {
+    "3": {
+      "double_to_unit_ratio": 2.0,
+      "max_permutation_abs_difference": 0.0,
+      "max_permutation_scaled_difference": 0.0,
+      "pass": true,
+      "permutations_tested": 6,
+      "tt_quality": {
+        "max_abs_trace": 4.440892098500626e-16,
+        "max_transversality_norm": 2.551123677874282e-16,
+        "momentum_conservation_norm": 0.0
+      },
+      "value_at_double_coupling": 16.852284709312844,
+      "value_at_unit_coupling": 8.426142354656422,
+      "value_at_zero_coupling": 0.0
+    },
+    "4": {
+      "double_to_unit_ratio": 2.0,
+      "max_permutation_abs_difference": 7.105427357601002e-15,
+      "max_permutation_scaled_difference": 2.8479689968605686e-16,
+      "pass": true,
+      "permutations_tested": 24,
+      "tt_quality": {
+        "max_abs_trace": 7.771561172376096e-16,
+        "max_transversality_norm": 2.2918781368532207e-16,
+        "momentum_conservation_norm": 0.0
+      },
+      "value_at_double_coupling": 49.89820721667688,
+      "value_at_unit_coupling": 24.94910360833844,
+      "value_at_zero_coupling": 0.0
+    },
+    "5": {
+      "double_to_unit_ratio": 2.0,
+      "max_permutation_abs_difference": 8.260059303211165e-14,
+      "max_permutation_scaled_difference": 3.650593099783768e-14,
+      "pass": true,
+      "permutations_tested": 120,
+      "tt_quality": {
+        "max_abs_trace": 1.3877787807814457e-16,
+        "max_transversality_norm": 3.38165916383627e-16,
+        "momentum_conservation_norm": 0.0
+      },
+      "value_at_double_coupling": 4.5253245581932555,
+      "value_at_unit_coupling": 2.2626622790966278,
+      "value_at_zero_coupling": 0.0
+    }
+  },
+  "Gamma3_SF052_match": {
+    "expected_global_factor": 6.0,
+    "expected_norm": "95/768",
+    "functional_derivative_global_factor": 6.0,
+    "generated_tensor_norm_after_dividing_global_factor": 0.12369791666666667,
+    "inherited_P_E_6d_C3_response": 1,
+    "max_generated_on_reference_zero_component": 0.0,
+    "max_ratio_deviation": 3.019806626980426e-14,
+    "nonzero_reference_components": 32,
+    "pass": true,
+    "reference_tensor_norm": 0.12369791666666663,
+    "tt_components": 125
+  },
+  "SF055_terminal_pass": false,
+  "classification": "PASS_C3_COMMON_ORIGIN_VERTEX_GENERATOR_SCOPED",
+  "gate": "SF055_C3_PROJECTED_FRG_IMPLEMENTATION_CONTRACT",
+  "lane": "B_COMMON_ORIGIN_C3_VERTEX_GENERATOR",
+  "lane_B_pass": true,
+  "method": {
+    "expansion": "square_free_multivariate_formal_series_through_full_multilinear_mask",
+    "momentum_derivative_convention": "d_to_p_stripped_Euclidean_matching_SF050_SF052",
+    "operator": "int sqrt(g) C_rhosigma^munu C_munu^alphabeta C_alphabeta^rhosigma",
+    "single_common_coupling_parameter": true
+  },
+  "remaining_lanes": {
+    "A": "OPEN_BASELINE_EH_GHOST_FLOW_REPRODUCTION",
+    "C": "ABSTRACT_MANIFEST_PASS_IMPLEMENTED_DIAGRAM_MANIFEST_OPEN",
+    "projected_C3_beta": "UNAUTHORIZED_UNTIL_ALL_CALIBRATION_LANES_TERMINAL"
+  },
+  "scope": "FLAT_EUCLIDEAN_PURE_GRAVITON_VERTEX_CALIBRATION_NO_FRG_LOOPS"
+}
