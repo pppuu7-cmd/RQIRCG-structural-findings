@@ -1,0 +1,38 @@
+{
+  "gate": "SF055A3Q3_TWO_POINT_BETA_MU_TOPOLOGY_PROJECTOR_CONTRACT",
+  "evidence_type": "EXACT_ANALYTIC_PROOF_WITH_INHERITED_SOURCE_SEED",
+  "classification": "PASS_SF055A3Q3_TWO_POINT_BETA_MU_TOPOLOGY_PROJECTOR_CONTRACT_SCOPED",
+  "inverse_derivative_terms": [
+    {"ordered_blocks": [[1,2]], "coefficient_before_trace_prefactor": -1},
+    {"ordered_blocks": [[1],[2]], "coefficient_before_trace_prefactor": 1},
+    {"ordered_blocks": [[2],[1]], "coefficient_before_trace_prefactor": 1}
+  ],
+  "source_sym2": "(1/2) sum_over_S2_labelled_external_permutations",
+  "topology_coefficients": {
+    "T4_GRAV": -0.5,
+    "B33_GRAV": 1.0,
+    "B33_GHOST": -2.0
+  },
+  "source_fp_ghost_hh_vertex": 0,
+  "K_EH": "1/(32*pi)",
+  "lambda2": "-1/20",
+  "mu_h": "1/10",
+  "Gamma_TT_2_p0_each_unit_TT": "1/(320*pi)",
+  "mass_projector": "Flow_TT_mass(0)=(1/5) sum_a Flow^(2)(0)[E_a,E_a]",
+  "beta_mu_extraction_eta0_k1": "beta_mu=Flow_TT_mass(0)/K_EH-2*mu_h",
+  "independent_published_crosscheck": "partial_t mu=(eta_h(0)-2)mu+(32*pi/5) Flow_TT^(hh)(0)",
+  "negative_controls": {
+    "missing_boson_half_rejected": true,
+    "unnormalised_sym2_with_same_coefficients_rejected": true,
+    "ghost_supertrace_sign_flip_rejected": true,
+    "nonzero_ghost_hh_tadpole_rejected": true,
+    "factor_two_KEH_rejected": true,
+    "omitted_minus_2mu_rejected": true
+  },
+  "eq14_numeric_target_used_in_derivation": false,
+  "scientific_pass": true,
+  "supplementary_actions_run": 35037794353,
+  "supplementary_actions_status_at_terminalization": "QUEUED_INFRASTRUCTURE_ONLY_NOT_USED_AS_SCIENTIFIC_PREMISE",
+  "next_required": "SAME_CONVENTIONS_TWO_POINT_FIXED_Q_CONTRACTION_AND_QUADRATURE_BETA_MU",
+  "interpretation_ceiling": "TOPOLOGY_PROJECTOR_CONTRACT_ONLY_NO_QUADRATURE_NO_EQ14_NUMERIC_REPRODUCTION_NO_C3"
+}
