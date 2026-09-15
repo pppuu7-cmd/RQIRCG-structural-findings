@@ -1,0 +1,86 @@
+{
+  "Gamma2_control": {
+    "momentum_conservation_lt_1e-12": true,
+    "pass": true,
+    "trace_lt_1e-12": true,
+    "transversality_lt_1e-12": true,
+    "value_abs_lt_1e-10": true,
+    "value_rounded": 0.0
+  },
+  "Gamma3_4_5_common_origin_controls": {
+    "3": {
+      "bose_scaled_residual_lt_1e-10": true,
+      "coupling_scaling_error_lt_1e-10": true,
+      "double_coupling_value_rounded": 16.8522847093,
+      "double_to_unit_ratio_rounded": 2.0,
+      "momentum_conservation_lt_1e-12": true,
+      "pass": true,
+      "permutations_tested": 6,
+      "trace_lt_1e-12": true,
+      "transversality_lt_1e-12": true,
+      "unit_coupling_value_rounded": 8.4261423547,
+      "zero_coupling_abs_lt_1e-10": true
+    },
+    "4": {
+      "bose_scaled_residual_lt_1e-10": true,
+      "coupling_scaling_error_lt_1e-10": true,
+      "double_coupling_value_rounded": 49.8982072167,
+      "double_to_unit_ratio_rounded": 2.0,
+      "momentum_conservation_lt_1e-12": true,
+      "pass": true,
+      "permutations_tested": 24,
+      "trace_lt_1e-12": true,
+      "transversality_lt_1e-12": true,
+      "unit_coupling_value_rounded": 24.9491036083,
+      "zero_coupling_abs_lt_1e-10": true
+    },
+    "5": {
+      "bose_scaled_residual_lt_1e-10": true,
+      "coupling_scaling_error_lt_1e-10": true,
+      "double_coupling_value_rounded": 4.5253245582,
+      "double_to_unit_ratio_rounded": 2.0,
+      "momentum_conservation_lt_1e-12": true,
+      "pass": true,
+      "permutations_tested": 120,
+      "trace_lt_1e-12": true,
+      "transversality_lt_1e-12": true,
+      "unit_coupling_value_rounded": 2.2626622791,
+      "zero_coupling_abs_lt_1e-10": true
+    }
+  },
+  "Gamma3_SF052_match": {
+    "expected_global_factor": "3! = 6",
+    "factor_deviation_lt_1e-10": true,
+    "functional_derivative_global_factor_rounded": 6.0,
+    "generated_norm_after_dividing_6_error_lt_1e-10": true,
+    "inherited_projector_response_is_one": true,
+    "max_component_ratio_deviation_lt_1e-10": true,
+    "nonzero_reference_components": 32,
+    "pass": true,
+    "reference_norm_error_lt_1e-10": true,
+    "reference_tensor_norm_target": "95/768",
+    "reference_zero_leakage_lt_1e-10": true,
+    "tt_components": 125
+  },
+  "SF055_terminal_pass": false,
+  "classification": "PASS_C3_COMMON_ORIGIN_VERTEX_GENERATOR_SCOPED",
+  "gate": "SF055_C3_PROJECTED_FRG_IMPLEMENTATION_CONTRACT",
+  "lane": "B_COMMON_ORIGIN_C3_VERTEX_GENERATOR",
+  "lane_B_pass": true,
+  "method": {
+    "SF052_symmetric_TT_basis": "explicit_SF050_analytic_frames_no_SVD",
+    "durable_serialization": "rounded_nonzero_diagnostics_and_threshold_certificates",
+    "operator": "int sqrt(g) C_rhosigma^munu C_munu^alphabeta C_alphabeta^rhosigma",
+    "pass_tolerance": "1e-10_on_unrounded_runtime_values",
+    "single_common_coupling_parameter": true
+  },
+  "remaining_lanes": {
+    "A": "OPEN_BASELINE_EH_GHOST_FLOW_REPRODUCTION",
+    "C": "ABSTRACT_MANIFEST_PASS_IMPLEMENTED_DIAGRAM_MANIFEST_OPEN",
+    "projected_C3_beta": "UNAUTHORIZED_UNTIL_ALL_CALIBRATION_LANES_TERMINAL"
+  },
+  "repair_contract": "research_log/SF055_LANE_B_REPRODUCIBILITY_REPAIR.md",
+  "repair_version": "V2_REPRODUCIBILITY_ONLY",
+  "scientific_core": "scripts/sf055_c3_vertex_generator.py",
+  "scope": "FLAT_EUCLIDEAN_PURE_GRAVITON_VERTEX_CALIBRATION_NO_FRG_LOOPS"
+}
