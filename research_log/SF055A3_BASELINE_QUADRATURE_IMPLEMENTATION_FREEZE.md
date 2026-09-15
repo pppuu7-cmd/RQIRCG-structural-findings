@@ -31,9 +31,23 @@ A pre-quadrature direct evaluation with the validated source-Fourier two-point e
 
 ## Exact batched EH vertex evaluation
 
-The existing square-free source-Fourier polynomial algebra is lifted only by adding leading batch axes. Every batch element is exactly the same multilinear coefficient calculation as `seed.eh_vertex_fourier`; no interpolation, SVD/CP truncation, stochastic estimator or fitted coefficient is introduced.
+The existing square-free source-Fourier polynomial algebra is lifted only by adding leading batch axes/JIT evaluation. Every batch element is exactly the same multilinear coefficient calculation as `seed.eh_vertex_fourier`; no interpolation, SVD/CP truncation, stochastic estimator or fitted coefficient is introduced.
 
-Before quadrature the batched engine MUST reproduce scalar source vertices at frozen n=2..5 controls and reproduce the existing fixed-q Figure-2 topology values.
+Before quadrature the execution backend MUST reproduce scalar source vertices at frozen n=2..5 controls and reproduce the existing fixed-q Figure-2 topology values.
+
+## Exact integrated external-permutation reduction
+
+The source normalization remains exactly
+
+`Sym_3=(1/6) sum_(sigma in S3)`.
+
+For the complete source projector at symmetric external kinematics, simultaneous external-leg permutation leaves `T_G` and `T_Lambda` invariant up to their corresponding basis-index relabeling. For each labelled Figure-2 term, a permutation of the three equal-magnitude symmetric external momenta is related to the canonical labelled term by an O(4) transformation and/or a loop-coordinate shift. The full loop measure and regulator are invariant under those transformations; routing-shift equivalence was already independently validated before integration.
+
+Therefore after complete Bose-symmetric TT projection and integration,
+
+`Integral[(1/6) sum_S3 I_sigma(q)] = Integral[I_canonical(q)]`.
+
+The quadrature may evaluate one canonical labelled routing instead of six copies. This is an exact reduction of the source average, not replacement of `Sym_3` by an unnormalised sum and not an approximation. A low-order permutation-integral diagnostic is retained as an implementation control.
 
 ## Rotational reduction of the 4D loop integral
 
