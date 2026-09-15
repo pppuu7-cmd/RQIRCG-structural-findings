@@ -23,6 +23,17 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "results" / "raw" / "SF055A3_INTERNAL_PROPAGATOR_CALIBRATION.json"
 
 
+def json_default(obj):
+    """Serialization-only adapter; does not alter any science value or criterion."""
+    if isinstance(obj, np.bool_):
+        return bool(obj)
+    if isinstance(obj, np.integer):
+        return int(obj)
+    if isinstance(obj, np.floating):
+        return float(obj)
+    raise TypeError(f"Object of type {obj.__class__.__name__} is not JSON serializable")
+
+
 def symmetric_basis():
     out = []
     for i in range(D):
@@ -238,8 +249,9 @@ def main():
         "interpretation_ceiling": "PROPAGATOR_REGULATOR_CALIBRATION_ONLY_NO_C3_FLOW",
     }
     OUT.parent.mkdir(parents=True, exist_ok=True)
-    OUT.write_text(json.dumps(out, indent=2, sort_keys=True) + "\n")
-    print(json.dumps(out, indent=2, sort_keys=True))
+    text = json.dumps(out, indent=2, sort_keys=True, default=json_default) + "\n"
+    OUT.write_text(text)
+    print(text, end="")
     if not scientific_pass:
         raise SystemExit(1)
 
