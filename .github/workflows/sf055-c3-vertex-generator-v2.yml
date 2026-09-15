@@ -1,0 +1,37 @@
+name: SF055 C3 vertex generator V2
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/sf055_c3_vertex_generator_v2.py'
+      - 'results/raw/SF055_C3_VERTEX_GENERATOR_V2.json'
+      - 'research_log/SF055_LANE_B_REPRODUCIBILITY_REPAIR.md'
+      - '.github/workflows/sf055-c3-vertex-generator-v2.yml'
+  pull_request:
+    paths:
+      - 'scripts/sf055_c3_vertex_generator.py'
+      - 'scripts/sf055_c3_vertex_generator_v2.py'
+      - 'results/raw/SF055_C3_VERTEX_GENERATOR_V2.json'
+      - 'research_log/SF055_LANE_B_REPRODUCIBILITY_REPAIR.md'
+      - '.github/workflows/sf055-c3-vertex-generator-v2.yml'
+
+jobs:
+  lane-b-v2:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install numerical dependency
+        run: python -m pip install numpy
+      - name: Recompute repaired SF055 Lane-B controls
+        run: python scripts/sf055_c3_vertex_generator_v2.py
+      - name: Verify canonical raw result is deterministic
+        run: git diff --exit-code -- results/raw/SF055_C3_VERTEX_GENERATOR_V2.json
+      - name: Upload canonical Lane-B result
+        uses: actions/upload-artifact@v4
+        with:
+          name: sf055-c3-vertex-generator-v2
+          path: results/raw/SF055_C3_VERTEX_GENERATOR_V2.json
