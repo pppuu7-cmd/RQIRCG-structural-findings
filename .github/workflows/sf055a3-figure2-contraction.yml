@@ -1,0 +1,30 @@
+name: SF055A3 Figure-2 contraction assembly
+
+on:
+  pull_request:
+    paths:
+      - 'research_log/SF055A3_FIGURE2_CONTRACTION_INTERFACE_FREEZE.md'
+      - 'scripts/sf055a3_figure2_contraction_assembly.py'
+      - '.github/workflows/sf055a3-figure2-contraction.yml'
+  workflow_dispatch:
+
+jobs:
+  fixed-q-contraction:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install numpy
+        run: python -m pip install numpy
+      - name: Run fixed-q contraction assembly controls
+        run: python scripts/sf055a3_figure2_contraction_assembly.py
+      - name: Upload contraction checks
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sf055a3-figure2-contraction
+          path: results/raw/SF055A3_FIGURE2_CONTRACTION_ASSEMBLY.json
+          if-no-files-found: warn

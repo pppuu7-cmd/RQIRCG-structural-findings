@@ -1,0 +1,52 @@
+{
+  "gate": "SF055A3_FIGURE2_TENSOR_CONTRACTION_ASSEMBLY",
+  "classification": "PASS_A3_2_FIGURE2_TENSOR_CONTRACTION_ASSEMBLY_SCOPED",
+  "C3_enabled": false,
+  "scientific_pass": true,
+  "positive_pass": true,
+  "negative_pass": true,
+  "lambda_2": -0.05,
+  "lambda_3": -0.7,
+  "external_TT_indices": [0, 1, 2],
+  "fixed_q_values": {
+    "q1": {
+      "q": [0.23, -0.31, 0.17, 0.29],
+      "T5_GRAV": 0.958801881718869,
+      "B43_GRAV": -2.377571118958953,
+      "T333_GRAV": -0.708106137422964,
+      "T333_GHOST": 0.07586734663176124,
+      "max_inverse_residual": 3.171254240824062e-16,
+      "max_basis_or_arrow_transform_difference": 9.547918011776346e-15
+    },
+    "q2": {
+      "q": [0.41, 0.12, -0.27, 0.19],
+      "T5_GRAV": -1.3864528599809398,
+      "B43_GRAV": 1.563041804307983,
+      "T333_GRAV": 2.3819817770174008,
+      "T333_GHOST": -0.21823132873611936,
+      "max_inverse_residual": 2.3948583136266515e-16,
+      "max_basis_or_arrow_transform_difference": 1.6431300764452317e-14
+    }
+  },
+  "all_topologies_nonzero_on_at_least_one_q": true,
+  "external_permutations_generated_per_topology_per_q": 6,
+  "negative_controls": {
+    "G_dotR_instead_of_G_dotR_G_rejected": true,
+    "TT_only_internal_basis_rejected": true,
+    "missing_bubble_propagator_rejected": true,
+    "missing_triangle_propagator_rejected": true,
+    "noncanonical_single_scale_edge_rejected": true,
+    "scalar_identity_graviton_regulator_rejected": true,
+    "untransported_endpoint_basis_rotation_rejected": true,
+    "wrong_ghost_matrix_order_rejected": true,
+    "wrong_ghost_pc_assignment_rejected": true,
+    "wrong_topology_coefficient_rejected": true
+  },
+  "successful_run": 35000997597,
+  "successful_job": 104489066892,
+  "artifact_id": 10409825944,
+  "artifact_digest": "sha256:bc558d2fa44d1cde0103b6f4ca1bc059b1740161927c63fb847cb008f51fe4bb",
+  "executed_head": "13317f3165d7f1afa9eae92a76f8971c19920388",
+  "next_required": "DETERMINISTIC_FIGURE2_QUADRATURE_AND_EQ14_BASELINE_REPRODUCTION",
+  "interpretation_ceiling": "FIXED_Q_CONTRACTION_ONLY_NO_QUADRATURE_NO_EQ14_NO_C3"
+}
