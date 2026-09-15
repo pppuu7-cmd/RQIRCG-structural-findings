@@ -1,0 +1,46 @@
+{
+  "classification": "SIGNED_AMPLITUDE_PARITY_STRONGLY_IMPROVES_Q2_CALIBRATION_SCOPED",
+  "controls": {
+    "delete_one_label_exact_zero": {"A": true, "B": true, "C": true},
+    "lambda0_gravity_exact_zero": true,
+    "min_positive_pair_separation_over_ell": 3.0,
+    "min_signed_pair_separation_over_ell": 3.0,
+    "positive_endpoint_matches": true,
+    "pure_z1_z2_inner_product": 3.608224830031759e-18
+  },
+  "noise": {
+    "1e-06": {
+      "positive_Q2_vif": 909.166134380049,
+      "positive_q_over_eps": 1.2636705529477296e-05,
+      "signed_Q2_vif": 37.50938040302976,
+      "signed_q_over_eps": 5.5476650776787726e-05,
+      "variance_improvement_positive_Q2_over_signed_Q2": 19.273151597836087,
+      "vif_improvement_positive_over_signed": 24.23836716605995
+    },
+    "1e-08": {
+      "positive_Q2_vif": 909.1661343795286,
+      "positive_q_over_eps": 1.2636705529480928e-05,
+      "signed_Q2_vif": 37.50938040302837,
+      "signed_q_over_eps": 5.547665077678871e-05,
+      "variance_improvement_positive_Q2_over_signed_Q2": 19.27315159782569,
+      "vif_improvement_positive_over_signed": 24.23836716604697
+    }
+  },
+  "positive_recomputed": {
+    "kappa": 219.1476037531367,
+    "near_null": [0.030315509224895818,0.0007280609367608501,-0.8040752977738521,-0.0067079892710119205,-0.3233945882049884,-0.49790993014526685],
+    "rank": 6,
+    "singular_values": [2.2081790170184306,0.7860995965783533,0.6167704783808303,0.33137027823750187,0.12521676640737744,0.010076217942614964],
+    "smin": 0.010076217942614964
+  },
+  "prereg_commit": "08d16e0c75192345f196cb82f0aaf0bb5c6eb04b",
+  "signed_structural": {
+    "kappa": 41.825911015569616,
+    "near_null": [0.030870217636300632,0.013561590078647028,-0.7035547692104417,0.009151258568849326,-0.6026399350352724,-0.37498688353882076],
+    "rank": 6,
+    "singular_values": [1.8396458148448582,1.3031695168795487,0.7478707473169379,0.5051897350073664,0.31779021946912345,0.04398340096310284],
+    "smin": 0.04398340096310284
+  },
+  "strong_criteria": [true,true,true],
+  "script_sha256": "cb1a78cc1d3ab829c4b5b6ff49aa30fd4958a1ae7e892964872258a1c3a4bf43"
+}
