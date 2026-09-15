@@ -1,0 +1,87 @@
+{
+  "baseline_topology_count": 4,
+  "baseline_topology_ids": [
+    "T5_GRAV",
+    "B43_GRAV",
+    "T333_GRAV",
+    "T333_GHOST"
+  ],
+  "c3_insertion_count": 6,
+  "c3_insertion_order_histogram": {
+    "3": 4,
+    "4": 1,
+    "5": 1
+  },
+  "classification": "PASS_IMPLEMENTED_THREE_POINT_FLOW_C3_INSERTION_MANIFEST_SCOPED",
+  "gate": "SF055C_IMPLEMENTED_THREE_POINT_FLOW_TOPOLOGY_MANIFEST",
+  "graviton_vertex_order_union": [
+    3,
+    4,
+    5
+  ],
+  "interpretation_ceiling": "TOPOLOGY_AND_INSERTION_BOOKKEEPING_ONLY_NO_LOOP_INTEGRAND_OR_C3_BETA",
+  "negative_control_errors": {
+    "add_C3_ghost_insertion": [
+      "c3_ghost_insertion",
+      "c3_insertion_count",
+      "c3_slots:T333_GHOST",
+      "c3_vertex_order_histogram"
+    ],
+    "add_C3_two_point_insertion": [
+      "c3_insertion_count",
+      "c3_slots:T5_GRAV",
+      "c3_two_point_insertion",
+      "c3_vertex_order_histogram"
+    ],
+    "add_extra_source_topology": [
+      "baseline_topology_count",
+      "topology_ids_or_order"
+    ],
+    "alter_source_coefficient": [
+      "source_coefficient:B43_GRAV"
+    ],
+    "delete_B43_C3_slot": [
+      "c3_insertion_count",
+      "c3_slots:B43_GRAV",
+      "c3_vertex_order_histogram"
+    ],
+    "delete_T333_C3_slot": [
+      "c3_insertion_count",
+      "c3_slots:T333_GRAV",
+      "c3_vertex_order_histogram"
+    ],
+    "delete_T5_C3_slot": [
+      "c3_insertion_count",
+      "c3_slots:T5_GRAV",
+      "c3_vertex_order_histogram"
+    ],
+    "independent_n4_coupling": [
+      "noncommon_c3_coupling"
+    ],
+    "set_C3_power_two": [
+      "nonlinear_c3_power"
+    ]
+  },
+  "negative_controls": {
+    "add_C3_ghost_insertion": true,
+    "add_C3_two_point_insertion": true,
+    "add_extra_source_topology": true,
+    "alter_source_coefficient": true,
+    "delete_B43_C3_slot": true,
+    "delete_T333_C3_slot": true,
+    "delete_T5_C3_slot": true,
+    "independent_n4_coupling": true,
+    "set_C3_power_two": true
+  },
+  "negative_pass": true,
+  "positive_errors": [],
+  "positive_pass": true,
+  "scientific_pass": true,
+  "source_coefficient_derivation_pass": true,
+  "source_coefficient_sequence": [
+    "-1/2",
+    "3",
+    "-3",
+    "6"
+  ]
+}
