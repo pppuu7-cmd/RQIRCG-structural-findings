@@ -1,0 +1,41 @@
+{
+  "gate": "SF055A3_FIGURE2_ROUTING_PREFLIGHT",
+  "classification": "PASS_A3_2_FIGURE2_ROUTING_PREFLIGHT_SCOPED",
+  "scientific_pass": true,
+  "positive_pass": true,
+  "negative_pass": true,
+  "external_momentum_sum_norm": 0.0,
+  "source_coefficients": {
+    "T5_GRAV": -0.5,
+    "B43_GRAV": 3.0,
+    "T333_GRAV": -3.0,
+    "T333_GHOST": 6.0
+  },
+  "topologies": {
+    "T5_GRAV": {"shifts_checked": 5, "permutations_generated": 6, "max_vertex_conservation_norm": 0.0, "max_internal_edge_opposition_error": 0.0},
+    "B43_GRAV": {"shifts_checked": 5, "permutations_generated": 6, "max_vertex_conservation_norm": 0.0, "max_internal_edge_opposition_error": 0.0},
+    "T333_GRAV": {"shifts_checked": 5, "permutations_generated": 6, "max_vertex_conservation_norm": 5.551115123125783e-17, "max_internal_edge_opposition_error": 0.0},
+    "T333_GHOST": {"shifts_checked": 5, "permutations_generated": 6, "max_vertex_conservation_norm": 5.551115123125783e-17, "max_internal_edge_opposition_error": 0.0}
+  },
+  "negative_controls": {
+    "coefficient_mutation_rejected": true,
+    "duplicate_permutation_not_new_topology": true,
+    "frozen_regulator_line_under_shift_rejected": true,
+    "lost_external_permutation_rejected": true,
+    "triangle_endpoint_sign_flip_rejected": true,
+    "wrong_bubble_v3_sign_rejected": true
+  },
+  "successful_run": 35000570266,
+  "successful_job": 104487655005,
+  "artifact_id": 10409661837,
+  "artifact_digest": "sha256:4f20ca865dfc1987937a3689de7106bd38923331d9b6c666b01eace0e8ba7d5f",
+  "executed_head": "1340cd7e8bf72afedd7c3afc28d97571b1717b2f",
+  "first_attempt": {
+    "run": 35000421090,
+    "job": 104487155775,
+    "failure_class": "JSON_SERIALIZATION_ONLY",
+    "physics_or_threshold_changed": false
+  },
+  "next_required": "FIGURE2_TENSOR_CONTRACTION_ASSEMBLY_WITH_FULL_KQ_PROPAGATORS",
+  "interpretation_ceiling": "ROUTING_BOOKKEEPING_ONLY_NO_LOOP_INTEGRAL_NO_EQ14_NO_C3"
+}
