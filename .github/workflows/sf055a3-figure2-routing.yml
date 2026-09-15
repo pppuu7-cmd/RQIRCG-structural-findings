@@ -1,0 +1,27 @@
+name: SF055A3 Figure-2 routing preflight
+
+on:
+  pull_request:
+    paths:
+      - 'research_log/SF055A3_FIGURE2_ROUTING_FREEZE.md'
+      - 'scripts/sf055a3_figure2_routing_check.py'
+      - '.github/workflows/sf055a3-figure2-routing.yml'
+  workflow_dispatch:
+
+jobs:
+  routing-preflight:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install numpy
+        run: python -m pip install numpy
+      - name: Run routing preflight
+        run: python scripts/sf055a3_figure2_routing_check.py
+      - name: Upload routing check
+        uses: actions/upload-artifact@v4
+        with:
+          name: sf055a3-figure2-routing
+          path: results/raw/SF055A3_FIGURE2_ROUTING_CHECK.json
