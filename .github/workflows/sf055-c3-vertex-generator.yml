@@ -1,0 +1,32 @@
+name: SF055 C3 vertex generator
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'results/raw/SF055_C3_VERTEX_GENERATOR.json'
+  pull_request:
+    paths:
+      - 'scripts/sf055_c3_vertex_generator.py'
+      - 'results/raw/SF055_C3_VERTEX_GENERATOR.json'
+      - '.github/workflows/sf055-c3-vertex-generator.yml'
+
+jobs:
+  lane-b:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install numerical dependency
+        run: python -m pip install numpy
+      - name: Recompute SF055 Lane-B vertex controls
+        run: python scripts/sf055_c3_vertex_generator.py
+      - name: Verify committed raw result is deterministic
+        run: git diff --exit-code -- results/raw/SF055_C3_VERTEX_GENERATOR.json
+      - name: Upload Lane-B result
+        uses: actions/upload-artifact@v4
+        with:
+          name: sf055-c3-vertex-generator
+          path: results/raw/SF055_C3_VERTEX_GENERATOR.json
