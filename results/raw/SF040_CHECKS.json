@@ -1,0 +1,50 @@
+{
+  "classification": "TRIPLE_NULL_CONTROLS_LOCALIZE_LINEAR_CUBIC_CROSSTALK_SCOPED",
+  "exact_identities": {
+    "S_minus_NA": "zeta_A * lambda_A",
+    "S_minus_NB": "zeta_B",
+    "S_minus_NC": "zeta_C",
+    "zeta0_recovery": "e.g. zeta_NA - zeta_B - zeta_C"
+  },
+  "full_S_NA_NB_NC": {
+    "condition_number": 6.375112674740512,
+    "rank": 4,
+    "shape": [60,4],
+    "singular_values": [1.6132665237512696,1.0,0.5773502691896258,0.25305694150420955]
+  },
+  "gravity_null_authority": "inherited exact delete-A/B/C controls from SF038 across signed lambda_A grid",
+  "null_only_NA_NB_NC": {
+    "condition_number": 5.955821404176531,
+    "rank": 4,
+    "shape": [45,4]
+  },
+  "prereg_commit": "bcbe70def315877ba5148f725d86444513f64cf1",
+  "science_only_negative_control": {
+    "condition_number": "inf",
+    "rank": 2,
+    "shape": [15,4]
+  },
+  "science_plus_NA_negative_control": {
+    "condition_number": "inf",
+    "rank": 2,
+    "shape": [30,4]
+  },
+  "science_plus_NB_diagnostic": {
+    "condition_number": "inf",
+    "rank": 3,
+    "shape": [30,4]
+  },
+  "science_plus_NC_diagnostic": {
+    "condition_number": "inf",
+    "rank": 3,
+    "shape": [30,4]
+  },
+  "script_sha256": "computed from scripts/sf040_checks.py at execution",
+  "zeta_AB_countermodel": [
+    {"lambda_A":-1.0,"S_minus_NA_zetaAB_coeff":-1.0,"S_minus_NB_zetaAB_coeff":-1.0,"S_minus_NC_zetaAB_coeff":0.0},
+    {"lambda_A":-0.5,"S_minus_NA_zetaAB_coeff":-0.5,"S_minus_NB_zetaAB_coeff":-0.5,"S_minus_NC_zetaAB_coeff":0.0},
+    {"lambda_A":0.0,"S_minus_NA_zetaAB_coeff":0.0,"S_minus_NB_zetaAB_coeff":0.0,"S_minus_NC_zetaAB_coeff":0.0},
+    {"lambda_A":0.5,"S_minus_NA_zetaAB_coeff":0.5,"S_minus_NB_zetaAB_coeff":0.5,"S_minus_NC_zetaAB_coeff":0.0},
+    {"lambda_A":1.0,"S_minus_NA_zetaAB_coeff":1.0,"S_minus_NB_zetaAB_coeff":1.0,"S_minus_NC_zetaAB_coeff":0.0}
+  ]
+}
