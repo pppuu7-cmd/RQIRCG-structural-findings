@@ -1,6 +1,6 @@
 # RQIRCGSF current authoritative front
 
-Updated: 2026-09-15, after SF054 with SF055 preregistered.
+Updated: 2026-09-15, SF055 Lane B terminalized; SF055 overall remains non-terminal.
 
 ## Repository role / parent separation
 
@@ -84,13 +84,9 @@ Qualification: frozen Euclidean TT symmetric-point only; do not promote to arbit
 
 ## SF053 target-flow availability
 
-Prereg `d924354f54f777b33105bae14db8554cc3ca18e0`, audit `9e69676a9060c959bf81ab5ea1ced8e9e79e82ab`, terminal `3889d4eb28070d128bf11711cce80da331d2c7e2`.
-
 Classification: `BLOCKED_TARGET_FLOW_OBJECT_NOT_RECONSTRUCTIBLE_SCOPED`.
 
 Secondary: `P6_C3_INFORMATION_DISCARDED_OR_NOT_INCLUDED_IN_EXECUTED_FLUCTUATION_TRUNCATIONS_SCOPED`.
-
-Existing fluctuation FRG calculations define tensor-valued flows formally but execute/publish coupling flows after projection onto a small Einstein-Hilbert-derived tensor basis. Full momentum dependence of one selected tensor dressing does not recover the orthogonal p6 C3 direction. Later effective-action reconstruction explicitly omits p6/R3.
 
 Retain:
 
@@ -101,8 +97,6 @@ Retain:
 Background `G_C3` must not substitute for the missing fluctuation object.
 
 ## SF054 minimal covariant C3 flow closure
-
-Prereg `34777656841abd66b221614bef8c0fafe06f8292`, audit `a9f1bff60d14e8843563ad085e121813329aa87c`, terminal `3ca271ea38c0b6668f65daafe23a985b3f8226f3`, ledger `72ba5302fb534241d5e6b339f394c417044c38b2`.
 
 Classification: `MINIMAL_C3_FLOW_REQUIRES_CORRELATED_3_4_5_VERTEX_INSERTIONS_SCOPED`.
 
@@ -124,44 +118,94 @@ Prospective preregistration:
 
 `9d998d984566aa5bf290312a6a062fd632c85561`.
 
-Status: `PREREGISTERED / NOT YET TERMINAL`.
+Status: `ACTIVE / NON-TERMINAL`.
 
-Frozen baseline realization inherits the published Local Quantum Gravity conventions:
+Frozen realization remains:
 
 - D=4 flat Euclidean background and linear split;
-- De-Donder-type linear gauge in the Landau limit;
+- De-Donder-type linear gauge in Landau limit;
 - graviton + Faddeev-Popov ghost sectors;
 - source regulator `R_phi(x)=Gamma_k^(phi phi)|_{mu=0}(x) r(x)` with `x r(x)=(1-x) theta(1-x)`;
-- symmetric external 3-point kinematics with target `p=k`, rescaling to the SF052 unit symmetric point;
-- source wave-function/canonical normalization tracked explicitly.
+- symmetric external three-point kinematics with target `p=k`, rescaling to the SF052 unit symmetric point;
+- one common `g_C3^fluc(k)=k^2 G_C3^fluc(k)` generating correlated `Gamma_C3^(3,4,5)`;
+- final target `B_C3(k)=P_E_6d[[partial_t Gamma_k^(3)]_TT]` only after calibration.
 
-Frozen C3 extension: one common `g_C3^fluc(k)=k^2 G_C3^fluc(k)` generating correlated `Gamma_C3^(3,4,5)`; no independent higher-vertex C3 coefficients.
+### SF055 preflight / auto-research contribution
 
-Target:
+Merged preflight commit:
 
-`B_C3(k)=P_E_6d[[partial_t Gamma_k^(3)]_TT]`
+`c2b888363267d25b9e1443b6ce545abf3d396688`.
 
-at the frozen symmetric point after the unprojected TT loop flow is assembled.
+GitHub Actions run `34993910636` completed successfully and validated source transcription, Eq. (14) spot checks, abstract one-C3 insertion slots and the inherited projector interface.
 
-Required pre-science calibration lanes:
+This remained explicitly preflight-only: it did not generate the correlated C3 vertices and did not terminalize SF055.
 
-1. reproduce a prospectively specified published baseline projected three-point flow using the same implementation conventions;
-2. reproduce `Gamma_C3^(2)=0` and the SF052 C3 three-point projector response;
-3. verify Bose symmetry and common-coupling origin of generated C3 3/4/5 vertices;
-4. verify every allowed one-C3 insertion is present in the three-point flow topologies;
-5. only then inspect a substantive C3 projected flow output.
+### SF055 Lane B — terminal PASS scoped
 
-Do not change gauge, regulator, split, kinematics, C3 closure or projector after seeing a C3 result.
+Result note:
+
+`results/SF055_LANE_B_C3_COMMON_ORIGIN_VERTEX_GENERATOR_TERMINAL.md`.
+
+Classification:
+
+`PASS_C3_COMMON_ORIGIN_VERTEX_GENERATOR_SCOPED`.
+
+A single covariant `int sqrt(g) C^3` generator now supplies correlated n=3,4,5 pure-graviton vertices in the frozen flat-Euclidean realization.
+
+Controls passed:
+
+- `Gamma_C3^(2)=0`;
+- all 125 SF052 cubic TT components match with one common functional-derivative factor `3! = 6`;
+- n=3,4,5 Bose symmetry checked over all 6, 24, 120 permutations;
+- zero/double one-common-coupling controls pass for all n=3,4,5;
+- no independent higher-vertex C3 coefficients exist.
+
+Initial validation run `34995303477` recomputed all science controls successfully but failed only byte-for-byte JSON comparison because machine-level floating diagnostics varied at `~1e-14` to `1e-13`, far below the unchanged `1e-10` science threshold.
+
+A prospective reproducibility-only repair was frozen in `research_log/SF055_LANE_B_REPRODUCIBILITY_REPAIR.md`. The repair changed no physics, thresholds or PASS criteria; it replaced the fixed SF052 SVD frame by the explicit SF050 analytic frame and canonicalized durable floating diagnostics.
+
+Independent retry:
+
+- run `34995827603`;
+- job `104471676663`;
+- conclusion `success`;
+- recomputation PASS;
+- canonical raw byte-stability PASS;
+- artifact upload PASS;
+- artifact id `10407234167`;
+- digest `sha256:7db9004088f78bb8513c84373a5c4688790e28749727af866ab56a7518048e9c`.
+
+Retain:
+
+`LANE_B_PASS != SF055_TERMINAL_PASS`.
+
+`SF055_TERMINAL_PASS = FALSE`.
 
 ## Current exact frontier
 
-`SF055_C3_PROJECTED_FRG_IMPLEMENTATION_CONTRACT_ACTIVE`.
+Lane A:
 
-Immediate work:
+`OPEN_BASELINE_EH_GHOST_FLOW_REPRODUCTION`.
 
-`CORRELATED_C3_3_4_5_VERTEX_GENERATOR + BASELINE_FRG_REPRODUCTION + PROJECTOR_FLOW_INTERFACE`.
+The same implementation path must reproduce the prospectively frozen published three-point baseline; hard-coded Eq. (14) values are insufficient.
 
-No C3 beta-value interpretation is authorized until SF055 calibration lanes terminalize.
+Lane C:
+
+`ABSTRACT_MANIFEST_PASS_IMPLEMENTED_DIAGRAM_MANIFEST_OPEN`.
+
+The implemented EH/ghost diagram realization must expose every frozen allowed one-C3 insertion slot and reject forbidden/missing/double insertions.
+
+Only after Lane A and implemented Lane C terminalize may a substantive projected C3 beta output be inspected.
+
+Highest-information next work:
+
+`SF055_LANE_A_SAME_CODE_PATH_EH_GHOST_BASELINE_REPRODUCTION`.
+
+Then:
+
+`SF055_LANE_C_IMPLEMENTED_DIAGRAM_MANIFEST`.
+
+No C3 beta-value interpretation is authorized yet.
 
 ## Claim locks
 
@@ -170,6 +214,7 @@ No C3 beta-value interpretation is authorized until SF055 calibration lanes term
 - no background/fluctuation equality assumed;
 - no frozen-point quotient PASS promoted to arbitrary kinematics;
 - no projected dynamical C3 beta function claimed yet;
+- no Lane-B PASS promoted to SF055 terminal PASS;
 - no three-point-only C3 truncation called covariantly complete;
 - no Euclidean off-shell coefficient called a physical observable without continuation;
 - no operational result selects quantum-law matching;
