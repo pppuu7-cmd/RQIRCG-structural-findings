@@ -1,0 +1,51 @@
+{
+  "gate": "SF055_C3_PROJECTED_FRG_IMPLEMENTATION_CONTRACT",
+  "parent_preregistration": "9d998d984566aa5bf290312a6a062fd632c85561",
+  "branch": "sf055-preflight-20260915",
+  "status": "PROSPECTIVE_CALIBRATION_SPECIFICATION",
+  "source": {
+    "paper": "Christiansen et al., Local Quantum Gravity",
+    "arxiv": "1506.07016v2",
+    "objects": ["eq1", "eq3-7", "fig2", "eq9-11", "regulator_after_eq11", "eq14"]
+  },
+  "lane_A": {
+    "spotcheck_point": {"g": "1", "mu_h": "1/10", "lambda_3": "-7/10"},
+    "eq14_exact": {
+      "B_g": "-274830865/3865224",
+      "beta_g": "2 - (274830865/9179907)/pi",
+      "beta_lambda3": "7/5 - (3364922887/183598140)/pi",
+      "beta_mu": "-1/5 + (6554/3993)/pi"
+    },
+    "reference_decimals": {
+      "beta_g": -7.529658781722162,
+      "beta_lambda3": -4.433872942167074,
+      "beta_mu": 0.32246506237129074
+    },
+    "terminal_pass_requires_same_EH_ghost_diagram_code_path": true
+  },
+  "lane_B": {
+    "single_common_C3_coupling": true,
+    "required_vertex_orders": [3,4,5],
+    "negative_control_Gamma2_zero": true,
+    "bose_symmetry_required": true,
+    "SF052_cubic_tensor_match_required": true
+  },
+  "lane_C": {
+    "linear_order_insertion_classes": [
+      "triangle_one_C3_Gamma3",
+      "bubble_C3_Gamma4_with_baseline_Gamma3",
+      "bubble_C3_Gamma3_with_baseline_Gamma4",
+      "tadpole_C3_Gamma5"
+    ],
+    "forbidden": ["C3_Gamma2_propagator_insertion", "ghost_C3_vertex", "double_C3_insertion_at_linear_order"]
+  },
+  "projector_interface": {
+    "P_C3": "1",
+    "P_S3": "0",
+    "P_SSC": "0",
+    "P_RDeltaR": "0",
+    "P_SDeltaS": "0",
+    "residual_norm": "243/9920"
+  },
+  "interpretation_ceiling": "NO_C3_BETA_OR_SELECTOR_CLAIM"
+}
