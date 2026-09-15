@@ -4,8 +4,13 @@ on:
   pull_request:
     paths:
       - 'scripts/sf055_c3_vertex_generator.py'
+      - 'scripts/sf055b_direct_c3_verifier.py'
+      - 'scripts/sf055b_v4_convergence_diagnostic.py'
       - 'results/raw/SF055_C3_COMMON_VERTEX_GENERATOR.json'
+      - 'results/raw/SF055B_C3_DIRECT_VERIFICATION.json'
+      - 'results/raw/SF055B_V4_STEP_CONVERGENCE_DIAGNOSTIC.json'
       - 'research_log/SF055_C3_COMMON_VERTEX_GENERATOR_FREEZE.md'
+      - 'prereg/SF055B_C3_VERTEX_GENERATOR_INDEPENDENT_VERIFICATION_PREOUTCOME.md'
       - '.github/workflows/sf055-c3-generator.yml'
   workflow_dispatch:
 
@@ -21,10 +26,21 @@ jobs:
         run: python -m pip install --disable-pip-version-check numpy
       - name: Run common C3 vertex generator controls
         run: python scripts/sf055_c3_vertex_generator.py > /tmp/SF055_C3_COMMON_VERTEX_GENERATOR.json
-      - name: Verify deterministic frozen result
+      - name: Verify deterministic frozen generator result
         run: diff -u results/raw/SF055_C3_COMMON_VERTEX_GENERATOR.json /tmp/SF055_C3_COMMON_VERTEX_GENERATOR.json
-      - name: Upload generator result
+      - name: Run independent direct-geometry verifier
+        run: python scripts/sf055b_direct_c3_verifier.py > /tmp/SF055B_C3_DIRECT_VERIFICATION.json
+      - name: Verify deterministic frozen SF055B result
+        run: diff -u results/raw/SF055B_C3_DIRECT_VERIFICATION.json /tmp/SF055B_C3_DIRECT_VERIFICATION.json
+      - name: Run post-outcome V4 convergence diagnostic
+        run: PYTHONPATH=scripts python scripts/sf055b_v4_convergence_diagnostic.py > /tmp/SF055B_V4_STEP_CONVERGENCE_DIAGNOSTIC.json
+      - name: Verify deterministic diagnostic
+        run: diff -u results/raw/SF055B_V4_STEP_CONVERGENCE_DIAGNOSTIC.json /tmp/SF055B_V4_STEP_CONVERGENCE_DIAGNOSTIC.json
+      - name: Upload SF055 C3 verification results
         uses: actions/upload-artifact@v4
         with:
-          name: sf055-c3-common-vertex-generator
-          path: /tmp/SF055_C3_COMMON_VERTEX_GENERATOR.json
+          name: sf055-c3-generator-verification
+          path: |
+            /tmp/SF055_C3_COMMON_VERTEX_GENERATOR.json
+            /tmp/SF055B_C3_DIRECT_VERIFICATION.json
+            /tmp/SF055B_V4_STEP_CONVERGENCE_DIAGNOSTIC.json
