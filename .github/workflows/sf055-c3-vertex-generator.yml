@@ -1,0 +1,26 @@
+name: SF055 C3 vertex generator
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/sf055_c3_covariant_vertex_generator.py'
+      - '.github/workflows/sf055-c3-vertex-generator.yml'
+  workflow_dispatch:
+
+jobs:
+  generator-controls:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install numpy
+        run: python -m pip install numpy
+      - name: Run common covariant C3 generator controls
+        run: python scripts/sf055_c3_covariant_vertex_generator.py
+      - name: Upload raw generator checks
+        uses: actions/upload-artifact@v4
+        with:
+          name: sf055-c3-vertex-generator-checks
+          path: results/raw/SF055_C3_VERTEX_GENERATOR_CHECKS.json
