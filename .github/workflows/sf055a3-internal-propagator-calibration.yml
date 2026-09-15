@@ -1,0 +1,27 @@
+name: SF055A3 internal propagator calibration
+
+on:
+  pull_request:
+    paths:
+      - 'prereg/SF055A3_SOURCE_FOURIER_BASELINE_LOOP_REPRODUCTION_PREOUTCOME.md'
+      - 'scripts/sf055a3_internal_propagator_calibration.py'
+      - '.github/workflows/sf055a3-internal-propagator-calibration.yml'
+  workflow_dispatch:
+
+jobs:
+  internal-propagator:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install numpy
+        run: python -m pip install numpy
+      - name: Run SF055A3 A3.1 calibration
+        run: python scripts/sf055a3_internal_propagator_calibration.py
+      - name: Upload raw calibration
+        uses: actions/upload-artifact@v4
+        with:
+          name: sf055a3-internal-propagator-calibration
+          path: results/raw/SF055A3_INTERNAL_PROPAGATOR_CALIBRATION.json
