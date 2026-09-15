@@ -1,0 +1,166 @@
+# SF055 Lane A — internal propagator / regulator source-authority audit
+
+Date: 2026-09-15
+Parent authority: SF055 preregistration `9d998d984566aa5bf290312a6a062fd632c85561`.
+Inherited durable status: Lane B PASS; Lane C topology/insertion bookkeeping PASS; SF055A predecessor INVALID due mixed momentum conventions; SF055A2 source-Fourier EH/FP/regulator seed engine PASS.
+
+## QUESTION
+
+Before constructing the full EH/ghost three-point baseline loop, determine whether the primary-source authority defines the internal graviton/ghost propagator and regulator tensor object sufficiently to avoid an unsupported TT-only or gauge-sector guess.
+
+## PRIMARY SOURCES
+
+### 1. Christiansen, Knorr, Pawlowski, Rodigast — Global Flows in Quantum Gravity
+
+arXiv:1403.1232v2 / Phys. Rev. D 93, 044036.
+
+Relevant source objects:
+
+- Eq. (5): gauge-fixed Einstein-Hilbert action plus Faddeev-Popov ghost action;
+- Eqs. (6)–(7): exact FP operator and linear de-Donder/harmonic gauge condition;
+- Landau limit `xi -> 0`;
+- Eqs. (9)–(16): vertex parameterisation, uniform graviton wave-function renormalisation, TT two-point mass coordinate, and EH-derived tensor structures;
+- regulator definition Eq. (18): regulator proportional to the tensor structure of the two-point function at vanishing mass;
+- optimized regulator Eq. (19).
+
+The paper states that all graviton-mode wave-function renormalisations are identified with the TT one in the uniform approximation. It also states that the general two-point tensor structures arise from functional differentiation of the Einstein-Hilbert action, while displayed scalar two-point formulae subsequently refer to the TT projection.
+
+### 2. Christiansen et al. — Local Quantum Gravity
+
+arXiv:1506.07016v2 / Phys. Rev. D 92, 121501.
+
+Relevant source objects:
+
+- Eqs. (3)–(5): dressed vertex ansatz with classical gauge-fixed Einstein-Hilbert tensor structures;
+- Fig. 2: three-graviton flow with graviton/ghost propagators and regulator insertions;
+- Eqs. (6)–(11): external TT projection and three-point coupling extraction;
+- regulator prescription after Eq. (11): `R_phi(x)=Gamma_k^(phi phi)|_{mu=0}(x) r(x)` with `x r(x)=(1-x) theta(1-x)`;
+- Eq. (14): analytic `eta_h=eta_c=0` baseline flow equations.
+
+### 3. Denz, Pawlowski, Reichert — Towards apparent convergence in asymptotically safe quantum gravity
+
+arXiv:1612.07315 / Eur. Phys. J. C 78, 336 (2018).
+
+This later paper explicitly documents the same vertex-expansion architecture and is used here as clarification of the implementation convention, not as a replacement for the 2015 baseline target.
+
+Relevant statements:
+
+- Eqs. (4)–(8): same gauge-fixed EH/FP action, harmonic gauge `beta=1`, Landau `alpha -> 0`;
+- in Landau gauge the fluctuation graviton propagator is transverse, i.e. annihilated by the gauge-fixing condition;
+- the flow equations for transverse fluctuation vertices are closed: external legs are transverse due to projection and internal legs are transverse because they are contracted with the transverse propagator;
+- Eqs. (15)–(16): transverse vertex tensors are generated from the gauge-fixed Einstein-Hilbert action;
+- the implementation uses a uniform graviton propagator with wave-function renormalisation taken from the TT mode;
+- regulator Eq. (23) is modelled on the corresponding two-point function at vanishing mass;
+- computational discussion states that the classical graviton propagator contains seven tensor terms, confirming that the internal object is not an unsupported scalar TT denominator.
+
+## SOURCE-TYPED INTERNAL GRAVITON OBJECT
+
+The source-faithful internal graviton object is therefore **not**
+
+`scalar_TT_propagator * Pi_TT`
+
+inserted by assumption.
+
+Instead it is the inverse of the gauge-fixed EH two-point tensor restricted to the Landau-transverse fluctuation subspace, with the uniform graviton wave-function factor identified with the TT one and with the regulator built from the same massless two-point tensor structure.
+
+At each nonzero internal Fourier momentum `q`, define the linear gauge map
+
+`F_mu[h;q] = i q^nu h_mu nu - (i/2) q_mu h^nu_nu`.
+
+The Landau-transverse subspace is
+
+`K(q) = ker F(q)`.
+
+The published Landau closure permits the internal graviton Hessian and regulator to be represented directly on `K(q)`. This retains the transverse trace/scalar direction when present; it does not silently discard it by replacing `K(q)` with the 5-dimensional TT subspace.
+
+The source action and gauge condition uniquely define the quadratic tensor on this subspace. No extra longitudinal ansatz is needed because the source states that longitudinal sectors decouple from the closed transverse flow at `alpha=0`.
+
+## SOURCE-TYPED REGULATOR OBJECT
+
+For the graviton sector at `k=1`, let
+
+`H_0(q) = Gamma_hh^(2)(q; Lambda_2=0)|_{K(q)}`.
+
+The source regulator is
+
+`R_h(q) = H_0(q) r(q^2)`,
+
+with optimized shape
+
+`r(x)=(1-x)/x theta(1-x)`.
+
+For `eta_h=0`, the scale derivative is generated by the same tensor `H_0(q)` multiplied by the source optimized `dot r` factor. The regulator is therefore not a separately guessed scalar mass term.
+
+The ghost sector is generated from the published FP operator. At flat background and zero fluctuation field its two-point object is the Fourier FP Hessian; its regulator is analogously built from the massless ghost two-point tensor structure and the same source shape function.
+
+## VERTEX OBJECTS ENTERING THE LOOP
+
+The baseline n=3,4,5 pure-graviton tensors are the source-Fourier functional derivatives of the single gauge-fixed Einstein-Hilbert action, with `Lambda -> Lambda_n` after differentiation as specified by the vertex ansatz.
+
+Because the source gauge condition is linear in `h`, the gauge-fixing action contributes only to the two-point Hessian, not to n>=3 pure-graviton vertices.
+
+The source FP operator is at most linear in `h` in the linear split/gauge used here. Thus the baseline ghost contribution to the three-graviton flow is the ghost triangle assembled from three ghost-ghost-h vertices; no source ghost-ghost-h^2 or higher vertex is required.
+
+These statements are independently consistent with the already-passed SF055A2 seed controls.
+
+## THREE-POINT FLOW / PROJECTION OBJECT
+
+The 2015 source does not print the scalar kernels `F_{phi_i,Lambda/G}` in Eq. (7). This remains true.
+
+However, their defining ingredients are source-closed:
+
+1. the gauge-fixed EH/FP action;
+2. the Landau-transverse internal propagator sector;
+3. the regulator tensor prescription;
+4. the Figure-2 topology/coefficient structure already closed by SF055 Lane C;
+5. the classical EH external projectors and external TT reduction;
+6. the symmetric three-point kinematics;
+7. the source coupling identifications used for Eq. (14).
+
+Therefore
+
+`KERNEL_NOT_PRINTED != OBJECT_NOT_RECONSTRUCTIBLE`.
+
+The kernels must be generated from the source objects; they must not be reconstructed by fitting Eq. (14).
+
+## NEGATIVE SOURCE-AUTHORITY CHECKS
+
+The following substitutions are not source-authorized for the Lane-A baseline reproduction:
+
+- internal TT-only graviton propagation by assumption;
+- omission of the transverse non-TT direction(s) merely because the external projector is TT;
+- a scalar regulator multiplied by an independently chosen projector rather than `Gamma^(2)|_{mass=0}`;
+- a background-C3 or background-EH propagator substituted for the fluctuation propagator;
+- fitting unknown loop kernels directly to Eq. (14);
+- changing from the source-Fourier convention validated in SF055A2 back to the invalid real-exponential momentum convention.
+
+## CLASSIFICATION
+
+`PASS_INTERNAL_PROPAGATOR_AND_REGULATOR_SOURCE_AUTHORITY_CLOSED_SCOPED`.
+
+Secondary:
+
+`LANDAU_TRANSVERSE_INTERNAL_SUBSPACE_REQUIRED_SCOPED`.
+
+`TT_EXTERNAL_PROJECTION != TT_ONLY_INTERNAL_PROPAGATOR`.
+
+## INTERPRETATION CEILING
+
+This is a source-authority PASS only. It does not show that the numerical internal propagator has been implemented correctly, that Figure-2 contractions or momentum routing are correct, or that Eq. (14) has been reproduced.
+
+It does not terminalize Lane A or SF055 and authorizes no C3 beta output.
+
+## NEXT GATE
+
+Prospectively freeze a full source-Fourier Lane-A baseline-loop reproduction with:
+
+- an explicit numerical construction of `K(q)=ker F(q)` at every internal momentum;
+- the EH Hessian and massless regulator tensor restricted to `K(q)`;
+- the source FP propagator/regulator;
+- n=3,4,5 EH and ghost-h vertices from the already-validated seed machinery;
+- exact Lane-C Figure-2 topology coefficients and full external symmetrisation;
+- explicit loop momentum routing;
+- explicit external TT projector contractions and source normalisations;
+- a prospectively frozen quadrature/convergence strategy;
+- no C3 insertions enabled;
+- same-code-path reproduction of the already-frozen `eta_h=eta_c=0` Local Quantum Gravity baseline before any C3 output is inspected.
