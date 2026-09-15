@@ -11,6 +11,17 @@ TOL = 1e-12
 COEFF = {"T5_GRAV": -0.5, "B43_GRAV": 3.0, "T333_GRAV": -3.0, "T333_GHOST": 6.0}
 
 
+def json_default(obj):
+    """Serialization-only adapter; routing/science criteria are unchanged."""
+    if isinstance(obj, np.bool_):
+        return bool(obj)
+    if isinstance(obj, np.integer):
+        return int(obj)
+    if isinstance(obj, np.floating):
+        return float(obj)
+    raise TypeError(f"Object of type {obj.__class__.__name__} is not JSON serializable")
+
+
 def sym_ps():
     p1 = np.array([1.0, 0.0, 0.0, 0.0])
     p2 = np.array([-0.5, np.sqrt(3.0) / 2.0, 0.0, 0.0])
@@ -59,7 +70,6 @@ def validate_graph(graph):
 
 
 def canonical_signature(graph):
-    # Structural incidence signature, deliberately independent of numerical q values.
     return tuple(sorted((min(a, b), max(a, b)) for a, _, b, _ in graph["edges"]))
 
 
@@ -75,7 +85,6 @@ def all_permuted(build, ps, q):
 
 def mutation_checks(ps, q):
     checks = {}
-
     g = b43(ps, q)
     bad = {k: ([np.array(x, copy=True) for x in v] if k != "edges" else list(v)) for k, v in g.items()}
     bad["v3"][2] = q - ps[0] - ps[1]
@@ -96,8 +105,6 @@ def mutation_checks(ps, q):
     mutated_coeff["B43_GRAV"] = 4.0
     checks["coefficient_mutation_rejected"] = mutated_coeff != COEFF
 
-    # Regulator-line transformation bookkeeping diagnostic: canonical q line must
-    # move with q under any nonzero affine diagnostic shift.
     qshift = shift_q(q, ps, 1, 0)
     checks["frozen_regulator_line_under_shift_rejected"] = np.linalg.norm(qshift - q) > TOL
     return checks
@@ -161,8 +168,9 @@ def main():
         "interpretation_ceiling": "ROUTING_BOOKKEEPING_ONLY_NO_LOOP_INTEGRAL_NO_EQ14_NO_C3",
     }
     OUT.parent.mkdir(parents=True, exist_ok=True)
-    OUT.write_text(json.dumps(out, indent=2, sort_keys=True) + "\n")
-    print(json.dumps(out, indent=2, sort_keys=True))
+    text = json.dumps(out, indent=2, sort_keys=True, default=json_default) + "\n"
+    OUT.write_text(text)
+    print(text, end="")
     if not scientific_pass:
         raise SystemExit(1)
 
