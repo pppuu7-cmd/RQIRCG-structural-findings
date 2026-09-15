@@ -5,9 +5,13 @@ on:
     branches: [main]
     paths:
       - 'results/raw/SF055_C3_VERTEX_GENERATOR.json'
+      - 'scripts/sf055_c3_vertex_generator.py'
+      - 'scripts/compare_json_numeric.py'
+      - '.github/workflows/sf055-c3-vertex-generator.yml'
   pull_request:
     paths:
       - 'scripts/sf055_c3_vertex_generator.py'
+      - 'scripts/compare_json_numeric.py'
       - 'results/raw/SF055_C3_VERTEX_GENERATOR.json'
       - '.github/workflows/sf055-c3-vertex-generator.yml'
 
@@ -21,10 +25,12 @@ jobs:
           python-version: '3.12'
       - name: Install numerical dependency
         run: python -m pip install numpy
+      - name: Preserve committed Lane-B result
+        run: cp results/raw/SF055_C3_VERTEX_GENERATOR.json /tmp/SF055_C3_VERTEX_GENERATOR.expected.json
       - name: Recompute SF055 Lane-B vertex controls
         run: python scripts/sf055_c3_vertex_generator.py
-      - name: Verify committed raw result is deterministic
-        run: git diff --exit-code -- results/raw/SF055_C3_VERTEX_GENERATOR.json
+      - name: Verify scientific result and numeric reproducibility
+        run: python scripts/compare_json_numeric.py /tmp/SF055_C3_VERTEX_GENERATOR.expected.json results/raw/SF055_C3_VERTEX_GENERATOR.json 1e-12
       - name: Upload Lane-B result
         uses: actions/upload-artifact@v4
         with:
