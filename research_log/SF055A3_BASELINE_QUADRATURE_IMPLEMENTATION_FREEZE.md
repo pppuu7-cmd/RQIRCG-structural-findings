@@ -27,7 +27,7 @@ For nonzero q let `u=q/|q|`, `P=I-u u^T`. Use the same five orthonormal transver
 
 Then `F[H_s;q]=0`, `tr H_s=sqrt(3)`, and `H_s` is orthogonal to all five TT tensors. Thus these six tensors span exactly the already-authorized `ker F(q)`.
 
-In this basis the source Landau propagator is diagonal: five TT modes have inverse two-point coefficient `K_EH(q^2+mu)` and the scalar transverse mode has `-2 K_EH(q^2+mu)`, with `K_EH=1/(32 pi)`. The optimized regulator replaces `q^2` by 1 below cutoff. The implementation MUST self-check this diagonal form against the already-validated source-Fourier Hessian before any integrated result is accepted.
+A pre-quadrature direct evaluation with the validated source-Fourier two-point engine fixes the diagonal Hessian in this normalized basis: five TT modes have inverse two-point coefficient `K_EH(q^2+mu)` and the sixth scalar transverse mode has `-(K_EH/2)(q^2+mu)`, with `K_EH=1/(32 pi)`. This replaces an initial implementation note that incorrectly wrote `-2 K_EH`; the correction was made before any quadrature output and changes no frozen science object. The optimized regulator replaces `q^2` by 1 below cutoff. The executable MUST independently repeat this source-Hessian self-check before any integrated result is accepted.
 
 ## Exact batched EH vertex evaluation
 
