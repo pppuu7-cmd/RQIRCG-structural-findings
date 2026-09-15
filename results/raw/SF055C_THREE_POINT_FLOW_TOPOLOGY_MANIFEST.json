@@ -1,0 +1,66 @@
+{
+  "gate": "SF055C_IMPLEMENTED_THREE_POINT_FLOW_TOPOLOGY_MANIFEST",
+  "parent_gate": "SF055_C3_PROJECTED_FRG_IMPLEMENTATION_CONTRACT",
+  "source": {
+    "paper": "Christiansen et al., Local Quantum Gravity",
+    "arxiv": "1506.07016v2",
+    "objects": ["Eq.(1)", "Fig.2", "Eq.(7)"]
+  },
+  "common_c3_coupling": "g_C3_fluc",
+  "linear_c3_order": 1,
+  "projection_stage": "AFTER_UNPROJECTED_TT_FLOW_ASSEMBLED",
+  "topologies": [
+    {
+      "id": "T5_GRAV",
+      "species": "graviton",
+      "source_coefficient": "-1/2",
+      "vertex_orders": [5],
+      "baseline": true,
+      "external_symmetrized": true,
+      "c3_insertions": [
+        {"slot": "v5", "vertex_order": 5, "c3_power": 1, "coupling": "g_C3_fluc"}
+      ]
+    },
+    {
+      "id": "B43_GRAV",
+      "species": "graviton",
+      "source_coefficient": "3",
+      "vertex_orders": [4, 3],
+      "baseline": true,
+      "external_symmetrized": true,
+      "c3_insertions": [
+        {"slot": "v4", "vertex_order": 4, "c3_power": 1, "coupling": "g_C3_fluc"},
+        {"slot": "v3", "vertex_order": 3, "c3_power": 1, "coupling": "g_C3_fluc"}
+      ]
+    },
+    {
+      "id": "T333_GRAV",
+      "species": "graviton",
+      "source_coefficient": "-3",
+      "vertex_orders": [3, 3, 3],
+      "baseline": true,
+      "external_symmetrized": true,
+      "c3_insertions": [
+        {"slot": "v3a", "vertex_order": 3, "c3_power": 1, "coupling": "g_C3_fluc"},
+        {"slot": "v3b", "vertex_order": 3, "c3_power": 1, "coupling": "g_C3_fluc"},
+        {"slot": "v3c", "vertex_order": 3, "c3_power": 1, "coupling": "g_C3_fluc"}
+      ]
+    },
+    {
+      "id": "T333_GHOST",
+      "species": "ghost",
+      "source_coefficient": "6",
+      "vertex_orders": [3, 3, 3],
+      "baseline": true,
+      "external_symmetrized": true,
+      "c3_insertions": []
+    }
+  ],
+  "forbidden": [
+    "Gamma_C3_2_PROPAGATOR_INSERTION",
+    "C3_GHOST_VERTEX",
+    "C3_POWER_GT_1_AT_LINEAR_ORDER",
+    "EXTRA_SOURCE_TOPOLOGY",
+    "EARLY_EH_SCALAR_PROJECTION"
+  ]
+}
