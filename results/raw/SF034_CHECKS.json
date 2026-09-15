@@ -1,0 +1,40 @@
+{
+  "M0": {
+    "control_lambda_A": 0,
+    "science_lambda_A": 1,
+    "science_minus_control_register": "0",
+    "theta3_register_deleteA": "-zeta*T",
+    "theta3_register_science": "-zeta*T",
+    "transferability": "EXACT_WITHIN_M0"
+  },
+  "M1": {
+    "deleteA_alone_identifies_zeta1": false,
+    "science_minus_control_register": "-zeta1*T",
+    "theta3_register_deleteA": "-zeta0*T",
+    "theta3_register_science": "-(zeta0+zeta1)*T",
+    "transferability": "FAILS_UNLESS_ZETA1_ZERO_OR_INDEPENDENTLY_CALIBRATED",
+    "zeta_lambda": "zeta0+zeta1*lambda_A"
+  },
+  "boolean_third_difference": {
+    "1": 0,
+    "nA": 0,
+    "nAnB": 0,
+    "nAnBnC": 1,
+    "nAnC": 0,
+    "nB": 0,
+    "nBnC": 0,
+    "nC": 0
+  },
+  "classification": "CONNECTED_CONTROL_PHASE_TRANSFER_MAP_DERIVED_UNDER_CONTROL_SEPARABILITY_SCOPED",
+  "prereg_commit": "45a121c99f41e285b4f007984ffe55763831f343",
+  "qualification": "MODEL_LEVEL_TRANSFERABILITY_NOT_DEVICE_VALIDATION",
+  "sf033_transfer_elements": {
+    "count_present_M0": 6,
+    "deleteA_action": true,
+    "equality_reason_M0": true,
+    "falsification_condition": true,
+    "fixed_vs_changed_variables": true,
+    "nuisance_generator": true,
+    "science_action": true
+  }
+}
