@@ -1,6 +1,6 @@
 # RQIRCGSF current authoritative front
 
-Updated: 2026-09-15, after SF038.
+Updated: 2026-09-15, after SF042.
 
 ## Repository role
 
@@ -28,7 +28,7 @@ SF028B remains the boundary-complete physical-object authority:
 
 `PASS_BOUNDARY_COMPLETE_KNOWN_PHYSICS_COHERENCE_BASELINE_SCOPED`.
 
-Authoritative observable is the reduced-qubit connected cumulant `C3`, with `Theta3=Im C3`, `Gamma3=-Re C3`.
+Authoritative observable remains reduced-qubit `C3`, with `Theta3=Im C3`, `Gamma3=-Re C3`.
 
 Retain:
 
@@ -36,133 +36,207 @@ Retain:
 
 `NONZERO_CONNECTED_SIGNAL != NEW_THREE_BODY_GRAVITATIONAL_VERTEX`.
 
-## Retained operational calibration chain
+## Retained SF029–SF038 calibration chain
 
-SF029: `ROBUST_KNOWN_PHYSICS_COHERENCE_BASELINE_HIERARCHY_SCOPED`.
+SF029: robust known-physics baseline hierarchy.
 
-SF030: `KNOWN_PHYSICS_COHERENCE_COMPONENTS_STRUCTURALLY_IDENTIFIABLE_SCOPED`.
+SF030: known components structurally identifiable under joint R/T design.
 
-SF031: generic R-independent tau-linear nuisance keeps rank but causes PN VIF `~2.1341e4`.
+SF031: generic R-independent tau-linear nuisance causes PN VIF `~2.1341e4`.
 
-SF032: matched delete-A null control can reduce PN VIF to `1.658` if the nuisance is physically shared.
+SF032: matched delete-A null can reduce PN VIF to `1.658` under a shared-nuisance hypothesis.
 
-SF033: `BLOCKED_MISSING_CONTROL_TRANSFER_MODEL` at the historical ideal-protocol authority level.
+SF033: historical ideal protocol lacked a physical transfer map.
 
-SF034 terminal `f4239b692ddb2879e1256450c076bc0ff00a1d9c`:
+SF034: explicit cubic register-phase control map; `C3` rejects diagonal Boolean degree <=2 control phases.
 
-`CONNECTED_CONTROL_PHASE_TRANSFER_MAP_DERIVED_UNDER_CONTROL_SEPARABILITY_SCOPED`.
+SF035: linear amplitude dependence identifiable; quadratic Q2 full rank but ill-conditioned.
 
-`C3` exactly rejects diagonal control phases through Boolean degree 2 and retains the cubic `hbar zeta n_A n_B n_C` phase.
+SF036: positive five-point amplitude ladder strongly improves Q2 structural conditioning.
 
-SF035 terminal `da807bcd82d1a64598ba9ba9252ceb6e6df4ffd6`:
+SF037: Q2 and 1PN jointly estimable; positive five-point Q2 PN VIF `909.166`.
 
-`LINEAR_CONTROL_PHASE_AMPLITUDE_DEPENDENCE_IDENTIFIABLE_SCOPED`.
-
-Linear `zeta0+zeta1 lambda_A` is moderately conditioned (`kappa=23.897`) on the three-amplitude/R/T design. Quadratic Q2 is full rank but ill-conditioned (`kappa=899.709`).
-
-SF036 terminal `43c6422f251bba181593a7512ea57e470e0e061d`:
-
-`FIVE_POINT_AMPLITUDE_LADDER_STRONGLY_IMPROVES_Q2_CONDITIONING_SCOPED`.
-
-Positive five-point ladder reduces Q2 `kappa` to `219.148` and improves the critical singular direction by `~4.1x`.
-
-SF037 terminal `2765dd936f0bf30fdb0968c687c5fe4bc297226f`:
-
-`Q2_CONTROL_PHASE_AND_1PN_JOINTLY_ESTIMABLE_SCOPED`.
-
-On the positive 45-row design Q2 PN VIF is `909.166`, SNR1 phase-noise coefficient is `1.26367e-5 epsilon_PN`, and PN variance is improved `22.917x` relative to the three-point Q2 design.
-
-## Latest gate — SF038 signed-amplitude parity calibration
-
-Preregistration:
-
-`08d16e0c75192345f196cb82f0aaf0bb5c6eb04b`.
-
-Script:
-
-`735257e70413746db9e05fcfdb166585e162cb75`.
-
-Raw:
-
-`6c942861ead30a6f8bbdfa947a8104d0173dbab5`.
-
-Terminal:
-
-`6a8afd7bde8a4d9d7783e9ec01dfb5f444250ff9`.
-
-Ledger:
-
-`adadf2f9a00003b34e02f2953f04e99c4aacc478`.
-
-Classification:
+SF038 terminal `6a8afd7bde8a4d9d7783e9ec01dfb5f444250ff9`:
 
 `SIGNED_AMPLITUDE_PARITY_STRONGLY_IMPROVES_Q2_CALIBRATION_SCOPED`.
 
-Frozen signed ladder:
+Signed five-point design lowers Q2 PN VIF to `37.5094` at the same 45-row count and provides strong odd/even amplitude leverage.
 
-`lambda_A={-1,-1/2,0,1/2,1}`
+## SF039 reversible harmonic transport implementation
 
-with the same `R={60,160,400}` and `tau={0.05,0.1,0.2}` 45-row count as the positive five-point comparator.
+Preregistration:
 
-### Exact controls
+`de31d7e3c6c6bbd97045709ff032e7f6a951f98d`.
 
-- minimum pair-center separation over signed grid: `3 ell`;
-- `lambda_A=0` exact known-gravity connected null;
-- positive endpoint recovery exact;
-- delete-A/B/C controls exact zero;
-- pure nuisance odd/even inner product `<lambda tau, lambda^2 tau> ~ 3.6e-18`.
+Derivation/source notes:
 
-### Structural gain
+`6bbc2cf28ee6d65bea52ab4bdab5d2a71caf06aa`.
 
-Positive five-point Q2:
+Terminal:
 
-`kappa=219.1476`, `smin=0.0100762`.
+`92b84b7e65c3fac26796b7b7fe04d529f3104bf5`.
 
-Signed Q2:
+Classification:
 
-`kappa=41.8259`, `smin=0.0439834`.
+`QUADRATIC_REVERSIBLE_TRANSPORT_GENERATES_NO_CONNECTED_CONTROL_PHASE_SCOPED`.
 
-Thus signed reversal improves normalized conditioning by about `5.24x` and the smallest singular value by about `4.36x`.
+Secondary:
 
-### Noise-aware gain
+`CONNECTED_CONTROL_PHASE_REQUIRES_NONQUADRATIC_OR_GENUINE_MULTILABEL_CONTROL_CONTENT_SCOPED`.
 
-At `epsilon_PN=1e-6` and confirmed again at `1e-8`:
+### Exact degree theorem
 
-positive Q2 PN VIF `=909.166`;
+For each moving harmonic control Hamiltonian with center
 
-signed Q2 PN VIF `=37.5094`.
+`Q_I=q_I^0+d_I f(t)`,
 
-Relative VIF improvement `=24.238x`.
+the branch-dependent c-number phase is at most
 
-Direct Q2 PN variance improvement `=19.273x`.
+`const + alpha_I d_I + beta_I d_I^2`.
 
-Signed SNR1 phase-noise coefficient:
+Frozen COM-closed drives are
 
-`5.54767e-5 epsilon_PN`,
+`d_A=lambda a ell`, `d_B=2b ell`, `d_C=3c ell`,
 
-about `4.39x` more tolerant than the positive five-point Q2 design.
+`d_D=-(lambda a+2b+3c)ell/5`.
 
-All three preregistered strong-information criteria pass.
+The recoil square reduces to Boolean degree <=2:
 
-### Structural interpretation
+`lambda^2 a+4b+9c+4lambda ab+6lambda ac+12bc`.
 
-The same row count with transport-direction reversal carries materially more calibration information because the Q2 nuisance has explicit odd/even amplitude structure.
+There is no `abc` term, hence
+
+`Delta3 Phi_ctrl=0`
+
+exactly for the ideal quadratic transport/recombination class.
+
+A common multiplicative signed-amplitude gain error and branch-independent body-local offsets preserve this connected null.
+
+Adding an explicit `chi abc` control term gives `Delta3=chi` as the negative control.
 
 Retain:
 
-`SIGNED_TRANSPORT_REVERSAL_PROVIDES_PARITY_CALIBRATION_POWER_AGAINST_CONNECTED_CONTROL_PHASE_CURVATURE`  (scoped).
+`IDEAL_REVERSIBLE_TRANSPORT_NULL != DEVICE_ERROR_NULL`.
 
-This is an effective-model/design result, not device validation.
+## SF040 triple-null cubic-crosstalk localization
 
-## Operational frontier after SF038
+Preregistration:
 
-`EXPLICIT_REVERSIBLE_TRANSPORT_IMPLEMENTATION_MODEL_REQUIRED`.
+`bcbe70def315877ba5148f725d86444513f64cf1`.
 
-The abstract R/T/amplitude/Fisher geometry is no longer the dominant blocker.
+Script:
 
-A future admissible repair must prospectively define a physical transport/control implementation in which `lambda_A -> -lambda_A` is a meaningful reversal, including pulse/readout error generators and a falsifiable science/control transfer test.
+`9dff4fbd9e2de8bc14044e600a764a90d6cb1c82`.
 
-Do not stack cubic-or-higher nuisance-polynomial degree merely because Q2 was tractable; higher nuisance structure requires independent physical motivation.
+Raw:
+
+`763f1bea76494400018d5ed26cb60f67f20c6998`.
+
+Terminal:
+
+`daeedf7e765eb9ae767492ea6f8df2ae6f8e513f`.
+
+Classification:
+
+`TRIPLE_NULL_CONTROLS_LOCALIZE_LINEAR_CUBIC_CROSSTALK_SCOPED`.
+
+Full S+NA+NB+NC four-parameter control matrix:
+
+`rank=4`, `kappa=6.3751`.
+
+Stronger null-only NA+NB+NC result:
+
+`rank=4`, `kappa=5.9558`.
+
+Thus linear single-actuator dependence of a genuine cubic connected control phase can be calibrated entirely on connected-gravity-null channels.
+
+Retain:
+
+`CONTROL_NUISANCE_CALIBRATION != GRAVITY_SIGNAL_FIT`.
+
+## SF041 pair-cross stress test
+
+Preregistration:
+
+`1127a7a774aeab6e33c27f3a0532f32068f35fd2`.
+
+Terminal:
+
+`0502125168c6ba09c4d4f5f70ec68df058ded2bb`.
+
+Classification:
+
+`TRIPLE_NULL_PAIR_CROSS_CROSSTALK_HAS_ONE_UNRESOLVED_DIRECTION_SCOPED`.
+
+For the seven-parameter linear+pair-cross actuator model, S+NA+NB+NC has exact rank 6.
+
+Exact null vector in order `[zeta0,zeta_A,zeta_B,zeta_C,zeta_AB,zeta_AC,zeta_BC]`:
+
+`(1,0,-1,-1,0,0,1)`.
+
+This prospectively identified the missing lever `B=C=0`.
+
+## Latest gate — SF042 minimum double-null repair
+
+Preregistration:
+
+`de70e9ca001611ce6f3ab63bc460b045ee187d3d`.
+
+Terminal:
+
+`27a249ce8c4741ce0b4e5768a5b091b2301620b0`.
+
+Ledger:
+
+`d085605ca5b02062e1a3e07b2249fa0058ef9974`.
+
+Classifications:
+
+`DOUBLE_NULL_CLOSES_PAIR_CROSS_CROSSTALK_MODEL_SCOPED`.
+
+`GRAVITY_NULL_CONTROLS_ALONE_CLOSE_PAIR_CROSS_CROSSTALK_MODEL_SCOPED`.
+
+The only new control family is
+
+`NBC=(lambda_A,0,0)`.
+
+### Full result
+
+S+NA+NB+NC+NBC:
+
+`rank=7/7`,
+
+`kappa=7.63564`,
+
+empty nullspace.
+
+### Null-only stronger result
+
+NA+NB+NC+NBC, with no gravity-bearing science rows:
+
+`rank=7/7`,
+
+`kappa=5.82843`.
+
+Therefore the frozen single- and pair-actuator cubic-crosstalk model can be structurally calibrated entirely on gravity-null controls.
+
+Removing NBC exactly reproduces SF041 rank 6 and its null direction.
+
+Leave-one-family audit shows NB, NC and NBC are essential; S or NA can be omitted for rank, but NA is required for a completely gravity-null calibration set.
+
+## Operational frontier after SF042
+
+Within the explicit quadratic reversible transport plus linear/pair-cross connected cubic-crosstalk class, structural nuisance identifiability is closed.
+
+Further arbitrary actuator-polynomial enlargement has low information value without independent physical motivation.
+
+The next missing operational object is empirical/device-level:
+
+`DEVICE_LEVEL_NONLINEAR_CROSSTALK_MAGNITUDE_AND_STABILITY_DATA_REQUIRED`.
+
+Actual measurements/bounds must determine whether genuine connected nonlinear control content exists and whether its coefficients remain stable across the null/science schedule.
+
+This information is not available from the abstract protocol alone.
 
 ## Parent and claim locks
 
@@ -170,10 +244,10 @@ Parent frontier remains `EXPLICIT_PROGRAMME_DISPOSITION_AUTHORITY_REQUIRED`.
 
 Retain:
 
-- `DESIGN_CALIBRATION_POWER != DEVICE_VALIDATION`;
+- `STRUCTURAL_CONTROL_CLOSURE != DEVICE_VALIDATION`;
 - `ESTIMABILITY != FEASIBILITY`;
 - `KNOWN_PHYSICS_SUBTRACTION != QUANTUM_RESIDUAL_AUTHORITY`;
-- no quantum matching coefficient selected;
+- no operational result selects a quantum-law matching coefficient;
 - no quantum `chi_ABC` computed;
 - no historical RCG-002 authority changed;
 - no parent programme disposition selected;
