@@ -1,0 +1,44 @@
+{
+  "gate": "SF055A3Q1_TT_PROJECTOR_RANK1_ACCELERATION",
+  "classification": "PASS_SF055A3_EXACT_TT_PROJECTOR_REGROUPING_ACCELERATION_SCOPED",
+  "scientific_pass": true,
+  "trilinearity_pass": true,
+  "comparison_pass": true,
+  "negative_pass": true,
+  "projector_meta": {
+    "G": {
+      "nonzero_components": 26,
+      "nonzero_grouped_pairs": 19,
+      "grouped_evaluations_max": 19,
+      "skipped_norm_fraction": 1.4243321899823828e-31,
+      "total_norm2": 0.0005287451905163499
+    },
+    "Lambda": {
+      "nonzero_components": 32,
+      "nonzero_grouped_pairs": 25,
+      "grouped_evaluations_max": 25,
+      "skipped_norm_fraction": 0.0,
+      "total_norm2": 0.0026385724906858796
+    }
+  },
+  "symmetrized_control": {
+    "brute": 0.42234129174039,
+    "grouped": 0.4223412917403892,
+    "abs_error": 7.771561172376096e-16,
+    "pass": true
+  },
+  "negative_controls": {
+    "G_weights_substituted_for_Lambda_rejected": true,
+    "dropped_nonzero_group_rejected": true,
+    "fitted_rescale_rejected": true,
+    "single_polarization_not_complete_projection": true
+  },
+  "provenance": {
+    "actions_run": 35016211111,
+    "job": 104540163228,
+    "head_sha": "5661af6bdbd57463612fcb562ccf75b34128ef04",
+    "artifact_id": 10416306023,
+    "artifact_digest": "sha256:132244f69243c67e5c0d2c6c3af0842ea9bc202dcbb8bc5fb56e04367b3e41b7"
+  },
+  "next": "FROZEN_FIGURE2_QUADRATURE_AND_EQ14_BASELINE_REPRODUCTION"
+}
