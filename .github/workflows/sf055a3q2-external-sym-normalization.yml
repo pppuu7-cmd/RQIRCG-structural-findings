@@ -1,0 +1,29 @@
+name: SF055A3Q2 external sym normalisation
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'prereg/SF055A3Q2_EXTERNAL_SYMMETRISATION_NORMALISATION_PREOUTCOME.md'
+      - 'scripts/sf055a3q2_external_sym_normalization.py'
+      - '.github/workflows/sf055a3q2-external-sym-normalization.yml'
+  workflow_dispatch:
+
+jobs:
+  combinatorics:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Derive exact labelled inverse-propagator combinatorics
+        run: python scripts/sf055a3q2_external_sym_normalization.py
+      - name: Upload raw result
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sf055a3q2-external-sym-normalization
+          path: results/raw/SF055A3Q2_EXTERNAL_SYM_NORMALIZATION.json
+          if-no-files-found: warn
