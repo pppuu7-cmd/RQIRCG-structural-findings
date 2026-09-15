@@ -1,22 +1,20 @@
 # RQIRCGSF current authoritative front
 
-Updated: 2026-09-15, after SF050.
+Updated: 2026-09-15, after SF051.
 
-## Repository role
+## Repository role and parent separation
 
 `pppuu7-cmd/RQIRCG-structural-findings` remains an independent `PROSPECTIVE NEW-PRINCIPLE / SUCCESSOR SEARCH`.
 
-Parent `pppuu7-cmd/RQIR-Candidate-Gravity` is separately parked on
+Parent `pppuu7-cmd/RQIR-Candidate-Gravity` remains separately parked on
 
 `WAIT_FOR_EXPLICIT_PROGRAMME_DISPOSITION_DECLARATION`.
 
 RQIRCGSF results remain successor authority until separately imported/promoted.
 
-## Retained operational front
+## Operational front retained
 
-SF028 remains terminal-invalid in its 1D Gaussian point-gravity object.
-
-SF028B remains the boundary-complete physical-object authority with reduced-qubit connected coherence `C3`, `Theta3=Im C3`, `Gamma3=-Re C3`.
+SF028B remains the boundary-complete physical coherence authority; SF029-SF042 close the declared known-physics calibration and frozen structural control/crosstalk chain.
 
 Retain:
 
@@ -24,19 +22,15 @@ Retain:
 
 `NONZERO_CONNECTED_SIGNAL != NEW_THREE_BODY_GRAVITATIONAL_VERTEX`.
 
-SF029-SF042 established robust known-physics baseline structure, joint R/T identifiability, noise-aware estimability, null-control calibration geometry, explicit control/crosstalk models, the exact quadratic reversible-transport connected null, and closure of the frozen linear/pair-cross cubic-crosstalk class with gravity-null controls.
-
 Current operational frontier:
 
 `DEVICE_LEVEL_NONLINEAR_CROSSTALK_MAGNITUDE_AND_STABILITY_DATA_REQUIRED`.
-
-Further arbitrary actuator-polynomial enlargement is low information without independently motivated device physics or measured bounds.
 
 Retain:
 
 `STRUCTURAL_CONTROL_CLOSURE != DEVICE_VALIDATION`.
 
-## Retained theory authorities
+## Theory authorities through SF043
 
 SF021:
 
@@ -54,9 +48,7 @@ SF027:
 
 `QCA_PERTURBATIVE_RANK_ZERO_EXACT_MAP_BLOCKED_SCOPED`.
 
-`ANOMALY_FREEDOM_IS_CONSISTENCY_NOT_PHYSICAL_MATCHING_SELECTION_SCOPED`.
-
-## SF043 asymptotic-safety selector
+SF043:
 
 `ASYMPTOTIC_SAFETY_PROVIDES_NONZERO_TRUNCATION_LEVEL_MATCHING_SELECTION_SCOPED`.
 
@@ -70,13 +62,9 @@ Retain:
 
 `R_ASGS_PHYSICAL=UNDEFINED_MAP_NOT_CLOSED`.
 
-The audited essential sixth-derivative truncation supplies a UV-safe trajectory that selects the finite IR C3 integration constant within that truncation, but its representative value remains regulator/truncation dependent and is not physical SF025 `b`.
+## SF044-SF049 physical-map localization
 
-## SF044-SF047 physical-map localization
-
-SF044:
-
-`ASYMPTOTIC_SAFETY_OBSERVABLE_FRAMEWORK_EXISTS_BUT_C3_MATCHING_BRIDGE_INCOMPLETE_SCOPED`.
+SF044: observable/form-factor framework exists but the specific C3 physical bridge is incomplete.
 
 SF045:
 
@@ -88,73 +76,51 @@ SF046:
 
 On the flat vacuum on-shell sector:
 
-`b = s G_C3/(32 pi G_N)`
+`b = s G_C3/(32 pi G_N)`.
 
-with one unresolved global sign convention. The finite-truncation/perturbative running mismatch remains exactly `-43/42`, so the physical-map problem is not merely normalization.
+The finite-truncation/perturbative running mismatch remains exactly `-43/42`, so the blocker is not normalization.
 
 SF047:
 
 `VERTEX_MACHINERY_EXISTS_C3_PROJECTION_MISSING_SCOPED`.
 
-Momentum-dependent dynamical 3-/4-graviton FRG machinery exists, but an explicit six-derivative C3 fluctuation projection and target background/fluctuation identity map were absent.
-
-## SF048-SF049 physical projection
-
 SF048:
 
 `BLOCKED_MISSING_EXPLICIT_C3_FLUCTUATION_PROJECTION`.
-
-Secondary:
-
-`PHYSICAL_C3_DIRECTION_UNIQUE_BUT_FRG_PROJECTOR_NOT_CONSTRUCTED_SCOPED`.
 
 SF049:
 
 `PHYSICAL_ON_SHELL_C3_HELICITY_PROJECTOR_CONSTRUCTED_SCOPED`.
 
-Qualification:
-
-`FRG_FLOW_AND_BACKGROUND_FLUCTUATION_MAP_REMAIN_OPEN_SCOPED`.
-
-For the physical local massless three-graviton amplitudes:
+Physical local structures:
 
 `B_+++=[12]^2[23]^2[31]^2`,
 
 `B_---=<12>^2<23>^2<31>^2`.
 
-Define
-
-`P3+[M]=[M3(+++)]_local,p6/B_+++`,
-
-`P3-[M]=[M3(---)]_local,p6/B_---`.
-
 For the source-normalized C3/R3 deformation:
 
-`P3+=P3-=alpha`.
+`P3+=P3-=P4+=alpha`.
 
-Einstein gravity is an exact zero control in these three-point helicity channels.
-
-The independent generic four-point control also returns `alpha`.
+Einstein gravity is an exact zero control in the all-plus/all-minus three-point channels.
 
 Retain:
 
 `PHYSICAL_HELICITY_PROJECTOR != PROJECTED_FRG_FLOW`.
 
-## Latest gate — SF050 Euclidean/off-shell embedding
+## SF050 Euclidean/off-shell embedding
 
-Prospective preregistration:
+Preregistration:
 
 `ae2d3414e87dd1b364a97b69349330267e88faff`.
 
-Exact symbolic script:
+Exact symbolic script/raw:
 
-`ba1bac6a1490e75aafce0e16faef9b6272eb2a8d`.
-
-Raw exact result:
+`ba1bac6a1490e75aafce0e16faef9b6272eb2a8d`,
 
 `1b8cba99d1f33f596485e5a50d0ad80d6e52b30b`.
 
-Authority/derivation audit:
+Audit:
 
 `e70a049c7f6d14b48ec47ec2a44449c789a7cb75`.
 
@@ -162,106 +128,147 @@ Terminal:
 
 `3b77fa25541138e395f62898d442c967e2578cd5`.
 
-Ledger:
-
-`e6b6fe3853dd36c704324a177fc94ea1555f5ba6`.
-
-Primary:
+Classification:
 
 `PARTIAL_TEMPLATE_ONLY_C3_TEMPLATE_CLOSED_ESSENTIAL_QUOTIENT_OPEN_SCOPED`.
 
+For `S_C3=integral sqrt(g) C C C` around flat space:
+
+`S_C3^(3)=integral C^(1) C^(1) C^(1)`.
+
+Thus the explicit local p6 Euclidean cubic C3 tensor is closed and continues to the SF049 physical helicity direction.
+
+But at the real Euclidean symmetric point an EOM-redundant Ricci-cubic control gives
+
+`||T_C3||^2=95/768`,
+
+`||T_Ric3||^2=5/192`,
+
+`<T_C3,T_Ric3>=-35/768`,
+
+so naive one-template contamination is
+
+`-7/19`.
+
+Therefore:
+
+`ONE_EUCLIDEAN_C3_TEMPLATE_CONTRACTION != PHYSICAL_C3_PROJECTOR`.
+
+## Latest gate — SF051 algebraic curvature-cubic quotient
+
+Prospective preregistration:
+
+`49eb8d22c4d69460306989c50b4ed32d3acc02ee`.
+
+Executed script:
+
+`125c8efc46fe02c4b5c0191c1abc641a6b3eafe0`.
+
+Raw exact result:
+
+`b792beee6432fea224c661f4ee3121d1dfc02f27`.
+
+Terminal:
+
+`6dab7d8bcf8ba6fbdeb49efa5f22a652b89551dc`.
+
+Ledger:
+
+`5f3c5f45a6d6b62aef7f9028cbfb0155fe0ebb1c`.
+
+Primary classification:
+
+`PASS_ALGEBRAIC_QUOTIENT_SCOPED`.
+
 Secondary:
 
-`OFFSHELL_REDUNDANT_DIRECTIONS_MUST_BE_QUOTIENTED_BEFORE_PHYSICAL_C3_FRG_MATCHING_SCOPED`.
+`ALGEBRAIC_RICCI_REDUNDANCY_REMOVABLE_BY_EXACT_TT_GRAM_QUOTIENT_SCOPED`.
 
-Counterexample:
+Qualification:
 
-`NAIVE_SINGLE_TEMPLATE_EUCLIDEAN_C3_PROJECTOR_CONTAMINATED_SCOPED`.
+`DERIVATIVE_SIX_DERIVATIVE_REDUNDANCIES_NOT_YET_INCLUDED`.
 
-### C3 template result
+### Frozen algebraic basis
 
-For
+Essential:
 
-`S_C3 = integral sqrt(g) C C C`
+`T_E = T[C^3]`.
 
-around flat space, `C[delta]=0`, so the exact cubic action is
+Redundant:
 
-`S_C3^(3)=integral C^(1)[h] C^(1)[h] C^(1)[h]`.
+`T_R1 = T[S_mu^nu S_nu^rho S_rho^mu]`,
 
-Measure corrections and nonlinear Weyl tensors first enter at `O(h^4)`.
+`T_R2 = T[S^{mu nu} S^{rho sigma} C_{mu rho nu sigma}]`.
 
-Thus `T_C3^(3)` is an explicit local, Bose-symmetric, linearized-gauge-invariant p6 tensor whose Lorentzian on-shell helicity continuation is the SF049 physical C3 direction.
+Scalar-containing `R^3`, `R S^2`, `R C^2` pure linearized-curvature cubic controls vanish exactly because `R^(1)=0` on the frozen TT legs.
 
-### Exact Euclidean contamination witness
+### Exact Gram result
 
-Use the EOM-redundant control
+At `p_i^2=1`, `p_i.p_j=-1/2`:
 
-`O_Ric3 = integral sqrt(g) R_mu^nu R_nu^rho R_rho^mu`.
+`G[C3,S3,SSC] =`
 
-At the real Euclidean symmetric point
+`[[95/768,-35/768,7/512],[-35/768,5/192,-1/128],[7/512,-1/128,15/1024]]`.
 
-`p_i^2=1`, `p_i.p_j=-1/2`,
+The redundant `[S3,SSC]` subspace has
 
-with five orthonormal TT tensors per leg, exact symbolic evaluation gives
+`det=21/65536`,
 
-`||T_C3||^2 = 95/768`,
+`rank=2`.
 
-`||T_Ric3||^2 = 5/192`,
+The exact essentialized algebraic tensor is
 
-`<T_C3,T_Ric3> = -35/768`,
+`T_C3_perp = T_C3 + (7/4) T_S3`.
 
-and therefore naive normalized contamination
+Its norm is
 
-`P_naive[T_Ric3] = -7/19`.
+`45/1024 > 0`.
 
-The overall sign may depend on curvature convention; the nonzero overlap does not.
+It obeys exactly
 
-Thus one Euclidean C3 template contraction is not the physical C3 projector before the Ricci/EOM/field-redefinition quotient.
+`<T_C3_perp,T_S3>=0`,
 
-Retain:
+`<T_C3_perp,T_SSC>=0`.
 
-`MOMENTUM_DEPENDENCE != OPERATOR_IDENTIFICATION`.
+The normalized projector returns
 
-`EH_TENSOR_VERTEX_DRESSING != ESSENTIAL_C3_COEFFICIENT`.
+`P_E_alg[C3]=1`,
 
-### Correct embedding architecture
+`P_E_alg[S3]=0`,
 
-Let `T_E=T_C3^(3)` and `{T_a}` span the relevant redundant six-derivative fluctuation tensors. A tensor-space essentialization requires the Gram quotient
+`P_E_alg[SSC]=0`.
 
-`T_E_perp = T_E - T_a (G_R^-1)^{ab}<T_b,T_E>`
+Naive single-template contaminations before quotient are
 
-on a kinematic family with sufficient rank, followed by projection of the dynamical vertex.
+`-7/19` for S3 and `21/190` for SSC.
 
-This must be consistent with the scale-dependent field redefinitions / split-Nielsen identities that define the essential RG scheme. A single symmetric point is insufficient unless completeness/rank is separately established.
+The fact that the final SSC subtraction coefficient is zero is nontrivial: it follows only after solving the correlated redundant Gram system.
 
 ## Current theory frontier
 
-Exact next high-information object:
+Algebraic curvature-cubic Ricci/EOM redundancy is closed in the frozen TT/symmetric-point subspace.
 
-`ESSENTIAL_SIX_DERIVATIVE_C3_FLUCTUATION_QUOTIENT_PROJECTOR_REQUIRED`.
+Exact remaining off-shell quotient problem:
 
-Minimum chain:
+`DERIVATIVE_REDUNDANT_COMPLETION_OF_ESSENTIAL_C3_FLUCTUATION_PROJECTOR`.
 
-`C3 TEMPLATE`
-`-> COMPLETE SIX-DERIVATIVE REDUNDANT TENSOR / FIELD-REDEFINITION QUOTIENT`
-`-> PROJECTED DYNAMICAL C3 FLOW`
+Then:
+
+`PROJECTED DYNAMICAL C3 FLOW`
 `-> BACKGROUND/FLUCTUATION SPLIT-NIELSEN CONTROL`
 `-> LORENTZIAN ON-SHELL LOW-ENERGY MATCHING`.
 
-Use the independently established essential sixth-derivative redundant-kernel basis rather than arbitrary tensor enlargement.
+A legitimate direct Lorentzian/complex on-shell fluctuation-flow construction could alternatively bypass off-shell EOM-redundant tensor subtraction because the SF049 physical helicity projector annihilates EOM-redundant on-shell structures. No such target C3 flow is currently authorized.
 
-## Parent and claim locks
+Use the independently established essential sixth-derivative field-redefinition/redundant-kernel architecture rather than arbitrary tensor enlargement.
 
-Parent remains on
-
-`WAIT_FOR_EXPLICIT_PROGRAMME_DISPOSITION_DECLARATION`.
-
-Retain:
+## Claim locks
 
 - no physical SF025 `b` selected;
-- no representative truncation constant promoted to physical matching;
+- no truncation constant promoted to physical matching;
 - no background/fluctuation equality assumed;
-- no naive Euclidean template coefficient called a physical C3 coefficient;
+- no algebraic-subspace PASS promoted to complete six-derivative quotient;
+- no Euclidean off-shell coefficient called a physical observable without quotient/continuation;
 - no operational result selects quantum-law matching;
 - no quantum `chi_ABC` computed;
 - no historical RCG-002 authority changed;
