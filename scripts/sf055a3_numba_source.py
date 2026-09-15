@@ -6,7 +6,7 @@ as sf055a2_source_fourier_seed_engine.eh_vertex_fourier.
 """
 import math
 import numpy as np
-from numba import njit
+from numba import njit, prange
 
 D = 4
 EH_PREF = 1.0 / (16.0 * math.pi)
@@ -45,9 +45,6 @@ def eh_vertex_fourier(ps, hs, lam):
     n = ps.shape[0]
     M = 1 << n
     full = M - 1
-
-    # Momentum conservation is checked by the caller; all quadrature routings
-    # are generated from the already-validated incidence map.
     H = np.zeros((M, D, D), np.float64)
     for i in range(n):
         H[1 << i] = hs[i]
@@ -177,15 +174,14 @@ def eh_vertex_fourier(ps, hs, lam):
             if ma & mb:
                 continue
             density[ma | mb] += sqrtg[ma] * core[mb]
-
     return density[full].real * EH_PREF
 
 
-@njit(cache=True)
+@njit(cache=True, parallel=True)
 def eval_many(ps_batch, hs_batch, lam):
     """Evaluate independent vertices; shapes (B,n,4), (B,n,4,4)."""
     B = ps_batch.shape[0]
     out = np.empty(B, np.float64)
-    for i in range(B):
+    for i in prange(B):
         out[i] = eh_vertex_fourier(ps_batch[i], hs_batch[i], lam)
     return out
