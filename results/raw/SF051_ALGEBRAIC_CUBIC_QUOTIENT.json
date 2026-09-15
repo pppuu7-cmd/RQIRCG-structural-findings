@@ -1,0 +1,45 @@
+{
+  "gate": "SF051_ALGEBRAIC_CURVATURE_CUBIC_QUOTIENT_PREOUTCOME_GATE",
+  "kinematics": {
+    "p_i_squared": 1,
+    "p_i_dot_p_j": "-1/2 for i != j",
+    "momentum_conservation": "p1+p2+p3=0",
+    "tt_basis_dimension_per_leg": 5
+  },
+  "basis": [
+    "T_E = C^3",
+    "T_R1 = S_mu^nu S_nu^rho S_rho^mu",
+    "T_R2 = S^{mu nu} S^{rho sigma} C_{mu rho nu sigma}"
+  ],
+  "scalar_R_controls": {
+    "linearized_R_on_all_TT_basis_legs": 0,
+    "R3_pure_linearized_curvature_cubic": 0,
+    "R_S2_pure_linearized_curvature_cubic": 0,
+    "R_C2_pure_linearized_curvature_cubic": 0
+  },
+  "gram_matrix": [
+    ["95/768", "-35/768", "7/512"],
+    ["-35/768", "5/192", "-1/128"],
+    ["7/512", "-1/128", "15/1024"]
+  ],
+  "redundant_subgram": {
+    "determinant": "21/65536",
+    "rank": 2
+  },
+  "essentialization": {
+    "subtraction_coefficients_for_T_E_minus_c1_T_R1_minus_c2_T_R2": ["-7/4", "0"],
+    "T_E_perp": "T_E + (7/4) T_R1",
+    "norm_squared": "45/1024",
+    "overlap_with_T_R1": 0,
+    "overlap_with_T_R2": 0,
+    "normalized_projector_response_to_T_E": 1,
+    "normalized_projector_response_to_T_R1": 0,
+    "normalized_projector_response_to_T_R2": 0
+  },
+  "naive_single_template_contamination": {
+    "T_R1": "-7/19",
+    "T_R2": "21/190"
+  },
+  "classification": "PASS_ALGEBRAIC_QUOTIENT_SCOPED",
+  "claim_ceiling": "Exact only in the frozen pure algebraic curvature-cubic linearized-TT subspace. Derivative-redundant six-derivative operators and the dynamical FRG flow are not covered."
+}
