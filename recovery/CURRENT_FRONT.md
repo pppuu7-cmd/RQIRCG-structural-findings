@@ -1,8 +1,8 @@
 # RQIRCGSF current authoritative front
 
-Updated: 2026-09-15, after SF051.
+Updated: 2026-09-15, after SF052.
 
-## Repository role and parent separation
+## Repository role / parent separation
 
 `pppuu7-cmd/RQIRCG-structural-findings` remains an independent `PROSPECTIVE NEW-PRINCIPLE / SUCCESSOR SEARCH`.
 
@@ -10,11 +10,11 @@ Parent `pppuu7-cmd/RQIR-Candidate-Gravity` remains separately parked on
 
 `WAIT_FOR_EXPLICIT_PROGRAMME_DISPOSITION_DECLARATION`.
 
-RQIRCGSF results remain successor authority until separately imported/promoted.
+Successor results do not become historical RCG-002 authority without a separate import/promotion gate.
 
 ## Operational front retained
 
-SF028B remains the boundary-complete physical coherence authority; SF029-SF042 close the declared known-physics calibration and frozen structural control/crosstalk chain.
+SF028B remains the boundary-complete coherence authority. SF029-SF042 close the declared known-physics calibration and frozen structural control/crosstalk chain.
 
 Retain:
 
@@ -22,7 +22,7 @@ Retain:
 
 `NONZERO_CONNECTED_SIGNAL != NEW_THREE_BODY_GRAVITATIONAL_VERTEX`.
 
-Current operational frontier:
+Current operational blocker:
 
 `DEVICE_LEVEL_NONLINEAR_CROSSTALK_MAGNITUDE_AND_STABILITY_DATA_REQUIRED`.
 
@@ -30,7 +30,7 @@ Retain:
 
 `STRUCTURAL_CONTROL_CLOSURE != DEVICE_VALIDATION`.
 
-## Theory authorities through SF043
+## Theory chain retained
 
 SF021:
 
@@ -52,41 +52,19 @@ SF043:
 
 `ASYMPTOTIC_SAFETY_PROVIDES_NONZERO_TRUNCATION_LEVEL_MATCHING_SELECTION_SCOPED`.
 
-Secondary:
-
-`PHYSICAL_ON_SHELL_MATCHING_AUTHORITY_BLOCKED_BY_TRUNCATION_OR_SCHEME_MAP`.
-
 Retain:
 
 `R_ASGS_TRUNCATION=1`.
 
 `R_ASGS_PHYSICAL=UNDEFINED_MAP_NOT_CLOSED`.
 
-## SF044-SF049 physical-map localization
+SF044-SF048 progressively localized the physical-map problem from a generic observable bridge to a missing explicit six-derivative C3 fluctuation projection.
 
-SF044: observable/form-factor framework exists but the specific C3 physical bridge is incomplete.
+SF046 established on the flat vacuum on-shell sector:
 
-SF045:
+`b = s G_C3/(32 pi G_N)`
 
-`BLOCKED_MISSING_LORENTZIAN_ON_SHELL_C3_MAP`.
-
-SF046:
-
-`C3_NORMALIZATION_MAP_DERIVED_UP_TO_SIGNATURE_CONVENTION_SCOPED`.
-
-On the flat vacuum on-shell sector:
-
-`b = s G_C3/(32 pi G_N)`.
-
-The finite-truncation/perturbative running mismatch remains exactly `-43/42`, so the blocker is not normalization.
-
-SF047:
-
-`VERTEX_MACHINERY_EXISTS_C3_PROJECTION_MISSING_SCOPED`.
-
-SF048:
-
-`BLOCKED_MISSING_EXPLICIT_C3_FLUCTUATION_PROJECTION`.
+with one unresolved global sign convention, and the finite-truncation/perturbative running mismatch remains `-43/42`, so the blocker is not normalization.
 
 SF049:
 
@@ -102,173 +80,175 @@ For the source-normalized C3/R3 deformation:
 
 `P3+=P3-=P4+=alpha`.
 
-Einstein gravity is an exact zero control in the all-plus/all-minus three-point channels.
+Einstein gravity is an exact zero control in the all-plus/all-minus three-point channel.
 
 Retain:
 
 `PHYSICAL_HELICITY_PROJECTOR != PROJECTED_FRG_FLOW`.
 
-## SF050 Euclidean/off-shell embedding
-
-Preregistration:
-
-`ae2d3414e87dd1b364a97b69349330267e88faff`.
-
-Exact symbolic script/raw:
-
-`ba1bac6a1490e75aafce0e16faef9b6272eb2a8d`,
-
-`1b8cba99d1f33f596485e5a50d0ad80d6e52b30b`.
-
-Audit:
-
-`e70a049c7f6d14b48ec47ec2a44449c789a7cb75`.
-
-Terminal:
-
-`3b77fa25541138e395f62898d442c967e2578cd5`.
+## SF050 Euclidean/off-shell template
 
 Classification:
 
 `PARTIAL_TEMPLATE_ONLY_C3_TEMPLATE_CLOSED_ESSENTIAL_QUOTIENT_OPEN_SCOPED`.
 
-For `S_C3=integral sqrt(g) C C C` around flat space:
+For `S_C3=int sqrt(g) C C C` around flat space:
 
-`S_C3^(3)=integral C^(1) C^(1) C^(1)`.
+`S_C3^(3)=int C^(1) C^(1) C^(1)`.
 
-Thus the explicit local p6 Euclidean cubic C3 tensor is closed and continues to the SF049 physical helicity direction.
-
-But at the real Euclidean symmetric point an EOM-redundant Ricci-cubic control gives
-
-`||T_C3||^2=95/768`,
-
-`||T_Ric3||^2=5/192`,
-
-`<T_C3,T_Ric3>=-35/768`,
-
-so naive one-template contamination is
-
-`-7/19`.
-
-Therefore:
+At the frozen Euclidean symmetric point a redundant Ricci-cubic control gives naive contamination `-7/19`, proving
 
 `ONE_EUCLIDEAN_C3_TEMPLATE_CONTRACTION != PHYSICAL_C3_PROJECTOR`.
 
-## Latest gate — SF051 algebraic curvature-cubic quotient
+## SF051 algebraic quotient
 
-Prospective preregistration:
-
-`49eb8d22c4d69460306989c50b4ed32d3acc02ee`.
-
-Executed script:
-
-`125c8efc46fe02c4b5c0191c1abc641a6b3eafe0`.
-
-Raw exact result:
-
-`b792beee6432fea224c661f4ee3121d1dfc02f27`.
-
-Terminal:
-
-`6dab7d8bcf8ba6fbdeb49efa5f22a652b89551dc`.
-
-Ledger:
-
-`5f3c5f45a6d6b62aef7f9028cbfb0155fe0ebb1c`.
-
-Primary classification:
+Classification:
 
 `PASS_ALGEBRAIC_QUOTIENT_SCOPED`.
 
-Secondary:
+Redundant algebraic basis:
 
-`ALGEBRAIC_RICCI_REDUNDANCY_REMOVABLE_BY_EXACT_TT_GRAM_QUOTIENT_SCOPED`.
+`S3 = S_mu^nu S_nu^rho S_rho^mu`,
 
-Qualification:
+`SSC = S^{mu nu} S^{rho sigma} C_{mu rho nu sigma}`.
 
-`DERIVATIVE_SIX_DERIVATIVE_REDUNDANCIES_NOT_YET_INCLUDED`.
-
-### Frozen algebraic basis
-
-Essential:
-
-`T_E = T[C^3]`.
-
-Redundant:
-
-`T_R1 = T[S_mu^nu S_nu^rho S_rho^mu]`,
-
-`T_R2 = T[S^{mu nu} S^{rho sigma} C_{mu rho nu sigma}]`.
-
-Scalar-containing `R^3`, `R S^2`, `R C^2` pure linearized-curvature cubic controls vanish exactly because `R^(1)=0` on the frozen TT legs.
-
-### Exact Gram result
-
-At `p_i^2=1`, `p_i.p_j=-1/2`:
-
-`G[C3,S3,SSC] =`
+Exact inherited Gram block at `p_i^2=1`, `p_i.p_j=-1/2`:
 
 `[[95/768,-35/768,7/512],[-35/768,5/192,-1/128],[7/512,-1/128,15/1024]]`.
 
-The redundant `[S3,SSC]` subspace has
+Algebraic essentialized tensor:
 
-`det=21/65536`,
+`T_C3_perp_alg = T_C3 + (7/4) T_S3`,
 
-`rank=2`.
+with norm `45/1024 > 0` and zero overlap with both algebraic redundant directions.
 
-The exact essentialized algebraic tensor is
+## Latest gate — SF052 complete source-authorized six-derivative TT quotient
 
-`T_C3_perp = T_C3 + (7/4) T_S3`.
+Preregistration:
 
-Its norm is
+`9e4a0a16e47b82989fafe08ea78533cc397d6459`.
 
-`45/1024 > 0`.
+Code:
 
-It obeys exactly
+`cbf76a43f579a53bf94c68bd8609378870efa658`.
 
-`<T_C3_perp,T_S3>=0`,
+Raw:
 
-`<T_C3_perp,T_SSC>=0`.
+`7ceaabdcfef88edb8ad45858f481f608d5aa92d5`.
 
-The normalized projector returns
+Authority/derivation audit:
 
-`P_E_alg[C3]=1`,
+`9baf5d5f3b29b51c85e786c008f4778f770633a0`.
 
-`P_E_alg[S3]=0`,
+Terminal:
 
-`P_E_alg[SSC]=0`.
+`4016da484546167175236c9b8d4faf879597db37`.
 
-Naive single-template contaminations before quotient are
+Ledger:
 
-`-7/19` for S3 and `21/190` for SSC.
+`ad1cc6b977358e2292bb46e81b1217b5e22a4ead`.
 
-The fact that the final SSC subtraction coefficient is zero is nontrivial: it follows only after solving the correlated redundant Gram system.
+Primary classification:
+
+`PASS_COMPLETE_SIX_DERIVATIVE_TT_QUOTIENT_SCOPED`.
+
+Secondary:
+
+`SOURCE_AUTHORIZED_DERIVATIVE_REDUNDANCY_REMOVABLE_WITH_NONZERO_C3_REMAINDER_SCOPED`.
+
+Qualification:
+
+`FROZEN_EUCLIDEAN_TT_SYMMETRIC_POINT_ONLY`.
+
+### Source-authorized derivative sector
+
+For the audited minimal essential scheme, the relevant derivative redundant action directions are
+
+`R Delta R`,
+
+`S_mu_nu Delta S^mu_nu`,
+
+with `Delta=-nabla^2`.
+
+The `nabla_mu nabla_nu R` kernel direction is a diffeomorphism and is not an additional tree-level redundant action operator in the audited background-field approximation.
+
+### R Delta R
+
+Since `R^(1)=0` on every frozen TT leg,
+
+`T[R Delta R]_(h^3,TT)=0`
+
+exactly.
+
+### S Delta S
+
+The full covariant cubic TT tensor is nonzero and linearly independent of the SF051 algebraic redundant span.
+
+Using basis `[C3,S3,SSC,SDeltaS]`, the rationally reconstructed Gram matrix is
+
+`[[95/768,-35/768,7/512,-259/768],`
+` [-35/768,5/192,-1/128,121/768],`
+` [7/512,-1/128,15/1024,-71/512],`
+` [-259/768,121/768,-71/512,1403/768]]`.
+
+The redundant `[S3,SSC,SDeltaS]` block has
+
+`det=4185/67108864`,
+
+`rank=3`.
+
+Complete frozen essentialized tensor:
+
+`T_C3_perp_6d = T_C3 + (84/155)T_S3 + (364/155)T_SSC + (49/155)T_SDeltaS`.
+
+Residual norm:
+
+`243/9920 > 0`.
+
+Normalized quotient projector:
+
+`P_E_6d[C3]=1`,
+
+`P_E_6d[S3]=0`,
+
+`P_E_6d[SSC]=0`,
+
+`P_E_6d[RDeltaR]=0`,
+
+`P_E_6d[SDeltaS]=0`.
+
+The previous blocker
+
+`DERIVATIVE_REDUNDANT_COMPLETION_OF_ESSENTIAL_C3_FLUCTUATION_PROJECTOR`
+
+is closed in the frozen TT/symmetric-point scope.
+
+Exactness qualification: the derivative tensor was executed numerically after an exact-symbolic implementation exceeded bounded runtime; the displayed simple-rational Gram entries reproduce the inherited exact SF051 block and satisfy the reconstructed determinant/rank/projection equations algebraically. Do not promote this to an arbitrary-kinematics symbolic theorem.
 
 ## Current theory frontier
 
-Algebraic curvature-cubic Ricci/EOM redundancy is closed in the frozen TT/symmetric-point subspace.
+Exact next high-information object:
 
-Exact remaining off-shell quotient problem:
+`PROJECTED_DYNAMICAL_C3_FLOW_RHS_REQUIRED`.
 
-`DERIVATIVE_REDUNDANT_COMPLETION_OF_ESSENTIAL_C3_FLUCTUATION_PROJECTOR`.
+Required chain:
 
-Then:
-
-`PROJECTED DYNAMICAL C3 FLOW`
+`COMPLETED ESSENTIAL C3 TT PROJECTOR`
+`-> ACTUAL DYNAMICAL GRAVITON THREE-POINT FRG FLOW RHS`
+`-> PROJECTED C3 FLUCTUATION FLOW`
 `-> BACKGROUND/FLUCTUATION SPLIT-NIELSEN CONTROL`
 `-> LORENTZIAN ON-SHELL LOW-ENERGY MATCHING`.
 
-A legitimate direct Lorentzian/complex on-shell fluctuation-flow construction could alternatively bypass off-shell EOM-redundant tensor subtraction because the SF049 physical helicity projector annihilates EOM-redundant on-shell structures. No such target C3 flow is currently authorized.
-
-Use the independently established essential sixth-derivative field-redefinition/redundant-kernel architecture rather than arbitrary tensor enlargement.
+The next gate should determine whether existing dynamical-vertex FRG machinery supplies the full p6 flow tensor needed by the completed projector, or precisely localize the missing RHS terms. Do not repeat the operator-basis or quotient calculations.
 
 ## Claim locks
 
 - no physical SF025 `b` selected;
 - no truncation constant promoted to physical matching;
 - no background/fluctuation equality assumed;
-- no algebraic-subspace PASS promoted to complete six-derivative quotient;
-- no Euclidean off-shell coefficient called a physical observable without quotient/continuation;
+- no frozen-point quotient PASS promoted to arbitrary kinematics;
+- no projected dynamical C3 beta function claimed yet;
+- no Euclidean off-shell coefficient called a physical observable without continuation;
 - no operational result selects quantum-law matching;
 - no quantum `chi_ABC` computed;
 - no historical RCG-002 authority changed;
