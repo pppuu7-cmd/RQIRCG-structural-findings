@@ -1,0 +1,35 @@
+{
+  "gate": "SF055A3_SOURCE_TT_PROJECTOR_NORMALISATION",
+  "classification": "PASS_SF055A3_SOURCE_TT_PROJECTOR_NORMALISATION_SCOPED",
+  "scientific_pass": true,
+  "Ng_inv": 0.00052874519051635,
+  "Ng": 1891.2701579818486,
+  "Nlambda_inv": 0.0026385724906858796,
+  "Nlambda": 378.99280900183135,
+  "TG_sha256": "66638b7f47175bfbe0b1fb7234f0c0f5260764da17942b9eedc9af0c35cf8e80",
+  "TLambda_sha256": "d4bce18818b05fcaf3e36c78683da0c0ca43db995221462c71131c90ecdf84e5",
+  "max_TT_gram_error": 4.440892098500626e-16,
+  "max_eq6_component_error": 1.734723475976807e-18,
+  "basis_rotation_Ng_inv_relative_change": 0.0,
+  "basis_rotation_Nlambda_inv_relative_change": 8.673617379884035e-19,
+  "global_rotation_Ng_inv_relative_change": 2.168404344971009e-19,
+  "global_rotation_Nlambda_inv_relative_change": 8.673617379884035e-19,
+  "alternative_symmetric_embeddings": [
+    {"plane": [0,1], "Ng_inv": 0.00052874519051635, "Nlambda_inv": 0.0026385724906858796},
+    {"plane": [0,2], "Ng_inv": 0.0005287451905163503, "Nlambda_inv": 0.0026385724906858796},
+    {"plane": [1,3], "Ng_inv": 0.0005287451905163503, "Nlambda_inv": 0.0026385724906858796}
+  ],
+  "negative_controls": {
+    "single_polarization_not_full_Ng": true,
+    "single_polarization_not_full_Nlambda": true,
+    "arbitrary_rescale_TG_rejected": true,
+    "arbitrary_rescale_TLambda_rejected": true
+  },
+  "successful_run": 35001632950,
+  "successful_job": 104491160831,
+  "artifact_id": 10409971299,
+  "artifact_digest": "sha256:e92c770acb56722729d307ee7740b01cf4d521b42c8dda65bd64d1e178b6a40d",
+  "executed_head": "8afc79b78313e11369f386684e19859c9f312acd",
+  "next_required": "FULL_TT_PROJECTED_FIGURE2_QUADRATURE_DERIVATIVE_AND_FINITE_DIFFERENCE_EXTRACTION",
+  "interpretation_ceiling": "PROJECTOR_NORMALISATION_ONLY_NO_LOOP_QUADRATURE_NO_EQ14_NO_C3"
+}
