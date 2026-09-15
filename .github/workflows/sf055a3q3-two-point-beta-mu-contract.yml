@@ -1,0 +1,30 @@
+name: SF055A3Q3 two-point beta_mu contract
+
+on:
+  push:
+    paths:
+      - 'prereg/SF055A3Q3_TWO_POINT_BETA_MU_TOPOLOGY_PROJECTOR_PREOUTCOME.md'
+      - 'scripts/sf055a3q3_two_point_beta_mu_contract.py'
+      - '.github/workflows/sf055a3q3-two-point-beta-mu-contract.yml'
+  workflow_dispatch:
+
+jobs:
+  contract:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install numpy
+        run: python -m pip install numpy
+      - name: Run two-point beta_mu topology/projector contract
+        run: python scripts/sf055a3q3_two_point_beta_mu_contract.py
+      - name: Upload raw result
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sf055a3q3-two-point-beta-mu-contract
+          path: results/raw/SF055A3Q3_TWO_POINT_BETA_MU_CONTRACT.json
+          if-no-files-found: warn
