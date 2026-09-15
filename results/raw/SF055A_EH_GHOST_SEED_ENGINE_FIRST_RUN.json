@@ -1,0 +1,135 @@
+{
+  "SF055_terminal_pass": false,
+  "canonical_graviton_field_convention": "h_can=sqrt(1/(32*pi))*h_raw",
+  "classification": "BLOCKED_EH_GHOST_SEED_OBJECT_NOT_RECONSTRUCTIBLE",
+  "gate": "SF055A_EH_GHOST_BASELINE_SEED_ENGINE",
+  "interpretation_ceiling": "SEED_OBJECTS_ONLY_NO_THREE_POINT_LOOP_OR_LANE_A_TERMINAL_PASS",
+  "invalid_positive_controls": [],
+  "negative_controls": {
+    "independent_n4_rescaling_rejected": true,
+    "non_Bose_n3_mutation_rejected": true,
+    "nonzero_ghost_h2_rejected": true,
+    "omitted_ghost_h_interaction_rejected": true,
+    "wrong_EH_kinetic_normalization_rejected": true,
+    "wrong_cosmological_TT_sign_rejected": true,
+    "wrong_dotr_rejected": true,
+    "wrong_regulator_shape_rejected": true
+  },
+  "negative_pass": true,
+  "parent_gate": "SF055_C3_PROJECTED_FRG_IMPLEMENTATION_CONTRACT",
+  "positive_controls": {
+    "EH_higher_vertices": {
+      "3": {
+        "bose_pass": true,
+        "canonical_value": 5.858650139449144,
+        "finite": true,
+        "max_permutation_abs_difference": 4.336808689942018e-18,
+        "nonzero": true,
+        "pass": true,
+        "permutations_tested": 6,
+        "value": 0.005812296859691782
+      },
+      "4": {
+        "bose_pass": true,
+        "canonical_value": -35.37928500734732,
+        "finite": true,
+        "max_permutation_abs_difference": 5.204170427930421e-18,
+        "nonzero": true,
+        "pass": true,
+        "permutations_tested": 24,
+        "value": -0.0035006553060195757
+      },
+      "5": {
+        "bose_pass": true,
+        "canonical_value": 107.74523675257691,
+        "finite": true,
+        "max_permutation_abs_difference": 9.540979117872439e-18,
+        "nonzero": true,
+        "pass": true,
+        "permutations_tested": 120,
+        "value": 0.0010632819763868261
+      },
+      "pass": true
+    },
+    "TT_two_point_and_Landau": {
+      "K_EH": 0.009947183943243459,
+      "gauge_F_max_norm": 0.0,
+      "max_abs_error": 0.019894367886486918,
+      "pass": false,
+      "records": [
+        {"Lambda": 0.0, "abs_error": 0.019894367886486915, "expected": 0.009947183943243459, "polarization": 0, "value": -0.009947183943243457},
+        {"Lambda": 0.0, "abs_error": 0.019894367886486918, "expected": 0.009947183943243459, "polarization": 1, "value": -0.009947183943243459},
+        {"Lambda": 0.0, "abs_error": 0.019894367886486915, "expected": 0.009947183943243459, "polarization": 2, "value": -0.009947183943243457},
+        {"Lambda": 0.0, "abs_error": 0.019894367886486915, "expected": 0.009947183943243459, "polarization": 3, "value": -0.009947183943243457},
+        {"Lambda": 0.0, "abs_error": 0.019894367886486915, "expected": 0.009947183943243459, "polarization": 4, "value": -0.009947183943243457},
+        {"Lambda": 0.15, "abs_error": 0.019894367886486915, "expected": 0.006963028760270421, "polarization": 0, "value": -0.012931339126216496},
+        {"Lambda": 0.15, "abs_error": 0.019894367886486918, "expected": 0.006963028760270421, "polarization": 1, "value": -0.012931339126216497},
+        {"Lambda": 0.15, "abs_error": 0.019894367886486915, "expected": 0.006963028760270421, "polarization": 2, "value": -0.012931339126216496},
+        {"Lambda": 0.15, "abs_error": 0.019894367886486915, "expected": 0.006963028760270421, "polarization": 3, "value": -0.012931339126216496},
+        {"Lambda": 0.15, "abs_error": 0.019894367886486915, "expected": 0.006963028760270421, "polarization": 4, "value": -0.012931339126216496},
+        {"Lambda": -0.2, "abs_error": 0.019894367886486915, "expected": 0.013926057520540842, "polarization": 0, "value": -0.005968310365946074},
+        {"Lambda": -0.2, "abs_error": 0.019894367886486915, "expected": 0.013926057520540842, "polarization": 1, "value": -0.005968310365946074},
+        {"Lambda": -0.2, "abs_error": 0.019894367886486915, "expected": 0.013926057520540842, "polarization": 2, "value": -0.005968310365946074},
+        {"Lambda": -0.2, "abs_error": 0.019894367886486915, "expected": 0.013926057520540842, "polarization": 3, "value": -0.005968310365946074},
+        {"Lambda": -0.2, "abs_error": 0.019894367886486915, "expected": 0.013926057520540842, "polarization": 4, "value": -0.005968310365946074}
+      ]
+    },
+    "ghost_seed": {
+      "generic_h_control": {
+        "h1_value": -0.3168020092097068,
+        "h2_value": 0.0,
+        "h3_value": 0.0,
+        "momentum_conservation_norm": 0.0,
+        "p_bar": [-1.0, -1.0, -1.0, -0.0],
+        "p_c": [0.0, 1.0, 1.0, 0.0],
+        "p_h": [1.0, 0.0, 0.0, 0.0],
+        "pass": true
+      },
+      "pass": true,
+      "two_point": {
+        "max_abs_error": 0.0,
+        "pass": true,
+        "records": [
+          {"abs_error": 0.0, "expected": 0.0, "pc": [1.0, 0.0, 0.0, 0.0], "value": 0.0},
+          {"abs_error": 0.0, "expected": -0.3086066999241838, "pc": [0.0, 1.0, 1.0, 0.0], "value": -0.3086066999241838},
+          {"abs_error": 0.0, "expected": 0.0, "pc": [1.0, -1.0, 0.5, 0.0], "value": 0.0}
+        ]
+      }
+    },
+    "optimized_regulator": {
+      "max_abs_error": 0.0,
+      "pass": true,
+      "records": [
+        {"abs_error": 0.0, "expected": 0.5, "mu": -0.5, "q2": 0.0625, "value": 0.5},
+        {"abs_error": 0.0, "expected": 1.0, "mu": 0.0, "q2": 0.0625, "value": 1.0},
+        {"abs_error": 0.0, "expected": 1.1, "mu": 0.1, "q2": 0.0625, "value": 1.1},
+        {"abs_error": 0.0, "expected": 0.5, "mu": -0.5, "q2": 0.25, "value": 0.5},
+        {"abs_error": 0.0, "expected": 1.0, "mu": 0.0, "q2": 0.25, "value": 1.0},
+        {"abs_error": 0.0, "expected": 1.1, "mu": 0.1, "q2": 0.25, "value": 1.1},
+        {"abs_error": 0.0, "expected": 0.5, "mu": -0.5, "q2": 0.75, "value": 0.5},
+        {"abs_error": 0.0, "expected": 1.0, "mu": 0.0, "q2": 0.75, "value": 1.0},
+        {"abs_error": 0.0, "expected": 1.1, "mu": 0.1, "q2": 0.75, "value": 1.1},
+        {"abs_error": 0.0, "expected": 0.75, "mu": -0.5, "q2": 1.25, "value": 0.75},
+        {"abs_error": 0.0, "expected": 1.25, "mu": 0.0, "q2": 1.25, "value": 1.25},
+        {"abs_error": 0.0, "expected": 1.35, "mu": 0.1, "q2": 1.25, "value": 1.35},
+        {"abs_error": 0.0, "expected": 1.5, "mu": -0.5, "q2": 2.0, "value": 1.5},
+        {"abs_error": 0.0, "expected": 2.0, "mu": 0.0, "q2": 2.0, "value": 2.0},
+        {"abs_error": 0.0, "expected": 2.1, "mu": 0.1, "q2": 2.0, "value": 2.1}
+      ]
+    },
+    "threshold_functions": {
+      "max_scaled_error": 3.9474596431116675e-16,
+      "pass": true,
+      "records": [
+        {"abs_error": 8.881784197001252e-16, "n": 1, "omega": 0.0, "p": 1, "pass": true, "target": 2.0, "value": 2.000000000000001},
+        {"abs_error": 0.0, "n": 1, "omega": 0.1, "p": 1, "pass": true, "target": 1.8181818181818181, "value": 1.8181818181818181},
+        {"abs_error": 2.220446049250313e-16, "n": 2, "omega": 0.0, "p": 2, "pass": true, "target": 1.0, "value": 1.0000000000000002},
+        {"abs_error": 3.3306690738754696e-16, "n": 2, "omega": 0.1, "p": 2, "pass": true, "target": 0.8264462809917354, "value": 0.8264462809917358},
+        {"abs_error": 3.552713678800501e-15, "n": 1, "omega": -0.5, "p": 2, "pass": true, "target": 8.0, "value": 8.000000000000004},
+        {"abs_error": 1.7763568394002505e-15, "n": 2, "omega": -0.5, "p": 3, "pass": true, "target": 8.0, "value": 8.000000000000002}
+      ]
+    }
+  },
+  "positive_pass": false,
+  "scientific_pass": false
+}
