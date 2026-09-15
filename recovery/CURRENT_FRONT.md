@@ -1,6 +1,6 @@
 # RQIRCGSF current authoritative front
 
-Updated: 2026-09-15, after SF042.
+Updated: 2026-09-15, after SF044.
 
 ## Repository role
 
@@ -10,19 +10,9 @@ Parent `pppuu7-cmd/RQIR-Candidate-Gravity` remains blocked on `EXPLICIT_PROGRAMM
 
 RQIRCGSF results remain successor authority until separately imported/promoted.
 
-## Theory frontier
+## Retained operational object and locks
 
-Retain SF021 scoped RHPI classical-law selection, SF025 physical quantum-law matching nonselection, and SF027 anomaly-freedom nonselection.
-
-Exact theory blocker remains:
-
-`GENUINELY_NEW_MICROSCOPIC_MATCHING_PRINCIPLE_WITH_EXPLICIT_PHYSICAL_MAP_REQUIRED`.
-
-Operational calibration may not choose the SF025/SF027 quantum-law matching datum.
-
-## Operational object and invariant locks
-
-SF028 remains terminal-invalid in its 1D Gaussian object.
+SF028 remains terminal-invalid in its one-dimensional Gaussian object.
 
 SF028B remains the boundary-complete physical-object authority:
 
@@ -36,7 +26,7 @@ Retain:
 
 `NONZERO_CONNECTED_SIGNAL != NEW_THREE_BODY_GRAVITATIONAL_VERTEX`.
 
-## Retained SF029–SF038 calibration chain
+## Retained operational calibration chain through SF038
 
 SF029: robust known-physics baseline hierarchy.
 
@@ -52,25 +42,13 @@ SF034: explicit cubic register-phase control map; `C3` rejects diagonal Boolean 
 
 SF035: linear amplitude dependence identifiable; quadratic Q2 full rank but ill-conditioned.
 
-SF036: positive five-point amplitude ladder strongly improves Q2 structural conditioning.
+SF036: positive five-point amplitude ladder improves Q2 conditioning.
 
 SF037: Q2 and 1PN jointly estimable; positive five-point Q2 PN VIF `909.166`.
 
-SF038 terminal `6a8afd7bde8a4d9d7783e9ec01dfb5f444250ff9`:
-
-`SIGNED_AMPLITUDE_PARITY_STRONGLY_IMPROVES_Q2_CALIBRATION_SCOPED`.
-
-Signed five-point design lowers Q2 PN VIF to `37.5094` at the same 45-row count and provides strong odd/even amplitude leverage.
+SF038: signed-amplitude parity strongly improves Q2 calibration; at equal row count PN VIF falls to `37.5094`.
 
 ## SF039 reversible harmonic transport implementation
-
-Preregistration:
-
-`de31d7e3c6c6bbd97045709ff032e7f6a951f98d`.
-
-Derivation/source notes:
-
-`6bbc2cf28ee6d65bea52ab4bdab5d2a71caf06aa`.
 
 Terminal:
 
@@ -84,53 +62,17 @@ Secondary:
 
 `CONNECTED_CONTROL_PHASE_REQUIRES_NONQUADRATIC_OR_GENUINE_MULTILABEL_CONTROL_CONTENT_SCOPED`.
 
-### Exact degree theorem
+For moving harmonic transport with centers linear in the Boolean branch labels, the exact forced-harmonic c-number phase is at most quadratic in the programmed displacements. Including the shared recoil body generates only constant, one-body and pairwise Boolean terms. Therefore ideal preparation/recombination control has exact `Delta3=0`.
 
-For each moving harmonic control Hamiltonian with center
+A common amplitude gain error and branch-independent body-local offsets preserve this null.
 
-`Q_I=q_I^0+d_I f(t)`,
-
-the branch-dependent c-number phase is at most
-
-`const + alpha_I d_I + beta_I d_I^2`.
-
-Frozen COM-closed drives are
-
-`d_A=lambda a ell`, `d_B=2b ell`, `d_C=3c ell`,
-
-`d_D=-(lambda a+2b+3c)ell/5`.
-
-The recoil square reduces to Boolean degree <=2:
-
-`lambda^2 a+4b+9c+4lambda ab+6lambda ac+12bc`.
-
-There is no `abc` term, hence
-
-`Delta3 Phi_ctrl=0`
-
-exactly for the ideal quadratic transport/recombination class.
-
-A common multiplicative signed-amplitude gain error and branch-independent body-local offsets preserve this connected null.
-
-Adding an explicit `chi abc` control term gives `Delta3=chi` as the negative control.
+A genuine degree-three branch/control term is required to evade the theorem.
 
 Retain:
 
 `IDEAL_REVERSIBLE_TRANSPORT_NULL != DEVICE_ERROR_NULL`.
 
 ## SF040 triple-null cubic-crosstalk localization
-
-Preregistration:
-
-`bcbe70def315877ba5148f725d86444513f64cf1`.
-
-Script:
-
-`9dff4fbd9e2de8bc14044e600a764a90d6cb1c82`.
-
-Raw:
-
-`763f1bea76494400018d5ed26cb60f67f20c6998`.
 
 Terminal:
 
@@ -140,25 +82,17 @@ Classification:
 
 `TRIPLE_NULL_CONTROLS_LOCALIZE_LINEAR_CUBIC_CROSSTALK_SCOPED`.
 
-Full S+NA+NB+NC four-parameter control matrix:
+Full S+NA+NB+NC linear actuator-dependence model:
 
 `rank=4`, `kappa=6.3751`.
 
-Stronger null-only NA+NB+NC result:
+Null-only NA+NB+NC:
 
 `rank=4`, `kappa=5.9558`.
 
-Thus linear single-actuator dependence of a genuine cubic connected control phase can be calibrated entirely on connected-gravity-null channels.
-
-Retain:
-
-`CONTROL_NUISANCE_CALIBRATION != GRAVITY_SIGNAL_FIT`.
+Thus the frozen genuine cubic control nuisance can be calibrated without fitting gravity-bearing science rows.
 
 ## SF041 pair-cross stress test
-
-Preregistration:
-
-`1127a7a774aeab6e33c27f3a0532f32068f35fd2`.
 
 Terminal:
 
@@ -168,27 +102,19 @@ Classification:
 
 `TRIPLE_NULL_PAIR_CROSS_CROSSTALK_HAS_ONE_UNRESOLVED_DIRECTION_SCOPED`.
 
-For the seven-parameter linear+pair-cross actuator model, S+NA+NB+NC has exact rank 6.
+Seven-parameter linear+pair-cross model has rank 6 under S+NA+NB+NC. Exact null vector:
 
-Exact null vector in order `[zeta0,zeta_A,zeta_B,zeta_C,zeta_AB,zeta_AC,zeta_BC]`:
+`(1,0,-1,-1,0,0,1)`
 
-`(1,0,-1,-1,0,0,1)`.
+in `[zeta0,zeta_A,zeta_B,zeta_C,zeta_AB,zeta_AC,zeta_BC]`.
 
-This prospectively identified the missing lever `B=C=0`.
+This identifies the missing double-null lever `B=C=0`.
 
-## Latest gate — SF042 minimum double-null repair
-
-Preregistration:
-
-`de70e9ca001611ce6f3ab63bc460b045ee187d3d`.
+## SF042 minimum double-null repair
 
 Terminal:
 
 `27a249ce8c4741ce0b4e5768a5b091b2301620b0`.
-
-Ledger:
-
-`d085605ca5b02062e1a3e07b2249fa0058ef9974`.
 
 Classifications:
 
@@ -196,59 +122,154 @@ Classifications:
 
 `GRAVITY_NULL_CONTROLS_ALONE_CLOSE_PAIR_CROSS_CROSSTALK_MODEL_SCOPED`.
 
-The only new control family is
+Adding only `NBC=(lambda_A,0,0)` gives full rank 7, `kappa=7.63564`.
 
-`NBC=(lambda_A,0,0)`.
+Null-only NA+NB+NC+NBC is also rank 7, `kappa=5.82843`.
 
-### Full result
+Removing NBC exactly restores the SF041 rank-6 null direction.
 
-S+NA+NB+NC+NBC:
-
-`rank=7/7`,
-
-`kappa=7.63564`,
-
-empty nullspace.
-
-### Null-only stronger result
-
-NA+NB+NC+NBC, with no gravity-bearing science rows:
-
-`rank=7/7`,
-
-`kappa=5.82843`.
-
-Therefore the frozen single- and pair-actuator cubic-crosstalk model can be structurally calibrated entirely on gravity-null controls.
-
-Removing NBC exactly reproduces SF041 rank 6 and its null direction.
-
-Leave-one-family audit shows NB, NC and NBC are essential; S or NA can be omitted for rank, but NA is required for a completely gravity-null calibration set.
-
-## Operational frontier after SF042
+### Operational frontier
 
 Within the explicit quadratic reversible transport plus linear/pair-cross connected cubic-crosstalk class, structural nuisance identifiability is closed.
 
-Further arbitrary actuator-polynomial enlargement has low information value without independent physical motivation.
+Further arbitrary actuator-polynomial enlargement is low information without independent physical motivation.
 
-The next missing operational object is empirical/device-level:
+Current operational blocker:
 
 `DEVICE_LEVEL_NONLINEAR_CROSSTALK_MAGNITUDE_AND_STABILITY_DATA_REQUIRED`.
 
-Actual measurements/bounds must determine whether genuine connected nonlinear control content exists and whether its coefficients remain stable across the null/science schedule.
-
-This information is not available from the abstract protocol alone.
-
-## Parent and claim locks
-
-Parent frontier remains `EXPLICIT_PROGRAMME_DISPOSITION_AUTHORITY_REQUIRED`.
+Actual device measurements/bounds are not available from the abstract protocol.
 
 Retain:
 
-- `STRUCTURAL_CONTROL_CLOSURE != DEVICE_VALIDATION`;
-- `ESTIMABILITY != FEASIBILITY`;
-- `KNOWN_PHYSICS_SUBTRACTION != QUANTUM_RESIDUAL_AUTHORITY`;
-- no operational result selects a quantum-law matching coefficient;
+`STRUCTURAL_CONTROL_CLOSURE != DEVICE_VALIDATION`.
+
+## Theory history before SF043
+
+SF021: `RHPI_SELECTED_AS_CLASSICAL_GRAVITATIONAL_LAW_PRINCIPLE_SCOPED`.
+
+SF025: `POST_RHPI_QUANTUM_COMPOSITION_DOES_NOT_FIX_FINITE_ON_SHELL_MATCHING_SCOPED`.
+
+Critical distinction:
+
+`QUANTUM_STATE_MEASURE_SELECTION != QUANTUM_LAW_ON_SHELL_MATCHING_SELECTION`.
+
+SF027:
+
+`QCA_PERTURBATIVE_RANK_ZERO_EXACT_MAP_BLOCKED_SCOPED`.
+
+`ANOMALY_FREEDOM_IS_CONSISTENCY_NOT_PHYSICAL_MATCHING_SELECTION_SCOPED`.
+
+Before SF043 the theory blocker was
+
+`GENUINELY_NEW_MICROSCOPIC_MATCHING_PRINCIPLE_WITH_EXPLICIT_PHYSICAL_MAP_REQUIRED`.
+
+## SF043 asymptotic-safety Goroff–Sagnotti matching selector
+
+Preregistration:
+
+`10c8fee5e58f507ea5893c5c2c789d8ed11cce84`.
+
+Authority audit:
+
+`a7435f6d48b17f25001f520d5f7c2cf8d41a97f2`.
+
+Terminal:
+
+`dff2f59cce67329d5fddddab16dc0efe9cc115b2`.
+
+Classification:
+
+`ASYMPTOTIC_SAFETY_PROVIDES_NONZERO_TRUNCATION_LEVEL_MATCHING_SELECTION_SCOPED`.
+
+Secondary:
+
+`PHYSICAL_ON_SHELL_MATCHING_AUTHORITY_BLOCKED_BY_TRUNCATION_OR_SCHEME_MAP`.
+
+Information rank:
+
+`R_ASGS_TRUNCATION=1`.
+
+`R_ASGS_PHYSICAL=UNDEFINED_MAP_NOT_CLOSED`.
+
+### New theory fact
+
+In the audited minimal essential sixth-derivative truncation, the Goroff–Sagnotti curvature-cubic coupling is an essential coupling and is irrelevant at a UV fixed point with one relevant direction.
+
+The unique UV-safe separatrix connected to the perturbative-GR infrared domain predicts the finite low-energy curvature-cubic trajectory constant once the relevant scale/data are fixed.
+
+Thus a microscopic UV boundary condition can carry genuine nonzero selection information on the SF025 matching fibre at **truncation level**.
+
+The audited paper gives a representative IR trajectory constant `A=-3.988e-6` for one technical regulator choice, but this number is not promoted to physical SF025 `b`.
+
+Physical promotion is blocked because the finite derivative-expansion FRG result retains technical/regulator dependence and its displayed low-energy curvature-cubic running coefficient does not reproduce the known perturbative two-loop coefficient. The authors themselves indicate that an infinite derivative expansion may be required.
+
+Therefore do not write `b=A`.
+
+## Latest theory gate — SF044 amplitude/form-factor bridge
+
+Preregistration:
+
+`796f2432c3524af6623bb9f3f717921f5c6d94e4`.
+
+Authority audit:
+
+`dbfffc2f1de0c3d45f34516b674c36e4fbfc7b32`.
+
+Terminal:
+
+`89e4e0d0911aaf762691400f1b80833dda8fb720`.
+
+Ledger:
+
+`6d8727285097859ed5f9bc6c075fad0c39906087`.
+
+Classification:
+
+`ASYMPTOTIC_SAFETY_OBSERVABLE_FRAMEWORK_EXISTS_BUT_C3_MATCHING_BRIDGE_INCOMPLETE_SCOPED`.
+
+Retain:
+
+`R_ASGS_PHYSICAL=UNDEFINED_MAP_NOT_CLOSED`.
+
+### Observable-framework audit
+
+The form-factor program supplies a legitimate physical-observable architecture:
+
+`UV fixed point -> quantum effective action/form factors -> on-shell amplitude -> low-energy EFT`.
+
+On-shell amplitudes identify physical essential combinations rather than arbitrary gauge/redundant couplings.
+
+However no audited source computes the specific pure-gravity Lorentzian Goroff–Sagnotti `C^3/R^3` matching observable from the SF043 UV-safe trajectory.
+
+The 2022 form-factor review reports first-principles progress on graviton propagators and parts of three-/four-point functions, while describing Lorentzian spectral-function work as a step toward asymptotically-safe scattering amplitudes.
+
+Newer 2025/2026 Lorentzian work strengthens the physical program but still stops below the target: self-consistent mass-shell graviton spectral functions are available and the Lorentzian effective action has been computed through quadratic curvature, not the required cubic-curvature physical four-graviton matching map.
+
+### Current theory frontier
+
+The generic selector-principle search has been substantially narrowed.
+
+A nonzero selector architecture exists at truncation level.
+
+The exact missing physical object is now:
+
+`REGULATOR_INDEPENDENT_LORENTZIAN_ON_SHELL_C3_MATCHING_MAP_FROM_UV_SAFE_ESSENTIAL_TRAJECTORY`.
+
+Further generic covariance/unitarity/positivity/anomaly-free selector stacking is lower information value than constructing or locating this exact bridge.
+
+## Parent and claim locks
+
+Parent frontier remains:
+
+`EXPLICIT_PROGRAMME_DISPOSITION_AUTHORITY_REQUIRED`.
+
+Retain:
+
+- no physical SF025 `b` selected;
+- no operational result selects the quantum-law matching datum;
 - no quantum `chi_ABC` computed;
 - no historical RCG-002 authority changed;
 - no parent programme disposition selected;
+- no asymptotic-safety correctness claim;
 - no `NEW_PHYSICS_FOUND`, `FULL_QUANTUM_GRAVITY`, or theory-establishment claim.
