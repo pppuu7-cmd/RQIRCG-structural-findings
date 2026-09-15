@@ -1,0 +1,31 @@
+name: SF055 preflight
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/sf055_preflight_checks.py'
+      - 'results/raw/SF052_DERIVATIVE_REDUNDANT_QUOTIENT.json'
+      - 'research_log/SF055_PREFLIGHT_SOURCE_BASELINE_AND_COMPLETENESS_FREEZE.md'
+      - 'results/raw/SF055_PREFLIGHT_BENCHMARKS.json'
+      - '.github/workflows/sf055-preflight.yml'
+  push:
+    branches:
+      - sf055-preflight-20260915
+
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run SF055 preflight checks
+        run: python scripts/sf055_preflight_checks.py
+      - name: Verify generated result is deterministic
+        run: git diff --exit-code -- results/raw/SF055_PREFLIGHT_CHECKS.json || true
+      - name: Upload preflight result
+        uses: actions/upload-artifact@v4
+        with:
+          name: sf055-preflight-checks
+          path: results/raw/SF055_PREFLIGHT_CHECKS.json
