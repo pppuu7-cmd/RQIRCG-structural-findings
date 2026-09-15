@@ -1,0 +1,29 @@
+name: SF055A EH ghost seed engine
+
+on:
+  pull_request:
+    paths:
+      - 'prereg/SF055A_EH_GHOST_BASELINE_SEED_ENGINE_PREOUTCOME.md'
+      - 'scripts/sf055a_eh_ghost_seed_engine.py'
+      - '.github/workflows/sf055a-eh-ghost-seed-engine.yml'
+  workflow_dispatch:
+
+jobs:
+  seed-engine:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install numerical dependency
+        run: python -m pip install --disable-pip-version-check numpy
+      - name: Run prospectively frozen SF055A seed controls
+        run: python scripts/sf055a_eh_ghost_seed_engine.py
+      - name: Upload executed seed result
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sf055a-eh-ghost-seed-engine
+          path: results/raw/SF055A_EH_GHOST_SEED_ENGINE.json
+          if-no-files-found: error
