@@ -15,14 +15,14 @@ jobs:
       max-parallel: 8
       matrix:
         include:
-          - {tag: p16N24, p: '0.0625', N: 24, S: 3, s: 0}
-          - {tag: p16N24, p: '0.0625', N: 24, S: 3, s: 1}
-          - {tag: p16N24, p: '0.0625', N: 24, S: 3, s: 2}
-          - {tag: p32N16, p: '0.03125', N: 16, S: 2, s: 0}
-          - {tag: p32N16, p: '0.03125', N: 16, S: 2, s: 1}
-          - {tag: p32N24, p: '0.03125', N: 24, S: 3, s: 0}
-          - {tag: p32N24, p: '0.03125', N: 24, S: 3, s: 1}
-          - {tag: p32N24, p: '0.03125', N: 24, S: 3, s: 2}
+          - {tag: p16N24, p: '0.0625', order: 24, nshards: 3, shard_id: 0}
+          - {tag: p16N24, p: '0.0625', order: 24, nshards: 3, shard_id: 1}
+          - {tag: p16N24, p: '0.0625', order: 24, nshards: 3, shard_id: 2}
+          - {tag: p32N16, p: '0.03125', order: 16, nshards: 2, shard_id: 0}
+          - {tag: p32N16, p: '0.03125', order: 16, nshards: 2, shard_id: 1}
+          - {tag: p32N24, p: '0.03125', order: 24, nshards: 3, shard_id: 0}
+          - {tag: p32N24, p: '0.03125', order: 24, nshards: 3, shard_id: 1}
+          - {tag: p32N24, p: '0.03125', order: 24, nshards: 3, shard_id: 2}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -34,36 +34,67 @@ jobs:
           NUMBA_NUM_THREADS: '1'
         run: >-
           python scripts/sf055a3q6p_yshard.py
-          --mode shard --p ${{ matrix.p }} --N ${{ matrix.N }}
-          --shard-id ${{ matrix.s }} --nshards ${{ matrix.S }}
-          --out results/raw/q6p/${{ matrix.tag }}_s${{ matrix.s }}.json
+          --mode shard --p ${{ matrix.p }} --N ${{ matrix.order }}
+          --shard-id ${{ matrix.shard_id }} --nshards ${{ matrix.nshards }}
+          --out results/raw/q6p/${{ matrix.tag }}_s${{ matrix.shard_id }}.json
       - uses: actions/upload-artifact@v4
         with:
-          name: sf055a3q6p-${{ matrix.tag }}-s${{ matrix.s }}
-          path: results/raw/q6p/${{ matrix.tag }}_s${{ matrix.s }}.json
+          name: sf055a3q6p-${{ matrix.tag }}-s${{ matrix.shard_id }}
+          path: results/raw/q6p/${{ matrix.tag }}_s${{ matrix.shard_id }}.json
 
-  merge:
+  merge_p16N24:
     needs: shards
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        include:
-          - {tag: p16N24, S: 3}
-          - {tag: p32N16, S: 2}
-          - {tag: p32N24, S: 3}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/download-artifact@v4
         with:
-          pattern: sf055a3q6p-${{ matrix.tag }}-*
+          pattern: sf055a3q6p-p16N24-s*
           path: results/parts
           merge-multiple: true
       - name: Merge exact y shards
         run: |
-          inputs=$(find results/parts -name '${{ matrix.tag }}_s*.json' -print | sort | tr '\n' ' ')
-          python scripts/sf055a3q6p_yshard.py --mode merge --inputs $inputs --out results/raw/q6p/${{ matrix.tag }}_merged.json
+          inputs=$(find results/parts -name 'p16N24_s*.json' -print | sort | tr '\n' ' ')
+          python scripts/sf055a3q6p_yshard.py --mode merge --inputs $inputs --out results/raw/q6p/p16N24_merged.json
       - uses: actions/upload-artifact@v4
         with:
-          name: sf055a3q6p-${{ matrix.tag }}-merged
-          path: results/raw/q6p/${{ matrix.tag }}_merged.json
+          name: sf055a3q6p-p16N24-merged
+          path: results/raw/q6p/p16N24_merged.json
+
+  merge_p32N16:
+    needs: shards
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: sf055a3q6p-p32N16-s*
+          path: results/parts
+          merge-multiple: true
+      - name: Merge exact y shards
+        run: |
+          inputs=$(find results/parts -name 'p32N16_s*.json' -print | sort | tr '\n' ' ')
+          python scripts/sf055a3q6p_yshard.py --mode merge --inputs $inputs --out results/raw/q6p/p32N16_merged.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sf055a3q6p-p32N16-merged
+          path: results/raw/q6p/p32N16_merged.json
+
+  merge_p32N24:
+    needs: shards
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: sf055a3q6p-p32N24-s*
+          path: results/parts
+          merge-multiple: true
+      - name: Merge exact y shards
+        run: |
+          inputs=$(find results/parts -name 'p32N24_s*.json' -print | sort | tr '\n' ' ')
+          python scripts/sf055a3q6p_yshard.py --mode merge --inputs $inputs --out results/raw/q6p/p32N24_merged.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sf055a3q6p-p32N24-merged
+          path: results/raw/q6p/p32N24_merged.json
