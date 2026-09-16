@@ -1,274 +1,231 @@
 # RQIRCGSF current authoritative front
 
-Updated: 2026-09-16 after terminal SF055A3Q4 shifted-Litim intersection geometry / piecewise-equivalence PASS.
+Updated: 2026-09-16 after reconciliation of autonomous Q5/Q6/Q6P work and prospective repair of the Q6P fatal-shard workflow graph.
 
 ## Current programme verdict
 
 `MISSING_OBJECT_OR_CONTROL_BLOCKER_SCOPED`.
 
-SF055 Lane A remains **BLOCKED by the original frozen baseline convergence test**.
+`SF055_TERMINAL_PASS=FALSE`.
 
-Historical classification remains:
+The programme remains stopped before substantive C3 flow. The original EH/ghost baseline remains historically terminal
 
 `BLOCKED_LANE_A_BASELINE_QUADRATURE_NOT_CONVERGED_SCOPED`.
 
-`SF055_TERMINAL_PASS=FALSE`.
-
-The programme hard stop before substantive C3 flow remains active.
-
-Q4 closes the missing exact shifted-regulator partition geometry needed for a source-equivalent implementation retry. It does **not** rewrite the blocked baseline as a PASS.
+No later implementation-control result rewrites that history. The active numerical successor is now Q6/Q6P, not Q4/Q5.
 
 ## Parent separation
 
-`pppuu7-cmd/RQIRCG-structural-findings` remains an independent `PROSPECTIVE NEW-PRINCIPLE / SUCCESSOR SEARCH`.
+`pppuu7-cmd/RQIRCG-structural-findings` remains an independent prospective successor search.
 
 Parent `pppuu7-cmd/RQIR-Candidate-Gravity` remains separately parked on
 
 `WAIT_FOR_EXPLICIT_PROGRAMME_DISPOSITION_DECLARATION`.
 
-No D1/D2/D3 disposition is selected. Successor results do not automatically become historical RCG-002 authority.
+No D1/D2/D3 disposition is selected. No successor result automatically becomes historical RCG-002 authority. `chi_ABC` remains unauthorized/not computed.
 
 ## Retained theory authority
 
-- SF021: `RHPI_SELECTED_AS_CLASSICAL_GRAVITATIONAL_LAW_PRINCIPLE_SCOPED`.
-- SF025: `POST_RHPI_QUANTUM_COMPOSITION_DOES_NOT_FIX_FINITE_ON_SHELL_MATCHING_SCOPED`.
-- SF043: `ASYMPTOTIC_SAFETY_PROVIDES_NONZERO_TRUNCATION_LEVEL_MATCHING_SELECTION_SCOPED`.
-- `R_ASGS_TRUNCATION=1`; `R_ASGS_PHYSICAL=UNDEFINED_MAP_NOT_CLOSED`.
-- SF046: `b=s G_C3/(32 pi G_N)` with unresolved global sign; no physical b selected.
-- SF049: `PHYSICAL_ON_SHELL_C3_HELICITY_PROJECTOR_CONSTRUCTED_SCOPED`.
-- SF052: `PASS_COMPLETE_SIX_DERIVATIVE_TT_QUOTIENT_SCOPED` only at the frozen D=4 Euclidean TT symmetric point.
-- SF053: `BLOCKED_TARGET_FLOW_OBJECT_NOT_RECONSTRUCTIBLE_SCOPED` for the audited published executed fluctuation truncations.
-- SF054: `MINIMAL_C3_FLOW_REQUIRES_CORRELATED_3_4_5_VERTEX_INSERTIONS_SCOPED`.
+Retain all terminal SF001-SF054 results, in particular:
+
+- SF021 `RHPI_SELECTED_AS_CLASSICAL_GRAVITATIONAL_LAW_PRINCIPLE_SCOPED`;
+- SF025 `POST_RHPI_QUANTUM_COMPOSITION_DOES_NOT_FIX_FINITE_ON_SHELL_MATCHING_SCOPED`;
+- SF043 `ASYMPTOTIC_SAFETY_PROVIDES_NONZERO_TRUNCATION_LEVEL_MATCHING_SELECTION_SCOPED`;
+- `R_ASGS_TRUNCATION=1`;
+- `R_ASGS_PHYSICAL=UNDEFINED_MAP_NOT_CLOSED`;
+- SF046 coordinate bridge `b=s G_C3/(32 pi G_N)` with unresolved global sign and no physical b selected;
+- SF049 physical on-shell C3 helicity projector scoped;
+- SF052 `PASS_COMPLETE_SIX_DERIVATIVE_TT_QUOTIENT_SCOPED` only at the frozen D=4 Euclidean TT symmetric point;
+- SF053 published executed fluctuation truncations do not supply the target p6/C3 flow object;
+- SF054 correlated C3 3/4/5-point insertions are required.
 
 Retain:
 
-`QUANTUM_STATE_MEASURE_SELECTION != QUANTUM_LAW_ON_SHELL_MATCHING_SELECTION`.
-
 `PHYSICAL_HELICITY_PROJECTOR != PROJECTED_FRG_FLOW`.
 
-`FULL_MOMENTUM_DEPENDENCE_OF_A_SELECTED_TENSOR_DRESSING != FULL_TENSOR_INFORMATION`.
+`BACKGROUND_COUPLING != PHYSICAL_FLUCTUATION_COUPLING`.
 
-## SF055 implementation contract and completed prerequisites
+`TRUNCATION_SELECTOR != PHYSICAL_SELECTOR`.
 
-Parent preregistration:
+## SF055 completed prerequisites retained
 
-`9d998d984566aa5bf290312a6a062fd632c85561`.
+Parent preregistration: `9d998d984566aa5bf290312a6a062fd632c85561`.
 
-Frozen realization remains D=4 flat Euclidean, linear split, source-Fourier `partial -> i p`, harmonic/de-Donder Landau gauge, full six-dimensional internal Landau-transverse graviton space plus FP ghosts, source optimized regulator, symmetric external three-point kinematics, and one common C3 coupling generating correlated vertices of orders 3,4,5.
+Lane B remains `PASS_C3_COMMON_ORIGIN_VERTEX_GENERATOR_SCOPED`, run `34995827603`, artifact `10407234167`.
 
-Lane B:
+Lane C remains `PASS_IMPLEMENTED_THREE_POINT_FLOW_C3_INSERTION_MANIFEST_SCOPED`, run `34995935520`, artifact `10407288690`.
 
-`PASS_C3_COMMON_ORIGIN_VERTEX_GENERATOR_SCOPED`, run `34995827603`, artifact `10407234167`.
-
-Lane C:
-
-`PASS_IMPLEMENTED_THREE_POINT_FLOW_C3_INSERTION_MANIFEST_SCOPED`, run `34995935520`, artifact `10407288690`.
-
-Source three-point topology coefficients remain
+Three-point source coefficients remain
 
 `T5=-1/2`, `B43=+3`, `T333grav=-3`, `T333ghost=+6`.
 
-Common-C3 insertion histogram remains `{3:4,4:1,5:1}`, with no C3 two-point or ghost insertion.
+Retain the validated source-Fourier seed engine, full six-dimensional Landau-transverse graviton internal space, FP ghost sector, routing, fixed-q contraction assembly, source TT projector normalisation, Q1 exact TT-projector regrouping and Q2 source symmetrisation normalisation.
 
-Lane-A prerequisite authorities retained:
-
-- source-Fourier EH/ghost seed engine PASS;
-- A3.1 full Landau-transverse internal propagator/regulator PASS: five TT plus one non-TT transverse mode;
-- A3.2 routing PASS: run `35000570266`, artifact `10409661837`;
-- A3.2 fixed-q contraction assembly PASS: run `35000997597`, artifact `10409825944`;
-- source TT-projector normalization PASS: run `35001632950`, artifact `10409971299`, digest `e92c770acb56722729d307ee7740b01cf4d521b42c8dda65bd64d1e178b6a40d`;
-- Q2 source external symmetrization PASS: run `35016518420`, artifact `10416150077`, digest `afa657ca7a4c8e70eff5013c91123c63ef352b025a63f1f2062edc7120538f85`;
-- Q1 exact TT-projector regrouping PASS: run `35016211111`, artifact `10416306023`, digest `132244f69243c67e5c0d2c6c3af0842ea9bc202dcbb8bc5fb56e04367b3e41b7`.
-
-Frozen normalizations remain
+Frozen normalisations remain
 
 `N_g^(-1)=0.00052874519051635`,
 
 `N_lambda^(-1)=0.0026385724906858796`.
 
-Source symmetrization remains
+Source symmetrisation remains `Sym_3=(1/6)sum_S3`; loop measure remains `d^4q/(2pi)^4`; single-scale line remains `G dotR G`; no fitted rescaling is allowed.
 
-`Sym_3=(1/6) sum_S3`.
+## Original baseline — historical terminal BLOCKED
 
-Loop measure remains
-
-`d^4q/(2 pi)^4`.
-
-Single-scale line remains
-
-`G dotR G`.
-
-No fitted rescaling is allowed.
-
-## Executed original baseline — terminal BLOCKED
-
-Parent science preregistration:
-
-`prereg/SF055A3_SOURCE_FOURIER_BASELINE_LOOP_REPRODUCTION_PREOUTCOME.md`, original freeze `e38e2fcc1a2da0c39be1d2cb28a7c8d5a3db276a`.
-
-Original implementation PR 16 branch:
-
-`sf055a3-baseline-quadrature-20260915`, head `1828aeb994265cb78691493a21bdd4f120a30d58`.
-
-Run `35019599951`, aggregate job `104590644553`, artifact `10421617496`.
-
-Archived raw:
-
-`results/raw/SF055A3_BASELINE_AGGREGATE_RUN35019599951.json`, commit `0f59cae8736a1161e81d14b75a071838b35b8803`.
+Original branch head `1828aeb994265cb78691493a21bdd4f120a30d58`, run `35019599951`, artifact `10421617496`.
 
 Classification:
 
 `BLOCKED_LANE_A_BASELINE_QUADRATURE_NOT_CONVERGED_SCOPED`.
 
-All three N24 values pass the separate frozen 1% target test, but the frozen N16-to-N24 convergence test fails:
+All N24 beta values passed the separate frozen 1% target test, but N16->N24 changes failed the frozen 0.2% convergence criterion:
 
-- beta_g change approximately `2.85265%`;
-- beta_lambda3 change approximately `1.68930%`;
-- frozen allowed relative change `0.2%`.
+- beta_g approximately 2.85265%;
+- beta_lambda3 approximately 1.68930%.
 
-beta_mu converges and agrees with its target to numerical precision. Therefore beta_mu is not the active blocker.
+beta_mu converged and agreed with target; it is not the active blocker.
 
-Target proximity cannot override failed convergence.
+Historical Richardson derivative amplification and scalar optimized-regulator shell diagnostics remain valid scoped diagnostics. In particular, a finite unsplit interior grid can miss a thin shifted support shell exactly.
 
-Retain:
+## Q4 geometry — terminal PASS retained
 
-`EQ14_ANALYTIC_TARGET != FINITE_DIFFERENCE_EQ10_TARGET`.
-
-## Post-run derivative/regulator-shell diagnostic retained
-
-Latest pre-Q4 diagnostic authority:
-
-`results/SF055A3_BASELINE_DERIVATIVE_AUDIT_TERMINAL_20260916.md`, commit `5f99cfb70d1d1e2b7428e66751fe4297e940add4`.
-
-Key findings retained:
-
-1. frozen Richardson derivative amplification is large: derivative L1 amplification `2730.6667`, beta_g amplification about `1.03289e7`;
-2. beta_lambda3 instability is dominated by the inherited beta_g derivative instability; the derivative-independent combination agrees with target but is only a diagnostic identity;
-3. a scalar control with the same optimized-denominator regularity has a nonzero continuum p^2 coefficient from a thin shifted-cutoff shell while a fixed finite interior grid can return exactly zero for sufficiently small p;
-4. a possible `|p|^3` term in the scalar control means evenness alone does not justify an O(h^4) Richardson truncation assumption for the full tensor flow.
-
-The scalar witness did not by itself establish the full tensor error mechanism.
-
-## SF055A3Q4 — terminal geometry/equivalence PASS
-
-Prospective preregistration:
-
-`cd4176921f009761250fc4a25c3e1dfb9841ce1d`.
-
-Control-only repair freeze after an ineffective negative-control mutation:
-
-`124f712679aa912f1a710674a695a33ced3befa7`.
-
-Checker:
-
-`scripts/sf055a3q4_shifted_litim_geometry.py`, commit `176765d9e6e263ed8402ced0889fb7f3fa240472`.
-
-Durable local raw:
-
-`results/raw/SF055A3Q4_SHIFTED_LITIM_INTERSECTION_GEOMETRY_LOCAL.json`, commit `9c9c817fee073fc10c19dcdb525d27a06eaacaf5`.
-
-Terminal result:
-
-`results/SF055A3Q4_SHIFTED_LITIM_INTERSECTION_GEOMETRY_TERMINAL.md`, commit `9b3933fe70b0042374b10c9d25f5fb05fb01048f`.
+Preregistration `cd4176921f009761250fc4a25c3e1dfb9841ce1d`.
 
 Classification:
 
 `PASS_SHIFTED_REGULATOR_INTERSECTION_GEOMETRY_AND_PIECEWISE_EQUIVALENCE_SCOPED`.
 
-### Exact canonical shifted lines
-
-For frozen symmetric canonical routing the three distinct shifted non-differentiated lines have planar shift directions
-
-- `ell=q+p0+p1`: `(1/2,+sqrt(3)/2)`;
-- `e23=q-p1`: `(1/2,-sqrt(3)/2)`;
-- `e31=q+p0`: `(1,0)`.
-
-All shifts have magnitude p.
-
-In the already-frozen reduced coordinates, with `r=sqrt(x)` and
-
-`c=sqrt(1-y) cos(phi-alpha)`, 
-
-the exact shifted support surface is
+For the canonical shifted lines `ell`, `e23`, `e31`, with `r=sqrt(x)` and `c=sqrt(1-y)cos(phi-alpha)`, exact support boundaries satisfy
 
 `r^2+2 p c r+p^2=1`,
 
-with nonnegative root
+`r_b=-p c+sqrt(1-p^2+p^2 c^2)`,
 
-`r_b=-p c+sqrt(1-p^2+p^2 c^2)`.
+with crossing iff `c>-p/2` and topology-change surface `y_*=1-p^2/4`.
 
-The crossing is active iff `c>-p/2` and angular birth/death occurs at
+Independent Q4 Actions reproduction run `35038554188` later completed successfully. Q4 geometry PASS is not baseline PASS.
 
-`phi=alpha +/- arccos[-p/(2 sqrt(1-y))]`,
+## Q5 — terminal implementation-control BLOCKED
 
-with topology-change surface
+Q5 prospectively attempted the full tensor piecewise baseline under the Q4 partition while retaining the old physics, momentum ladder, Richardson stencil, N-sequence and thresholds.
 
-`y_*=1-p^2/4`.
+Terminal predecessor classification recorded by commit `fe5ca698a0e2e8d0554721bab8aa50a406c1b8d5`:
 
-### Executed Q4 controls
+`BLOCKED_LANE_A_PIECEWISE_IMPLEMENTATION_CONTROL_SCOPED`.
 
-- 303 shifted-shell roots tested;
-- max direct boundary residual `4.440892098500626e-16`;
-- 110 phi intervals tested with constant active sets;
-- 645 radial intervals tested;
-- max partition coverage error `0.0`;
-- smooth reduced-measure controls agree with analytic values at about `1e-17` absolute;
-- scalar shell p=1/8 piecewise-vs-independent-polar relative difference `1.978661416381604e-08`;
-- scalar shell p=1/32 relative difference `3.291125821931293e-07`;
-- at p=1/256, `Delta J/p^2` agrees with the independently derived continuum coefficient to relative `0.0010059543` (about 0.1006%), inside the prospectively frozen Q4 0.5% control.
+Reason: the Q5 target-blind smooth polynomial equivalence control failed because the allocator could assign a single Gauss-Legendre node to a radial shell piece. One-point GL cannot integrate the required reduced-measure quadratic radial control exactly.
 
-Direct finite-grid counterexample at N=24:
+Q5 did not inspect/authorize a C3 result and did not produce a baseline science PASS.
 
-- `p_safe=0.00030097992802030626`;
-- unsplit shell contribution `0.0`;
-- piecewise shell contribution `-1.1851582767804493e-10`.
+## Q6 — active radial-min2 successor
 
-Thus the exact partition captures a real thin-shell contribution that the unsplit finite grid can miss identically in the scalar control.
+Prospective preregistration commit:
+
+`54fe1870177ce8d9155bd0731203197761bed5dc`.
+
+Q6 retains exactly the same C3-disabled SF055A3 baseline, source objects, Q4 geometry, momentum points, Richardson extraction, `N={8,12,16,24}`, 0.2% convergence threshold and 1% target thresholds.
+
+The only prospectively motivated implementation change from Q5 is:
+
+- y pieces: minimum 1 GL node;
+- phi pieces: minimum 1 GL node;
+- each nonempty radial x piece: minimum **2** GL nodes;
+- remaining nodes distributed deterministically by interval length with Hamilton/largest-remainder and lower-index tie break;
+- total node budget in each nested coordinate remains exactly N.
+
+This is target-blind: two-point GL is exact through polynomial degree 3 and therefore closes the Q5 smooth `x`/`x^2` reduced-measure control if correctly implemented.
+
+Q6 local allocator preflight PASS was recorded at commit `05ce187a9df4dae183ad8a3ac549807614217c18`.
+
+Full Q6 workflow run `35040058701` was still queued at the latest reconciliation and has no authoritative science output yet.
+
+## Q6P deterministic y-shard equivalence — terminal PASS
+
+Prospective Q6P equivalence preregistration commit `1a9266881aa13ac8ae1a51e16466f00c2426a050`.
+
+Executor commit `c38fa52bbc17f2db8213a7cfe95caa79caa3c6f0`.
+
+Terminal classification commit `7a39e23b271154ad338ff572010cf9e5be2b8573`:
+
+`PASS_Q6P_Y_SHARD_EXECUTION_EQUIVALENCE_SCOPED`.
+
+At the frozen reference `p=1/16`, `N=8`, deterministic y-index sharding reproduced the serial Q6 result additively:
+
+- serial Flow_G `-0.0008541599769643584`;
+- merged Flow_G `-0.0008541599769643585`;
+- absolute difference `1.0842021724855044e-19`.
+
+Each y index was covered exactly once; dropped/duplicated shard controls were rejected.
+
+Therefore Q6P y sharding is an exact execution acceleration, not a new quadrature or physics approximation.
+
+## Q6P fatal convergence execution — repaired non-terminal workflow
+
+Frozen fatal-point set:
+
+- `p=1/16`, `N=24`, 3 y shards;
+- `p=1/32`, `N=16`, 2 y shards;
+- `p=1/32`, `N=24`, 3 y shards.
+
+These points are sufficient to attack the derivative-sensitive Q6 N16->N24 convergence bottleneck when combined with the already-fixed Q6 extraction architecture; no partial shard value may be used.
+
+First workflow attempt:
+
+- launch commit `42517365ed6f5a09babc8d9eaa8542c81e1819b3`;
+- run `35043244628`;
+- conclusion `failure` with **zero instantiated jobs**.
+
+Classification of that attempt:
+
+`INFRASTRUCTURE_WORKFLOW_GRAPH_FAILURE_ONLY`.
+
+No shard executed and no scientific value existed.
+
+Prospective control-only repair freeze:
+
+`d5631d160e567c84daf493fda437c78614556e7f`.
+
+The repair explicitly forbids any change to Q6 code, p/N values, shard assignment, shard counts, merge arithmetic, source objects, regulator, projectors, normalisations, convergence or target criteria. It changes only Actions orchestration.
+
+Workflow repair commit:
+
+`521812df9f1084bcae0aef816f460dad2041c455`.
+
+Authoritative retry:
+
+run `35044525051`.
+
+At this recovery update the repaired graph has successfully instantiated all eight frozen shard jobs:
+
+- p16N24: shard 0,1,2;
+- p32N16: shard 0,1;
+- p32N24: shard 0,1,2.
+
+All were still queued; no partial science values are authorized. A green workflow later will still be provenance/execution only; the final Q6 science verdict must use the frozen aggregate/convergence/target rules.
+
+## Exact next action
+
+1. Inspect only authoritative run `35044525051` until all required shards and explicit merge jobs are terminal.
+2. Do not use partial shard outputs.
+3. Validate exact y coverage, exact node budget and merged provenance for each of the three frozen fatal points.
+4. Combine only complete merged values with the already-frozen Q6 extraction/aggregate architecture.
+5. Apply the unchanged Q6 classifications:
+   - PASS only if implementation controls + historical convergence + p=1 control + all historical 1% targets pass;
+   - `BLOCKED_LANE_A_Q6_PIECEWISE_BASELINE_NOT_CONVERGED_SCOPED` if implementation controls pass but historical convergence fails;
+   - `FAIL_LANE_A_Q6_PIECEWISE_BASELINE_REPRODUCTION_SCOPED` if convergence passes but target reproduction fails;
+   - infrastructure failure remains non-scientific.
+6. Even a Q6 baseline PASS does **not** close derivative-truncation control and does not authorize physical C3 matching by itself.
 
 Retain:
 
-`SCALAR_SHELL_MECHANISM != PROVEN_FULL_TENSOR_SOLE_ERROR_SOURCE`.
+`Q6_BASELINE_PASS != DERIVATIVE_TRUNCATION_CONTROL`.
 
-All final Q4 negative controls pass. The first local dry run is retained as `INVALID_NEGATIVE_CONTROL_IMPLEMENTATION / NON_TERMINAL`: its hard-coded frozen-support mutation accidentally sampled the same side of the shell. The repair was prospectively frozen before retry and changed no positive result, formula, tolerance or science criterion.
-
-Independent Actions reproduction run `35038554188` was queued at Q4 terminalization. Queue status is infrastructure only and is not a scientific premise.
-
-## Redundant Q3 note
-
-A prospectively frozen two-point beta_mu topology/projector contract was also derived in this session. It reproduces the same already-implemented coefficients `T4=-1/2`, `B33grav=+1`, `B33ghost=-2`, `K_EH=1/(32pi)` and `beta_mu=-2mu+(32pi/5)Flow_TT^(2)(0)`.
-
-Because the authoritative original baseline had already converged and matched beta_mu, Q3 is supporting/redundant evidence and is **not** the current frontier. Its queued Actions run `35037794353` is non-blocking infrastructure provenance only.
-
-## Exact next admissible work
-
-The programme remains stopped before substantive C3.
-
-The next high-information successor is now:
-
-`FULL_TENSOR_PIECEWISE_BASELINE_IMPLEMENTATION_RETRY_UNDER_ORIGINAL_FREEZE`.
-
-Before seeing new full tensor output, prospectively freeze the implementation-only successor using the exact Q4 partition while preserving:
-
-- the same source vertices, propagators, regulator and topology coefficients;
-- the same source TT projectors and Q1/Q2 normalisations;
-- the same momentum points `p=0,1/8,1/16,1/32` and separate `p=1` finite-difference control;
-- the same Richardson stencil;
-- the same deterministic science sequence `N={8,12,16,24}`;
-- the same 0.2% inter-order convergence threshold;
-- the same 1% target thresholds;
-- C3 disabled.
-
-The new implementation must make the Q4 shifted-shell surfaces actual quadrature boundaries for all canonical shifted propagators.
-
-Derivative truncation error must still be established separately from inter-order quadrature convergence. A changed derivative prescription or h ladder requires a separately prospective gate and cannot erase the original failed baseline.
-
-Do not relaunch the old unsplit matrix blindly, select a best-looking momentum estimate, relax the tolerance, fit a normalization, or inspect substantive C3 output.
+`Q6_BASELINE_PASS != PHYSICAL_C3_MATCHING`.
 
 ## Operational front retained
 
-SF028B remains boundary-complete coherence authority; SF029-SF042 retain the known-physics calibration/control chain.
+SF028B remains the boundary-complete coherence authority and SF029-SF042 retain the known-physics/control chain.
 
-Unresolved device blocker:
+Operational blocker remains
 
 `DEVICE_LEVEL_NONLINEAR_CROSSTALK_MAGNITUDE_AND_STABILITY_DATA_REQUIRED`.
 
@@ -289,9 +246,8 @@ Without separate authority:
 - no background/fluctuation equality assumed;
 - no frozen-point quotient promoted to arbitrary kinematics;
 - no projected dynamical C3 beta claimed;
-- no sub-lane, diagnostic or Q4 PASS promoted to SF055 PASS;
+- no Q4/Q5/Q6/Q6P sub-result promoted to SF055 PASS prematurely;
 - no Euclidean off-shell coefficient declared a physical observable without continuation;
-- no operational result selects quantum law;
 - no quantum chi_ABC;
 - no historical RCG-002 authority change;
 - no asymptotic-safety correctness claim;
