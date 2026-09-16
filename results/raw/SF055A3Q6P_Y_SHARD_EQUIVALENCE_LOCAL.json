@@ -1,0 +1,42 @@
+{
+  "gate": "SF055A3Q6P_Y_SHARD_EXECUTION_EQUIVALENCE",
+  "classification": "PASS_Q6P_Y_SHARD_EXECUTION_EQUIVALENCE_SCOPED",
+  "C3_enabled": false,
+  "p": 0.125,
+  "N": 8,
+  "nshards": 2,
+  "serial": {
+    "Flow_G": 0.0005202256280417457,
+    "topology_G": {
+      "T5_GRAV": -0.00018424354056838701,
+      "B43_GRAV": 0.0005661847673048973,
+      "T333_GRAV": 0.00022330223792746523,
+      "T333_GHOST": -0.00008501783662222987
+    },
+    "quadrature_points": 512
+  },
+  "merged": {
+    "Flow_G": 0.0005202256280417462,
+    "topology_G": {
+      "T5_GRAV": -0.00018424354056838682,
+      "B43_GRAV": 0.0005661847673048979,
+      "T333_GRAV": 0.00022330223792746515,
+      "T333_GHOST": -0.00008501783662222991
+    },
+    "quadrature_points": 512
+  },
+  "absolute_errors": {
+    "Flow_G": 5.421010862427522e-19,
+    "T5_GRAV": 1.8973538018496328e-19,
+    "B43_GRAV": 5.421010862427522e-19,
+    "T333_GRAV": 8.131516293641283e-20,
+    "T333_GHOST": 4.0657581468206416e-20
+  },
+  "frozen_tolerance_formula": "5e-12*(1+abs(serial))",
+  "all_equivalence_controls_pass": true,
+  "point_count_exact": true,
+  "y_index_coverage_exact": true,
+  "dropped_shard_negative_control_rejected": true,
+  "duplicate_y_index_negative_control_rejected": true,
+  "interpretation": "Execution-equivalence only. Authorizes deterministic y-sharding of the unchanged Q6 quadrature; does not alter Q6 scientific criteria."
+}
