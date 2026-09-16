@@ -1,0 +1,64 @@
+{
+  "C3_enabled": false,
+  "absolute_contribution_fractions": {
+    "B43_GRAV": 0.3159731166991083,
+    "T333_GHOST": 0.00019569999270633136,
+    "T333_GRAV": 0.6838311833070755,
+    "T5_GRAV": 1.1098538474285905e-12
+  },
+  "classification": "DESCRIPTIVE_Q7C_P32_TOPOLOGY_DRIFT_LOCALIZED_SCOPED",
+  "combined_B43_plus_T333_GRAV_absolute_fraction": 0.9998043000061838,
+  "data_status": "RETROSPECTIVE_EXISTING_Q6_DATA_NO_PROSPECTIVE_THRESHOLD_CLAIM",
+  "decomposition_identity_abs_residual": 4.0657581468206416e-20,
+  "dominant_absolute_topology": "T333_GRAV",
+  "flow_delta_N16_to_N24": -8.056166134691499e-07,
+  "gate": "SF055A3Q7C_P32_TOPOLOGY_DRIFT_LOCALIZATION",
+  "independent_q6p_cross_execution_abs_differences": {
+    "N16": {
+      "Flow_G_abs_difference": 2.2768245622195593e-18,
+      "topology_abs_difference": {
+        "B43_GRAV": 1.3010426069826053e-18,
+        "T333_GHOST": 2.846030702774449e-19,
+        "T333_GRAV": 3.2526065174565133e-18,
+        "T5_GRAV": 6.2341624917916505e-19
+      }
+    },
+    "N24": {
+      "Flow_G_abs_difference": 2.168404344971009e-18,
+      "topology_abs_difference": {
+        "B43_GRAV": 0.0,
+        "T333_GHOST": 2.0328790734103208e-19,
+        "T333_GRAV": 1.5720931501039814e-18,
+        "T5_GRAV": 4.0657581468206416e-19
+      }
+    }
+  },
+  "interpretation": {
+    "T333_GHOST_material_drift": false,
+    "T333_GRAV_and_B43_localize_numerical_drift": true,
+    "T5_GRAV_material_drift": false,
+    "derivative_regularization_closed": false,
+    "physical_C3_established": false,
+    "q8_convergence_established": false,
+    "sf055_terminal_pass": false
+  },
+  "signed_contribution_fractions_over_flow_delta": {
+    "B43_GRAV": 0.3160968369964818,
+    "T333_GHOST": -0.0001957766196724054,
+    "T333_GRAV": 0.6840989396220298,
+    "T5_GRAV": 1.1102884142976945e-12
+  },
+  "topology_deltas_N16_to_N24": {
+    "B43_GRAV": -2.5465286334941557e-07,
+    "T333_GHOST": 1.57720897336921e-10,
+    "T333_GRAV": -5.511214710161362e-07,
+    "T5_GRAV": -8.944667923005412e-19
+  },
+  "topology_sum_delta": -8.056166134691093e-07,
+  "workflow_provenance": {
+    "run": 35149044304,
+    "head": "ccc99eb964311284f96410e0c496a1d061e392f5",
+    "artifact_id": 10467778500,
+    "artifact_digest": "sha256:3dee255da80dfe3bb353582b4ab964a6a73263be184d4c2a261a4f1ca06023e5"
+  }
+}
