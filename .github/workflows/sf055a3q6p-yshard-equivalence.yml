@@ -1,0 +1,35 @@
+name: SF055A3Q6P y-shard equivalence
+
+on:
+  push:
+    paths:
+      - 'scripts/sf055a3q6p_yshard.py'
+      - 'scripts/sf055a3q6_piecewise_baseline.py'
+      - 'scripts/sf055a3q5_piecewise_baseline.py'
+      - 'scripts/sf055a3_numba_source.py'
+      - 'prereg/SF055A3Q6P_Y_SHARD_EXECUTION_EQUIVALENCE_PREOUTCOME.md'
+      - '.github/workflows/sf055a3q6p-yshard-equivalence.yml'
+  workflow_dispatch:
+
+jobs:
+  equivalence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install numpy numba
+      - name: Run serial-vs-two-shard N8 equivalence
+        run: >-
+          python scripts/sf055a3q6p_yshard.py
+          --mode selftest
+          --out results/raw/SF055A3Q6P_Y_SHARD_EQUIVALENCE.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: sf055a3q6p-y-shard-equivalence
+          path: |
+            results/raw/SF055A3Q6P_Y_SHARD_EQUIVALENCE.json
+            results/raw/q6p_selftest_parts/*.json
