@@ -1,0 +1,88 @@
+{
+  "canonical_shift_angles": {
+    "e23": 5.235987755982989,
+    "e31": 0.0,
+    "ell": 1.0471975511965976
+  },
+  "canonical_shift_units": {
+    "e23": [0.5, -0.8660254037844386],
+    "e31": [1.0, 0.0],
+    "ell": [0.5, 0.8660254037844386]
+  },
+  "classification": "PASS_SHIFTED_REGULATOR_INTERSECTION_GEOMETRY_AND_PIECEWISE_EQUIVALENCE_SCOPED",
+  "gate": "SF055A3Q4_SHIFTED_LITIM_INTERSECTION_GEOMETRY",
+  "geometry": {
+    "activation_pass": true,
+    "boundary_pass": true,
+    "boundary_roots_tested": 303,
+    "max_boundary_residual": 4.440892098500626e-16,
+    "max_partition_coverage_error": 0.0,
+    "phi_constant_active_sets_pass": true,
+    "phi_intervals_tested": 110,
+    "radial_intervals_tested": 645,
+    "radial_partition_pass": true
+  },
+  "interpretation_ceiling": "GEOMETRY_EQUIVALENCE_ONLY_HISTORICAL_BASELINE_REMAINS_BLOCKED_NO_C3",
+  "negative_controls": {
+    "frozen_shifted_support_rejected": true,
+    "omitted_phi_breakpoints_rejected": true,
+    "omitted_shift_rejected": true,
+    "shift_sign_reversal_rejected": true,
+    "smoothed_regulator_rejected": true,
+    "target_dependent_root_clipping_rejected": true,
+    "wrong_root_branch_rejected": true
+  },
+  "next_required": "FULL_TENSOR_PIECEWISE_BASELINE_IMPLEMENTATION_RETRY_UNDER_ORIGINAL_FREEZE",
+  "positive_controls": {
+    "activation_equivalence": true,
+    "continuum_c2_control": true,
+    "geometry_boundary": true,
+    "phi_partition": true,
+    "radial_partition": true,
+    "scalar_shell_equivalence": true,
+    "shift_census": true,
+    "smooth_integral_equivalence": true,
+    "unsplit_counterexample": true
+  },
+  "scalar_shell_controls": [
+    {
+      "p": 0.125,
+      "piecewise_N24": -1.976210890335743e-05,
+      "polar_N64": -1.976210929438266e-05,
+      "relative_error": 1.978661416381604e-08
+    },
+    {
+      "p": 0.03125,
+      "piecewise_N24": -1.2673470664854288e-06,
+      "polar_N64": -1.2673466493857005e-06,
+      "relative_error": 3.291125821931293e-07
+    }
+  ],
+  "scientific_pass": true,
+  "small_p_control": {
+    "analytic_c2": -0.0013083830532326674,
+    "p": 0.00390625,
+    "p2_coefficient": -0.001307066879642879,
+    "piecewise_N24": -1.9944257807050764e-08,
+    "relative_error": 0.0010059543239547334
+  },
+  "smooth_controls": {
+    "abs_errors": [5.204170427930421e-18, 1.214306433183765e-17],
+    "analytic": [0.0031662869888230555, 0.0021108579925487037],
+    "piecewise_N24": [0.0031662869888230503, 0.002110857992548716]
+  },
+  "unsplit_shell_loss_control": {
+    "N": 24,
+    "p_safe": 0.00030097992802030626,
+    "piecewise": -1.1851582767804493e-10,
+    "unsplit": 0.0
+  },
+  "provenance": {
+    "execution": "local synchronous exact retry after prospectively frozen control-only repair",
+    "parent_prereg_commit": "cd4176921f009761250fc4a25c3e1dfb9841ce1d",
+    "repair_freeze_commit": "124f712679aa912f1a710674a695a33ced3befa7",
+    "local_script_sha256": "44ad6ada243e8a6cb6a3dd710a20caa82f9509f68365101e9db4b67adfeedbd6",
+    "local_raw_sha256": "79fc954419d5c505530a89adcd6c5c61dcf7e9a36e059043653f75f456f2e4a1",
+    "repository_script_commit": "176765d9e6e263ed8402ced0889fb7f3fa240472"
+  }
+}
