@@ -1,0 +1,31 @@
+name: SF055A3Q4 shifted Litim geometry
+
+on:
+  push:
+    paths:
+      - 'prereg/SF055A3Q4_SHIFTED_LITIM_INTERSECTION_GEOMETRY_PREOUTCOME.md'
+      - 'research_log/SF055A3Q4_CONTROL_ONLY_REPAIR_FREEZE.md'
+      - 'scripts/sf055a3q4_shifted_litim_geometry.py'
+      - '.github/workflows/sf055a3q4-shifted-litim-geometry.yml'
+  workflow_dispatch:
+
+jobs:
+  geometry:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install numpy
+        run: python -m pip install numpy
+      - name: Run shifted Litim geometry and piecewise controls
+        run: python scripts/sf055a3q4_shifted_litim_geometry.py | tee SF055A3Q4_SHIFTED_LITIM_INTERSECTION_GEOMETRY_CI.json
+      - name: Upload raw result
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sf055a3q4-shifted-litim-geometry
+          path: SF055A3Q4_SHIFTED_LITIM_INTERSECTION_GEOMETRY_CI.json
+          if-no-files-found: error
