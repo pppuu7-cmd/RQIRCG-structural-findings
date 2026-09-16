@@ -1,0 +1,29 @@
+{
+  "gate": "SF055A3Q5_FULL_TENSOR_PIECEWISE_BASELINE_RETRY",
+  "classification": "BLOCKED_LANE_A_PIECEWISE_IMPLEMENTATION_CONTROL_SCOPED",
+  "C3_enabled": false,
+  "matrix_executed": false,
+  "blocking_control": "smooth_composite_polynomial_equivalence",
+  "frozen_threshold_abs": 2e-10,
+  "smooth_control_max_abs_error": {
+    "8": 1.1541821024916785e-07,
+    "12": 2.2976919557965436e-08,
+    "16": 5.879272069186925e-09,
+    "24": 8.177778909775058e-10
+  },
+  "thin_shell_control": {
+    "p_safe": 0.00030097992802030626,
+    "piecewise_N24": -1.1850604402647715e-10,
+    "unsplit_N24": 0.0,
+    "sign_expected": "negative",
+    "pass": true
+  },
+  "allocator_control": {
+    "interval_example": [[0.0,0.1],[0.1,1.0]],
+    "N": 8,
+    "allocation": [2,6]
+  },
+  "interpretation": "Q4 shell partition remains valid, but the Q5 frozen one-node-minimum composite budget does not meet its own smooth-equivalence control. No full tensor baseline values were inspected.",
+  "historical_baseline_rewritten": false,
+  "sf055_terminal_pass": false
+}
