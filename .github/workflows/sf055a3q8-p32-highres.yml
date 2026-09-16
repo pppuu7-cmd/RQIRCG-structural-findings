@@ -1,0 +1,109 @@
+name: SF055A3Q8 p32 high-resolution convergence
+
+on:
+  push:
+    paths:
+      - '.github/workflows/sf055a3q8-p32-highres.yml'
+      - 'scripts/sf055a3q8_p32_highres_aggregate.py'
+      - 'prereg/SF055A3Q8_P32_HIGH_RESOLUTION_DERIVATIVE_CONVERGENCE_AND_ERROR_BUDGET.md'
+  workflow_dispatch:
+
+jobs:
+  shards:
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    strategy:
+      fail-fast: false
+      max-parallel: 17
+      matrix:
+        include:
+          - {tag: p32N32, order: 32, nshards: 4, shard_id: 0}
+          - {tag: p32N32, order: 32, nshards: 4, shard_id: 1}
+          - {tag: p32N32, order: 32, nshards: 4, shard_id: 2}
+          - {tag: p32N32, order: 32, nshards: 4, shard_id: 3}
+          - {tag: p32N40, order: 40, nshards: 5, shard_id: 0}
+          - {tag: p32N40, order: 40, nshards: 5, shard_id: 1}
+          - {tag: p32N40, order: 40, nshards: 5, shard_id: 2}
+          - {tag: p32N40, order: 40, nshards: 5, shard_id: 3}
+          - {tag: p32N40, order: 40, nshards: 5, shard_id: 4}
+          - {tag: p32N48, order: 48, nshards: 8, shard_id: 0}
+          - {tag: p32N48, order: 48, nshards: 8, shard_id: 1}
+          - {tag: p32N48, order: 48, nshards: 8, shard_id: 2}
+          - {tag: p32N48, order: 48, nshards: 8, shard_id: 3}
+          - {tag: p32N48, order: 48, nshards: 8, shard_id: 4}
+          - {tag: p32N48, order: 48, nshards: 8, shard_id: 5}
+          - {tag: p32N48, order: 48, nshards: 8, shard_id: 6}
+          - {tag: p32N48, order: 48, nshards: 8, shard_id: 7}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install numpy numba
+      - name: Execute unchanged Q6 p32 y shard
+        env:
+          NUMBA_NUM_THREADS: '1'
+        run: >-
+          python scripts/sf055a3q6p_yshard.py
+          --mode shard --p 0.03125 --N ${{ matrix.order }}
+          --shard-id ${{ matrix.shard_id }} --nshards ${{ matrix.nshards }}
+          --out results/raw/q8/${{ matrix.tag }}_s${{ matrix.shard_id }}.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sf055a3q8-${{ matrix.tag }}-s${{ matrix.shard_id }}
+          path: results/raw/q8/${{ matrix.tag }}_s${{ matrix.shard_id }}.json
+
+  merge:
+    needs: shards
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - {tag: p32N32}
+          - {tag: p32N40}
+          - {tag: p32N48}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install numpy numba
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: sf055a3q8-${{ matrix.tag }}-s*
+          path: results/parts
+          merge-multiple: true
+      - name: Merge exact y shards
+        run: |
+          inputs=$(find results/parts -name '${{ matrix.tag }}_s*.json' -print | sort | tr '\n' ' ')
+          python scripts/sf055a3q6p_yshard.py --mode merge --inputs $inputs --out results/raw/q8/${{ matrix.tag }}_merged.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sf055a3q8-${{ matrix.tag }}-merged
+          path: results/raw/q8/${{ matrix.tag }}_merged.json
+
+  aggregate:
+    needs: merge
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: sf055a3q8-p32N*-merged
+          path: results/q8merged
+          merge-multiple: true
+      - name: Apply preregistered Q8 contract
+        run: |
+          set +e
+          python scripts/sf055a3q8_p32_highres_aggregate.py --root results/q8merged --out results/raw/SF055A3Q8_P32_HIGHRES_AGGREGATE.json
+          code=$?
+          echo "aggregate_exit=$code"
+          exit 0
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sf055a3q8-p32-highres-aggregate
+          path: results/raw/SF055A3Q8_P32_HIGHRES_AGGREGATE.json
