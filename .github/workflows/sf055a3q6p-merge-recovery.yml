@@ -1,0 +1,87 @@
+name: SF055A3Q6P merge-only recovery
+
+on:
+  push:
+    paths:
+      - '.github/workflows/sf055a3q6p-merge-recovery.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  merge_recovery:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: 521812df9f1084bcae0aef816f460dad2041c455
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install unchanged merge import dependencies
+        run: python -m pip install numpy numba
+
+      - name: Download p16N24 frozen shards
+        uses: actions/download-artifact@v4
+        with:
+          pattern: sf055a3q6p-p16N24-s*
+          path: results/parts/p16N24
+          merge-multiple: true
+          repository: pppuu7-cmd/RQIRCG-structural-findings
+          run-id: '35044525051'
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Download p32N16 frozen shards
+        uses: actions/download-artifact@v4
+        with:
+          pattern: sf055a3q6p-p32N16-s*
+          path: results/parts/p32N16
+          merge-multiple: true
+          repository: pppuu7-cmd/RQIRCG-structural-findings
+          run-id: '35044525051'
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Download p32N24 frozen shards
+        uses: actions/download-artifact@v4
+        with:
+          pattern: sf055a3q6p-p32N24-s*
+          path: results/parts/p32N24
+          merge-multiple: true
+          repository: pppuu7-cmd/RQIRCG-structural-findings
+          run-id: '35044525051'
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Merge original shard artifacts with unchanged Q6P merge function
+        run: |
+          mkdir -p results/raw/q6p_recovery
+          inputs=$(find results/parts/p16N24 -name 'p16N24_s*.json' -print | sort | tr '\n' ' ')
+          python scripts/sf055a3q6p_yshard.py --mode merge --inputs $inputs --out results/raw/q6p_recovery/p16N24_merged.json
+          inputs=$(find results/parts/p32N16 -name 'p32N16_s*.json' -print | sort | tr '\n' ' ')
+          python scripts/sf055a3q6p_yshard.py --mode merge --inputs $inputs --out results/raw/q6p_recovery/p32N16_merged.json
+          inputs=$(find results/parts/p32N24 -name 'p32N24_s*.json' -print | sort | tr '\n' ' ')
+          python scripts/sf055a3q6p_yshard.py --mode merge --inputs $inputs --out results/raw/q6p_recovery/p32N24_merged.json
+
+      - name: Validate controls and write provenance manifest
+        run: |
+          python - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+          root=Path('results/raw/q6p_recovery')
+          expected={'p16N24':(0.0625,24,3),'p32N16':(0.03125,16,2),'p32N24':(0.03125,24,3)}
+          manifest={'classification':'PASS_Q6P_MERGE_ONLY_RECOVERY_SCOPED','source_run':35044525051,'source_head':'521812df9f1084bcae0aef816f460dad2041c455','records':{}}
+          for tag,(p,N,S) in expected.items():
+              path=root/f'{tag}_merged.json'
+              raw=path.read_bytes(); d=json.loads(raw)
+              ok=(d['mode']=='three' and d['implementation']=='Q6P_y_sharded_Q6' and float(d['p'])==p and int(d['N'])==N and int(d['nshards'])==S and d['y_coverage_exact'] is True and d['node_budget_exact'] is True and d['C3_enabled'] is False)
+              if not ok:
+                  raise SystemExit(f'control failure for {tag}: {d}')
+              manifest['records'][tag]={'sha256':hashlib.sha256(raw).hexdigest(),'Flow_G':d['Flow_G'],'quadrature_points':d['quadrature_points'],'y_coverage_exact':d['y_coverage_exact'],'node_budget_exact':d['node_budget_exact'],'C3_enabled':d['C3_enabled']}
+          (root/'manifest.json').write_text(json.dumps(manifest,indent=2,sort_keys=True)+'\n')
+          print(json.dumps(manifest,indent=2,sort_keys=True))
+          PY
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sf055a3q6p-merge-recovery
+          path: results/raw/q6p_recovery/*.json
