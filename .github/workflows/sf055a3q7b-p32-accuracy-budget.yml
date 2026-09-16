@@ -1,0 +1,28 @@
+name: SF055A3Q7B p32 primitive accuracy budget
+
+on:
+  push:
+    paths:
+      - '.github/workflows/sf055a3q7b-p32-accuracy-budget.yml'
+      - 'scripts/sf055a3q7b_p32_accuracy_budget.py'
+      - 'prereg/SF055A3Q7B_P32_PRIMITIVE_ACCURACY_BUDGET.md'
+  workflow_dispatch:
+
+jobs:
+  diagnostic:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Compute exact frozen Q7B accuracy budget
+        run: >-
+          python scripts/sf055a3q7b_p32_accuracy_budget.py
+          --summary results/raw/SF055A3Q6_TERMINAL_SUMMARY_RUN35040058701.json
+          --ladder results/raw/SF055A3Q6_DERIVATIVE_LADDER_CANONICAL.json
+          --out results/raw/SF055A3Q7B_P32_PRIMITIVE_ACCURACY_BUDGET.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sf055a3q7b-p32-primitive-accuracy-budget
+          path: results/raw/SF055A3Q7B_P32_PRIMITIVE_ACCURACY_BUDGET.json
