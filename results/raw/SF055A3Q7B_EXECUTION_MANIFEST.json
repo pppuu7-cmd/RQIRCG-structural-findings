@@ -1,0 +1,14 @@
+{
+  "gate": "SF055A3Q7B_P32_PRIMITIVE_ACCURACY_BUDGET",
+  "preregistration_commit": "7f4dec270e50d2c63427e3187daf06497c562b55",
+  "script_commit": "a2c837bedb481fd15b4d6e2930f3faab31e89786",
+  "workflow_commit": "61eeae813eed6772dc2badbd533738765365b906",
+  "workflow_run": 35145658603,
+  "workflow_conclusion": "success",
+  "artifact_id": 10466641953,
+  "artifact_name": "sf055a3q7b-p32-primitive-accuracy-budget",
+  "artifact_digest": "sha256:cc5af23db1f340258944e9ba68163a9c589418c9642eb70ce1a3eb7cc6e0ad83",
+  "terminal_classification": "PASS_Q7B_P32_PRIMITIVE_ACCURACY_BUDGET_CONSTRUCTED_SCOPED",
+  "q8_values_used": false,
+  "sf055_terminal_pass": false
+}
