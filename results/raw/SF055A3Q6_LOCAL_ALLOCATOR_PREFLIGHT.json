@@ -1,0 +1,22 @@
+{
+  "gate": "SF055A3Q6_RADIAL_MIN2_PIECEWISE_BASELINE",
+  "classification": "PASS_Q6_ALLOCATOR_PREFLIGHT",
+  "C3_enabled": false,
+  "scientific_pass": true,
+  "smooth_controls": {
+    "8": {"max_abs_error": 3.903127820947816e-18},
+    "12": {"max_abs_error": 6.938893903907228e-18},
+    "16": {"max_abs_error": 7.806255641895632e-18},
+    "24": {"max_abs_error": 8.673617379884035e-18}
+  },
+  "thin_shell": {
+    "p_safe": 0.00030097992802030626,
+    "piecewise_N24": -1.1850641070250976e-10,
+    "unsplit_N24": 0.0,
+    "pass": true
+  },
+  "max_radial_segments_N8_scan": 4,
+  "radial_min_nodes": 2,
+  "minimum_N": 8,
+  "interpretation": "Allocator/partition preflight only; no full tensor beta output in this file."
+}
