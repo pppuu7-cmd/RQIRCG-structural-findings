@@ -1,0 +1,46 @@
+{
+  "C3_enabled": false,
+  "classification": "PASS_Q7B_P32_PRIMITIVE_ACCURACY_BUDGET_CONSTRUCTED_SCOPED",
+  "construction_pass": true,
+  "gate": "SF055A3Q7B_P32_PRIMITIVE_ACCURACY_BUDGET",
+  "historical_beta_budget": {
+    "allowed_abs_beta_g_change_at_Q6_N24_scale": 0.015181395172590687,
+    "local_isolated_F32_budget": 2.9396080381477514e-09
+  },
+  "inherited_p0_error_floor": {
+    "F0_reconstructed_N16": 0.0005562382713360568,
+    "F0_reconstructed_N24": 0.0005562382414400815,
+    "abs_F0_N16_to_N24_drift": 2.9895975343745274e-11,
+    "floor_over_allowed_beta_change": 0.009534426536138242,
+    "propagated_abs_beta_g_floor": 0.00014474589698914965
+  },
+  "inputs": {
+    "N_g_inverse": 0.00052874519051635,
+    "beta_g_N24": -7.590697586295343,
+    "h": 0.03125,
+    "threshold_beta_g_relative": 0.002
+  },
+  "interpretation_ceiling": {
+    "derivative_regularization_closed": false,
+    "physical_C3_established": false,
+    "q6_pass_established": false,
+    "q8_convergence_established": false,
+    "sf055_terminal_pass": false
+  },
+  "observed_Q6_resolution_gap": {
+    "F32_N16": 0.0005545825645617668,
+    "F32_N24": 0.0005537769479482976,
+    "abs_F32_N16_to_N24_drift": 8.056166134691499e-07,
+    "drift_over_local_budget": 274.05579349849967
+  },
+  "preregistration_commit": "7f4dec270e50d2c63427e3187daf06497c562b55",
+  "q8_values_used": false,
+  "sensitivity": {
+    "K0_abs_d_beta_g_d_F0": 4841651.604433533,
+    "K32_abs_d_beta_g_d_F32": 5164428.3780624345,
+    "K32_finite_difference": 5164428.3578511365,
+    "check_tolerance": 1e-08,
+    "pass": true,
+    "relative_difference": 3.913559553763567e-09
+  }
+}
