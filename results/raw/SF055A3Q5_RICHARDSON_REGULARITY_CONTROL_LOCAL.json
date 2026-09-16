@@ -1,0 +1,52 @@
+{
+  "C3_enabled": false,
+  "classification": "BOSE_ROTATIONAL_SYMMETRY_DOES_NOT_IMPLY_P2_ANALYTICITY_SCOPED",
+  "checks": {
+    "c2_formula": true,
+    "c3_formula": true,
+    "c3_nonzero_at_mu_0p1": true,
+    "equal_weight_three_shift_c3_survives": true,
+    "hemisphere_I1": true,
+    "hemisphere_I2": true,
+    "hemisphere_I3": true,
+    "p4_cancels": true,
+    "richardson_result": true,
+    "zero_sum_negative_control": true
+  },
+  "hemisphere_moments": {
+    "I1": "4*pi/3",
+    "I2": "pi**2/4",
+    "I3": "8*pi/15"
+  },
+  "single_shift": {
+    "c2": "-1/(64*pi**2*a**2)",
+    "c3": "(8 - 5*a)/(180*pi**3*a**3)",
+    "mu_0p1_c2": -0.0013083830532326676,
+    "mu_0p1_c3": 0.0003365424329368007
+  },
+  "equal_weight_three_shift": {
+    "c2": "-3/(64*pi**2*a**2)",
+    "c3": "(8 - 5*a)/(60*pi**3*a**3)",
+    "mu_0p1_c3": 0.0010096272988104023
+  },
+  "frozen_richardson": {
+    "symbolic": "A + 2*B*h/3",
+    "bias_from_abs_p3": "2*B*h/3",
+    "h": "1/32",
+    "scalar_bias": 7.011300686183349e-06,
+    "scalar_relative_bias_magnitude": 0.005358752292656408
+  },
+  "negative_control": {
+    "weights": [1, 1, -2],
+    "c3": "0",
+    "meaning": "cancellation requires an extra coefficient relation; it is not forced by rotations"
+  },
+  "provenance": {
+    "freeze_commit": "2a95bbfd78c651ff89435f71090ce42cb9ed8efd",
+    "repository_script_commit": "0eddbd0e724f68d73ae3f5b286db8c4445f6c73d",
+    "execution": "local synchronous symbolic mirror; no GitHub Actions premise",
+    "local_mirror_sha256": "303361466dbab0a27786b51301747340883403a67a94b63da0db29400e090c61",
+    "raw_local_sha256": "2f07f6ee3afd22a2fc14241525abe952bc5db85588cc8a7b9a211905e965cce7"
+  },
+  "claim_ceiling": "Counterexample regularity class only. It does not prove a nonzero |p|^3 coefficient in the full tensor flow and does not change the frozen Q5 stencil."
+}
