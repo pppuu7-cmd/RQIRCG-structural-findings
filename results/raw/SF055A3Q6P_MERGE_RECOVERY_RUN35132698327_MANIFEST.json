@@ -1,0 +1,34 @@
+{
+  "classification": "PASS_Q6P_MERGE_ONLY_RECOVERY_SCOPED",
+  "records": {
+    "p16N24": {
+      "C3_enabled": false,
+      "Flow_G": 0.0005465706425780866,
+      "node_budget_exact": true,
+      "quadrature_points": 13824,
+      "sha256": "2529a5198bfb5fbc712834be6d26d788f6274108508766fea45779248d1e3fec",
+      "y_coverage_exact": true
+    },
+    "p32N16": {
+      "C3_enabled": false,
+      "Flow_G": 0.0005545825645617645,
+      "node_budget_exact": true,
+      "quadrature_points": 4096,
+      "sha256": "5e57fdfe6d09e58e932961d829554421b448ecb832c277f825d64fc626968f0d",
+      "y_coverage_exact": true
+    },
+    "p32N24": {
+      "C3_enabled": false,
+      "Flow_G": 0.0005537769479482955,
+      "node_budget_exact": true,
+      "quadrature_points": 13824,
+      "sha256": "b8e981548d2906fc03cd6d4c1a71427b08a148540ffed2a79f3d755af84fc1d2",
+      "y_coverage_exact": true
+    }
+  },
+  "source_head": "521812df9f1084bcae0aef816f460dad2041c455",
+  "source_run": 35044525051,
+  "recovery_run": 35132698327,
+  "recovery_artifact_id": 10461044772,
+  "recovery_artifact_digest": "sha256:bc2a95fc125e3d0b86c85139c4224c2ceb45aac2034a14b66d30654585477416"
+}
