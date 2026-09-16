@@ -1,6 +1,6 @@
 # RQIRCGSF current authoritative front
 
-Updated: 2026-09-16 after terminal SF055A3Q7 Richardson-regularity diagnostic while authoritative Q6/Q6P fatal-point execution remains non-terminal.
+Updated: 2026-09-16 after completed Q6 radial-min2 piecewise baseline, Q6P merge-only recovery, and Q7A full-tensor regularity application.
 
 ## Current programme verdict
 
@@ -8,11 +8,9 @@ Updated: 2026-09-16 after terminal SF055A3Q7 Richardson-regularity diagnostic wh
 
 `SF055_TERMINAL_PASS=FALSE`.
 
-The programme remains stopped before substantive C3 flow. The historical EH/ghost baseline remains
+The programme remains stopped before substantive C3 flow.
 
-`BLOCKED_LANE_A_BASELINE_QUADRATURE_NOT_CONVERGED_SCOPED`.
-
-The active numerical successor is Q6/Q6P. Q7 is an independent outcome-blind derivative-regularity diagnostic and does not rewrite Q6.
+The active numerical blocker is now localized to derivative resolution/regularity at the smallest frozen momentum `p=1/32`; it is no longer missing shifted-support geometry, Q5 one-node radial allocation, y-shard execution, or merge provenance.
 
 ## Parent separation
 
@@ -22,7 +20,7 @@ Parent remains parked on
 
 `WAIT_FOR_EXPLICIT_PROGRAMME_DISPOSITION_DECLARATION`.
 
-No D1/D2/D3 disposition is selected. No successor result becomes historical RCG-002 authority automatically. `chi_ABC` remains unauthorized/not computed.
+No D1/D2/D3 disposition is selected. `chi_ABC` remains unauthorized/not computed. No successor result automatically becomes historical RCG-002 authority.
 
 ## Retained theory authority
 
@@ -51,15 +49,15 @@ Retain:
 
 Parent preregistration: `9d998d984566aa5bf290312a6a062fd632c85561`.
 
-Lane B: `PASS_C3_COMMON_ORIGIN_VERTEX_GENERATOR_SCOPED`, run `34995827603`.
+Lane B remains `PASS_C3_COMMON_ORIGIN_VERTEX_GENERATOR_SCOPED`.
 
-Lane C: `PASS_IMPLEMENTED_THREE_POINT_FLOW_C3_INSERTION_MANIFEST_SCOPED`, run `34995935520`.
+Lane C remains `PASS_IMPLEMENTED_THREE_POINT_FLOW_C3_INSERTION_MANIFEST_SCOPED`.
 
 Three-point source topology coefficients remain
 
 `T5=-1/2`, `B43=+3`, `T333grav=-3`, `T333ghost=+6`.
 
-Retain the validated source-Fourier EH/ghost seed engine, six-dimensional Landau-transverse graviton internal space, FP ghosts, canonical routing, fixed-q contraction assembly, TT projector normalisation, Q1 regrouping and Q2 symmetrisation.
+Retain validated source-Fourier EH/ghost seed engine, six-dimensional Landau-transverse graviton internal space, FP ghosts, canonical routing, fixed-q contraction assembly, TT projector normalisation, Q1 exact TT-projector regrouping and Q2 source symmetrisation.
 
 Frozen normalisations:
 
@@ -67,223 +65,220 @@ Frozen normalisations:
 
 `N_lambda^(-1)=0.0026385724906858796`.
 
-Loop measure `d^4q/(2pi)^4`; single-scale line `G dotR G`; source symmetrisation `Sym_3=(1/6)sum_S3`; no fitted rescaling.
+Loop measure `d^4q/(2pi)^4`; source symmetrisation `Sym_3=(1/6)sum_S3`; single-scale line `G dotR G`; no fitted rescaling.
 
-## Historical original baseline
+## Historical original baseline retained
 
-Original branch head `1828aeb994265cb78691493a21bdd4f120a30d58`, run `35019599951`, artifact `10421617496`.
-
-Terminal:
+Original terminal classification remains
 
 `BLOCKED_LANE_A_BASELINE_QUADRATURE_NOT_CONVERGED_SCOPED`.
 
-At N24 all three values passed separate 1% target agreement, but N16->N24 failed the frozen 0.2% convergence criterion:
+Its N24 values were target-close but N16->N24 convergence failed. Q6 is a prospectively authorized numerical successor and does not rewrite this history.
 
-- beta_g change approximately 2.85265%;
-- beta_lambda3 change approximately 1.68930%;
-- beta_mu converged and is not the active blocker.
+## Q4 and Q5 retained
 
-The retained derivative audit proved large derivative conditioning and a scalar shifted-Litim shell witness; it did not prove the full tensor error mechanism.
-
-## Q4 exact shifted-support geometry — terminal PASS
-
-Preregistration `cd4176921f009761250fc4a25c3e1dfb9841ce1d`.
-
-Terminal:
+Q4:
 
 `PASS_SHIFTED_REGULATOR_INTERSECTION_GEOMETRY_AND_PIECEWISE_EQUIVALENCE_SCOPED`.
 
-Canonical shifted support boundaries use
+Canonical shifted support boundaries:
 
 `r^2+2 p c r+p^2=1`,
 
 `r_b=-p c+sqrt(1-p^2+p^2 c^2)`,
 
-with crossing iff `c>-p/2` and topology-change surface `y_*=1-p^2/4`.
+crossing iff `c>-p/2`, topology-change surface `y_*=1-p^2/4`.
 
-Q4 geometry PASS is not baseline PASS.
-
-## Q5 — terminal implementation-control BLOCKED
-
-Terminal commit `fe5ca698a0e2e8d0554721bab8aa50a406c1b8d5`:
+Q5:
 
 `BLOCKED_LANE_A_PIECEWISE_IMPLEMENTATION_CONTROL_SCOPED`.
 
-Reason: the target-blind smooth radial control exposed that a one-node GL radial shell piece cannot integrate the required reduced-measure quadratic polynomial exactly.
+Its one-node radial allocation failed the target-blind quadratic smooth control. Q6 prospectively repaired only that implementation defect by requiring minimum two GL nodes per nonempty radial piece.
 
-No Q5 baseline science PASS exists.
-
-## Q6 — active radial-min2 successor
+## Q6 radial-min2 piecewise baseline — TERMINAL BLOCKED
 
 Preregistration:
 
 `54fe1870177ce8d9155bd0731203197761bed5dc`.
 
-Q6 retains the same C3-disabled baseline, source objects, Q4 geometry, momentum ladder, Richardson extraction, `N={8,12,16,24}`, 0.2% convergence threshold and 1% target thresholds.
-
-Only target-blind implementation change from Q5:
-
-- y/phi pieces minimum 1 GL node;
-- every nonempty radial piece minimum 2 GL nodes;
-- remaining nodes distributed deterministically by interval length with Hamilton/largest-remainder, lower-index tie break;
-- exact total node budget N in every nested coordinate.
-
-Allocator preflight PASS: `05ce187a9df4dae183ad8a3ac549807614217c18`.
-
-Full monolithic Q6 run `35040058701` has no authoritative science output in this front.
-
-## Q6P y-shard equivalence — terminal PASS
-
-Preregistration `1a9266881aa13ac8ae1a51e16466f00c2426a050`.
-
-Executor `c38fa52bbc17f2db8213a7cfe95caa79caa3c6f0`.
-
-Terminal `7a39e23b271154ad338ff572010cf9e5be2b8573`:
-
-`PASS_Q6P_Y_SHARD_EXECUTION_EQUIVALENCE_SCOPED`.
-
-At p=1/16,N=8:
-
-- serial Flow_G `-0.0008541599769643584`;
-- merged Flow_G `-0.0008541599769643585`;
-- absolute difference `1.0842021724855044e-19`.
-
-Exact y-index coverage and negative dropped/duplicate shard controls passed. Q6P is an execution acceleration only.
-
-## Q6P fatal convergence execution — active non-terminal
-
-Frozen fatal points:
-
-- p=1/16,N=24, 3 shards;
-- p=1/32,N=16, 2 shards;
-- p=1/32,N=24, 3 shards.
-
-First run `35043244628` failed before instantiating any job. This is
-
-`INFRASTRUCTURE_WORKFLOW_GRAPH_FAILURE_ONLY`.
-
-Prospective workflow-only repair freeze:
-
-`d5631d160e567c84daf493fda437c78614556e7f`.
-
-Repair commit:
-
-`521812df9f1084bcae0aef816f460dad2041c455`.
-
-Execution-recovery terminal:
-
-`fb2a628476e8baabdd0ae128fa653302c4b61f8b`,
-
-classification
-
-`PASS_Q6P_WORKFLOW_GRAPH_RECOVERY_SCOPED`.
-
-Authoritative retry run:
-
-`35044525051`.
-
-Latest inspected status in this front:
-
-- p16N24 shard 1: in progress;
-- p16N24 shard 2: in progress;
-- remaining six frozen shards: queued;
-- no partial substantive values authorized or used.
-
-Do not create a competing Q6 verdict while this run is non-terminal.
-
-## Q7 Richardson regularity diagnostic — terminal PASS
-
-Prospective preregistration:
-
-`61461e28abc9a51cb697e20953033e46e7035aa4`.
-
-Script:
-
-`scripts/sf055a3q7_richardson_regularity.py`, creation commit `628e2352d5f867e6433cda305c0abbfe02f54cfc`.
-
-Raw exact-rational output:
-
-`results/raw/SF055A3Q7_RICHARDSON_REGULARITY_LOCAL.json`, commit `be73b44925b4bb46f6fbdbc92b5fdc069610b272`.
-
 Terminal result:
 
-`results/SF055A3Q7_RICHARDSON_REGULARITY_DIAGNOSTIC_TERMINAL.md`, commit `053211a5c3ebcbb6c929a0f84d6c292e2861c3f2`.
+`results/SF055A3Q6_RADIAL_MIN2_PIECEWISE_BASELINE_TERMINAL.md`, commit `7fb39877f2415c6367c83af6c9ec0b183509178e`.
+
+Workflow run `35040058701`, head `4b6c6902376e88f49c291813ecc4250edc8f32ee`.
+
+Aggregate artifact `10429809775`, digest
+
+`sha256:cfbd1546ec1b0fdc08be2dfce15d6d7660bf3e83ae38f51ea769fe303c9e1485`.
+
+Preflight artifact `10424957402`, digest
+
+`sha256:89fba3d99d76dd86e7919abdf72439da67027bac209aa731333ff424e9e634fc`.
 
 Classification:
 
+`BLOCKED_LANE_A_Q6_PIECEWISE_BASELINE_NOT_CONVERGED_SCOPED`.
+
+All required implementation controls pass, including source/JIT equivalence, fixed-q topology equivalence, p=0 historical-rule equivalence, node budgets, smooth reduced-measure controls, Q4 thin-shell control and frozen negative controls.
+
+`C3_enabled=false`.
+
+At N=16:
+
+- `beta_g=-3.4763144983440384`;
+- `beta_lambda3=-3.015202432913556`;
+- `beta_mu=0.3224650623712873`.
+
+At N=24:
+
+- `beta_g=-7.590697586295343`;
+- `beta_lambda3=-4.455236523767682`;
+- `beta_mu=0.3224650623712883`.
+
+Frozen N16->N24 relative changes:
+
+- beta_g `0.5420296410411126` = 54.2029641%;
+- beta_lambda3 `0.3232228150339199` = 32.3222815%;
+- beta_mu `3.098632499331524e-15`.
+
+Frozen allowed relative change is 0.2%.
+
+All separate N24 1% target checks pass:
+
+- beta_g target error 0.810645%;
+- beta_lambda3 target error 0.481827%;
+- beta_mu target error negligible.
+
+Therefore `target_pass=true` cannot override `convergence_pass=false`.
+
+Retain:
+
+`PIECEWISE_SUPPORT_CLOSURE != DERIVATIVE_CONVERGENCE`.
+
+`TARGET_PROXIMITY != CONVERGENCE`.
+
+## Q6P execution and merge provenance — TERMINAL PASS
+
+Q6P deterministic y-shard equivalence remains
+
+`PASS_Q6P_Y_SHARD_EXECUTION_EQUIVALENCE_SCOPED`.
+
+The first fatal-point workflow graph failure was infrastructure only. All eight repaired shard jobs later completed successfully.
+
+Their original merge jobs failed only because NumPy was not installed in the merge environment; no shard value was read before that failure.
+
+Merge-only recovery was prospectively frozen at
+
+`8dab2f6561d4bae1e3b91eba9cd31152a6795082`.
+
+Recovery workflow run `35132698327` completed successfully.
+
+Artifact `10461044772`, digest
+
+`sha256:bc2a95fc125e3d0b86c85139c4224c2ceb45aac2034a14b66d30654585477416`.
+
+Terminal classification:
+
+`PASS_Q6P_MERGE_ONLY_RECOVERY_SCOPED`.
+
+Recovered fatal points:
+
+- p=1/16,N=24: `Flow_G=0.0005465706425780866`;
+- p=1/32,N=16: `Flow_G=0.0005545825645617645`;
+- p=1/32,N=24: `Flow_G=0.0005537769479482955`.
+
+All have exact shard/y coverage, exact node budget, and `C3_enabled=false`.
+
+They agree with independent monolithic Q6 values at about `1.5e-18` to `2.3e-18` absolute.
+
+Thus monolithic-vs-sharded execution is not the source of the Q6 derivative nonconvergence.
+
+## Q7 frozen Richardson regularity authority retained
+
+Q7 terminal classification:
+
 `PASS_Q7_RICHARDSON_REGULARITY_DIAGNOSTIC_CONSTRUCTED_SCOPED`.
 
-No partial Q6 output was inspected.
+For `h=1/32`, with `D_r=[F(rh)-F(0)]/(rh)^2`, r={1,2,4}:
 
-For `h=1/32` define
+`C2_234=(8D_1-6D_2+D_4)/3`,
 
-`D_r=[F(rh)-F(0)]/(rh)^2`, r={1,2,4}.
+`C3_234=[-2D_1+(5/2)D_2-(1/2)D_4]/h`,
 
-The moment matrix has exact determinant `6`, so the p2,p3,p4 control directions are algebraically identifiable from the already-frozen p=1/32,1/16,1/8 ladder.
-
-Unique p2 estimator annihilating p3 and p4:
-
-`C2_234=(8D_1-6D_2+D_4)/3`.
-
-Unique p3-sensitive estimator annihilating p2 and p4:
-
-`C3_234=[-2D_1+(5/2)D_2-(1/2)D_4]/h`.
-
-Exact identity for arbitrary D_1,D_2,D_4:
+and exact identity
 
 `R_h-C2_234=(2h/3)C3_234`,
 
-where historical
+where `R_h=(4D_1-D_2)/3`.
 
-`R_h=(4D_1-D_2)/3`.
+Q7 is a diagnostic, not an authorized replacement estimator.
 
-Thus the existing frozen momentum ladder contains an internal diagnostic of the cubic/nonanalytic direction that the historical Richardson estimator does not cancel.
+## Q7A application to complete Q6 ladder — TERMINAL INCONCLUSIVE
 
-Negative control: for any two retained radii a,b, the nonzero polynomial
+Terminal result:
 
-`p^2(p-a h)(p-b h)`
+`results/SF055A3Q7A_FULL_TENSOR_REGULARITY_APPLICATION_TERMINAL.md`, commit `2abcc0740061951c71b08cf8a772e97527b44ea9`.
 
-vanishes at both sampled nonzero momenta while having nonzero p2/p3 coefficients. Therefore any two-scale subset is insufficient for simultaneous p2/p3 separation with p4 control.
+Classification:
 
-Conditioning warning:
+`INCONCLUSIVE_Q7_FULL_TENSOR_CUBIC_DIRECTION_SCOPED`.
 
-- historical Richardson primitive-error L1 amplification `8192/3`;
-- C2_234 amplification `5504`;
-- ratio `2.015625`;
-- C3_234 amplification `133120` in its own coefficient units.
+`C3_234` sequence:
 
-Therefore Q7 is a diagnostic, not an authorized replacement derivative estimator.
+- N8 `+0.11047520333196903`;
+- N12 `-0.15822591014134924`;
+- N16 `-0.04860017786014337`;
+- N24 `+0.0015123122084195195`.
+
+The sequence changes sign and magnitude strongly. No stable nonzero continuum cubic/nonanalytic direction is established.
+
+The cubic-sensitive discrepancy `|R_h-C2_234|/|R_h|` falls from about 69.9% at N16 to about 1.24% at N24.
+
+### Exact derivative-instability localization
+
+For N16->N24:
+
+- `Delta D_1` at p=1/32: `-0.0008249207987136575`;
+- `Delta D_2` at p=1/16: `-0.000036492790310538314`;
+- `Delta D_4` at p=1/8: `-0.000014811385983241887`.
+
+Historical Richardson uses only D1,D2:
+
+`Delta R_h=(4 Delta D_1-Delta D_2)/3`.
+
+Contributions:
+
+- p=1/32: `-0.0010998943982848768`;
+- p=1/16: `+0.000012164263436846104`;
+- total: `-0.0010877301348480308`.
+
+Thus p=1/32 accounts for about 101.118% of the signed change, with p=1/16 canceling about 1.118%. In absolute-contribution terms p=1/32 carries about **98.9061%** of the N16->N24 Richardson instability.
 
 Retain:
 
-`Q7_DIAGNOSTIC_PASS != Q6_BASELINE_PASS`.
+`UNSTABLE_C3_DIAGNOSTIC != NONZERO_CONTINUUM_ABS_P3`.
 
-`Q7_DIAGNOSTIC_PASS != NONZERO_FULL_TENSOR_ABS_P3`.
+`P32_ERROR_LOCALIZATION != PERMISSION_TO_DROP_P32`.
 
-`Q7_DIAGNOSTIC_PASS != DERIVATIVE_TRUNCATION_CLOSURE`.
+## Exact next admissible gate
 
-## Exact next admissible work
+The highest-information next successor should target only the derivative-sensitive p=1/32 object with stronger prospectively frozen resolution/error control.
 
-Primary active gate remains Q6/Q6P run `35044525051`.
+Do not blindly recompute the entire Q6 matrix: p=0, p=1/16, p=1/8 and beta_mu are not the dominant source of the current Richardson instability.
 
-1. Inspect only that run until all frozen shards and merge jobs are terminal.
-2. Do not use partial shard outputs.
-3. Validate exact y coverage, node budgets, C3=false and complete merged provenance for all three fatal points.
-4. Apply the unchanged Q6 PASS/BLOCKED/FAIL contract. No Q7 formula may rewrite that verdict.
-5. If a common-N complete merged ladder p=1/32,1/16,1/8 becomes authoritative, Q7 may be applied as a separately bounded diagnostic using its already-frozen formulas to quantify the cubic/nonanalytic direction.
-6. Even a Q6 baseline PASS does not close derivative-truncation error and does not authorize physical C3 matching.
+A new gate must be frozen before any new higher-resolution p=1/32 values are inspected. It may vary numerical resolution prospectively, but it must not rewrite Q6, change the historical Richardson definition post hoc, relax the 0.2% convergence threshold, fit a normalization, or inspect C3 physics.
 
-Retain:
+Useful target of the next gate:
 
-`Q6_BASELINE_PASS != DERIVATIVE_TRUNCATION_CONTROL`.
+`P32_HIGH_RESOLUTION_DERIVATIVE_CONVERGENCE_AND_ERROR_BUDGET`.
 
-`Q6_BASELINE_PASS != PHYSICAL_C3_MATCHING`.
+Even if p=1/32 numerical convergence is achieved, derivative-truncation/regularity remains a separate question unless independently bounded.
 
 ## Operational front retained
 
 SF028B remains boundary-complete coherence authority; SF029-SF042 retain the known-physics/control chain.
 
-Operational blocker:
+Operational blocker remains
 
 `DEVICE_LEVEL_NONLINEAR_CROSSTALK_MAGNITUDE_AND_STABILITY_DATA_REQUIRED`.
 
@@ -304,9 +299,9 @@ Without separate authority:
 - no background/fluctuation equality assumed;
 - no frozen-point quotient promoted to arbitrary kinematics;
 - no projected dynamical C3 beta claimed;
-- no Q4/Q5/Q6/Q6P/Q7 sub-result promoted to SF055 PASS prematurely;
+- no Q4/Q5/Q6/Q6P/Q7/Q7A sub-result promoted to SF055 PASS;
 - no Euclidean off-shell coefficient declared physical without continuation;
 - no quantum chi_ABC;
 - no historical RCG-002 authority change;
-- no asymptotic-safety correctness claim;
+- no asymptotic-safety correctness or failure claim;
 - no `NEW_PHYSICS_FOUND`, `FULL_QUANTUM_GRAVITY`, `THEORY_ESTABLISHED`, or unique quantum-gravity selector claim.
