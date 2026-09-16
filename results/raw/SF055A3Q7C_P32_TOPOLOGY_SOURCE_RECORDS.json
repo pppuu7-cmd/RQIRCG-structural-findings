@@ -1,0 +1,78 @@
+{
+  "diagnostic": "SF055A3Q7C_P32_TOPOLOGY_DRIFT_LOCALIZATION",
+  "data_status": "RETROSPECTIVE_CANONICAL_ARCHIVE_FROM_EXISTING_Q6_AND_Q6P_ARTIFACTS",
+  "note": "These values existed before Q7C and were inspected before this descriptive diagnostic. No prospective numerical threshold claim is made.",
+  "monolithic_q6": {
+    "source_run": 35040058701,
+    "source_head": "4b6c6902376e88f49c291813ecc4250edc8f32ee",
+    "N16_artifact": {
+      "artifact_id": 10427431773,
+      "artifact_digest": "sha256:77eb1328d16fd839f0d4cf7d1a49f2c0ef33f7b0f64a365c42589c35f481d379",
+      "file": "three_p32_N16.json",
+      "record": {
+        "N": 16,
+        "p": 0.03125,
+        "C3_enabled": false,
+        "Flow_G": 0.0005545825645617668,
+        "topology_G": {
+          "B43_GRAV": 0.0005663859665628421,
+          "T333_GHOST": -0.00008505928342081323,
+          "T333_GRAV": 0.0002549793279276861,
+          "T5_GRAV": -0.00018172344650794822
+        }
+      }
+    },
+    "N24_artifact": {
+      "artifact_id": 10426124437,
+      "artifact_digest": "sha256:3cd0c5def1050cc55a67fc1198e61331e0c6b7b981b22049993a6bcce66dbbc1",
+      "file": "three_p32_N24.json",
+      "record": {
+        "N": 24,
+        "p": 0.03125,
+        "C3_enabled": false,
+        "Flow_G": 0.0005537769479482976,
+        "topology_G": {
+          "B43_GRAV": 0.0005661313136994927,
+          "T333_GHOST": -0.00008505912569991589,
+          "T333_GRAV": 0.00025442820645666997,
+          "T5_GRAV": -0.0001817234465079491
+        }
+      }
+    }
+  },
+  "independent_q6p_y_sharded": {
+    "recovery_run": 35132698327,
+    "artifact_id": 10461044772,
+    "artifact_digest": "sha256:bc2a95fc125e3d0b86c85139c4224c2ceb45aac2034a14b66d30654585477416",
+    "N16_file_sha256": "5e57fdfe6d09e58e932961d829554421b448ecb832c277f825d64fc626968f0d",
+    "N24_file_sha256": "b8e981548d2906fc03cd6d4c1a71427b08a148540ffed2a79f3d755af84fc1d2",
+    "N16": {
+      "N": 16,
+      "p": 0.03125,
+      "C3_enabled": false,
+      "node_budget_exact": true,
+      "y_coverage_exact": true,
+      "Flow_G": 0.0005545825645617645,
+      "topology_G": {
+        "B43_GRAV": 0.0005663859665628434,
+        "T333_GHOST": -0.00008505928342081294,
+        "T333_GRAV": 0.00025497932792768285,
+        "T5_GRAV": -0.00018172344650794884
+      }
+    },
+    "N24": {
+      "N": 24,
+      "p": 0.03125,
+      "C3_enabled": false,
+      "node_budget_exact": true,
+      "y_coverage_exact": true,
+      "Flow_G": 0.0005537769479482955,
+      "topology_G": {
+        "B43_GRAV": 0.0005661313136994927,
+        "T333_GHOST": -0.00008505912569991609,
+        "T333_GRAV": 0.0002544282064566684,
+        "T5_GRAV": -0.00018172344650794952
+      }
+    }
+  }
+}
