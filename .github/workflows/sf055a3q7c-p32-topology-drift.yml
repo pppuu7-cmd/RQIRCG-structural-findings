@@ -1,0 +1,27 @@
+name: SF055A3Q7C p32 topology drift localization
+
+on:
+  push:
+    paths:
+      - '.github/workflows/sf055a3q7c-p32-topology-drift.yml'
+      - 'scripts/sf055a3q7c_p32_topology_drift.py'
+      - 'results/raw/SF055A3Q7C_P32_TOPOLOGY_SOURCE_RECORDS.json'
+  workflow_dispatch:
+
+jobs:
+  diagnostic:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run exact retrospective topology decomposition
+        run: >-
+          python scripts/sf055a3q7c_p32_topology_drift.py
+          --source results/raw/SF055A3Q7C_P32_TOPOLOGY_SOURCE_RECORDS.json
+          --out results/raw/SF055A3Q7C_P32_TOPOLOGY_DRIFT.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sf055a3q7c-p32-topology-drift
+          path: results/raw/SF055A3Q7C_P32_TOPOLOGY_DRIFT.json
