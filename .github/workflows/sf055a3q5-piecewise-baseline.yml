@@ -1,0 +1,135 @@
+name: SF055A3Q5 piecewise full-tensor baseline
+
+on:
+  push:
+    branches: ['sf055a3-piecewise-baseline-20260916']
+    paths:
+      - 'scripts/sf055a3q5_piecewise_baseline.py'
+      - 'prereg/SF055A3Q5_FULL_TENSOR_PIECEWISE_BASELINE_RETRY_PREOUTCOME.md'
+      - '.github/workflows/sf055a3q5-piecewise-baseline.yml'
+  workflow_dispatch:
+
+jobs:
+  equivalence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install numerical dependencies
+        run: python -m pip install numpy numba
+      - name: Q5 implementation equivalence controls
+        run: >-
+          python scripts/sf055a3q5_piecewise_baseline.py
+          --mode equivalence
+          --out results/raw/SF055A3Q5_EQUIVALENCE.json
+      - name: Upload equivalence result
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sf055a3q5-equivalence
+          path: results/raw/SF055A3Q5_EQUIVALENCE.json
+
+  three:
+    needs: equivalence
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    strategy:
+      fail-fast: false
+      max-parallel: 18
+      matrix:
+        include:
+          - {N: 8, p: '0.0', tag: p0}
+          - {N: 12, p: '0.0', tag: p0}
+          - {N: 16, p: '0.0', tag: p0}
+          - {N: 24, p: '0.0', tag: p0}
+          - {N: 8, p: '0.125', tag: p8}
+          - {N: 12, p: '0.125', tag: p8}
+          - {N: 16, p: '0.125', tag: p8}
+          - {N: 24, p: '0.125', tag: p8}
+          - {N: 8, p: '0.0625', tag: p16}
+          - {N: 12, p: '0.0625', tag: p16}
+          - {N: 16, p: '0.0625', tag: p16}
+          - {N: 24, p: '0.0625', tag: p16}
+          - {N: 8, p: '0.03125', tag: p32}
+          - {N: 12, p: '0.03125', tag: p32}
+          - {N: 16, p: '0.03125', tag: p32}
+          - {N: 24, p: '0.03125', tag: p32}
+          - {N: 16, p: '1.0', tag: p1}
+          - {N: 24, p: '1.0', tag: p1}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install numerical dependencies
+        run: python -m pip install numpy numba
+      - name: Run piecewise three-point quadrature
+        run: >-
+          python scripts/sf055a3q5_piecewise_baseline.py
+          --mode three --p ${{ matrix.p }} --N ${{ matrix.N }}
+          --out results/raw/quadrature/three_${{ matrix.tag }}_N${{ matrix.N }}.json
+      - name: Upload three-point quadrature
+        uses: actions/upload-artifact@v4
+        with:
+          name: sf055a3q5-three-${{ matrix.tag }}-N${{ matrix.N }}
+          path: results/raw/quadrature/three_${{ matrix.tag }}_N${{ matrix.N }}.json
+
+  two:
+    needs: equivalence
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        N: [8, 12, 16, 24]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install numerical dependencies
+        run: python -m pip install numpy numba
+      - name: Run unchanged two-point beta-mu path
+        run: >-
+          python scripts/sf055a3q5_piecewise_baseline.py
+          --mode two --N ${{ matrix.N }}
+          --out results/raw/quadrature/two_N${{ matrix.N }}.json
+      - name: Upload two-point quadrature
+        uses: actions/upload-artifact@v4
+        with:
+          name: sf055a3q5-two-N${{ matrix.N }}
+          path: results/raw/quadrature/two_N${{ matrix.N }}.json
+
+  aggregate:
+    needs: [three, two]
+    runs-on: ubuntu-latest
+    if: always() && needs.three.result == 'success' && needs.two.result == 'success'
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download Q5 three-point artifacts
+        uses: actions/download-artifact@v4
+        with:
+          pattern: sf055a3q5-three-*
+          path: results/collected
+          merge-multiple: true
+      - name: Download Q5 two-point artifacts
+        uses: actions/download-artifact@v4
+        with:
+          pattern: sf055a3q5-two-*
+          path: results/collected
+          merge-multiple: true
+      - name: Aggregate with original frozen classifier
+        run: >-
+          python scripts/sf055a3_baseline_aggregate.py
+          --root results/collected
+          --out results/raw/SF055A3Q5_PIECEWISE_BASELINE_AGGREGATE.json
+      - name: Upload aggregate even on scientific failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sf055a3q5-piecewise-baseline-aggregate
+          path: results/raw/SF055A3Q5_PIECEWISE_BASELINE_AGGREGATE.json
