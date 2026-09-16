@@ -1,0 +1,138 @@
+name: SF055A3Q5 piecewise baseline retry
+
+on:
+  push:
+    paths:
+      - 'scripts/sf055a3q5_piecewise_baseline.py'
+      - 'scripts/sf055a3q5_fixedq_control.py'
+      - 'scripts/sf055a3q5_piecewise_aggregate.py'
+      - 'scripts/sf055a3_numba_source.py'
+      - 'prereg/SF055A3Q5_FULL_TENSOR_PIECEWISE_BASELINE_RETRY_PREOUTCOME.md'
+      - '.github/workflows/sf055a3q5-piecewise-baseline.yml'
+  workflow_dispatch:
+
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: python -m pip install numpy numba
+      - name: Run frozen Q5 implementation controls
+        run: python scripts/sf055a3q5_piecewise_baseline.py --mode selftest --out results/raw/SF055A3Q5_SELFTEST.json
+      - name: Run fixed-q topology equivalence
+        run: python scripts/sf055a3q5_fixedq_control.py
+      - name: Upload preflight
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sf055a3q5-preflight
+          path: |
+            results/raw/SF055A3Q5_SELFTEST.json
+            results/raw/SF055A3Q5_FIXEDQ_CONTROL.json
+
+  three:
+    needs: preflight
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    strategy:
+      fail-fast: false
+      max-parallel: 18
+      matrix:
+        include:
+          - {N: 8, p: '0.0', tag: p0}
+          - {N: 12, p: '0.0', tag: p0}
+          - {N: 16, p: '0.0', tag: p0}
+          - {N: 24, p: '0.0', tag: p0}
+          - {N: 8, p: '0.125', tag: p8}
+          - {N: 12, p: '0.125', tag: p8}
+          - {N: 16, p: '0.125', tag: p8}
+          - {N: 24, p: '0.125', tag: p8}
+          - {N: 8, p: '0.0625', tag: p16}
+          - {N: 12, p: '0.0625', tag: p16}
+          - {N: 16, p: '0.0625', tag: p16}
+          - {N: 24, p: '0.0625', tag: p16}
+          - {N: 8, p: '0.03125', tag: p32}
+          - {N: 12, p: '0.03125', tag: p32}
+          - {N: 16, p: '0.03125', tag: p32}
+          - {N: 24, p: '0.03125', tag: p32}
+          - {N: 16, p: '1.0', tag: p1}
+          - {N: 24, p: '1.0', tag: p1}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: python -m pip install numpy numba
+      - name: Run piecewise three-point quadrature
+        run: >-
+          python scripts/sf055a3q5_piecewise_baseline.py
+          --mode three --p ${{ matrix.p }} --N ${{ matrix.N }}
+          --out results/raw/q5/three_${{ matrix.tag }}_N${{ matrix.N }}.json
+      - name: Upload three-point result
+        uses: actions/upload-artifact@v4
+        with:
+          name: sf055a3q5-three-${{ matrix.tag }}-N${{ matrix.N }}
+          path: results/raw/q5/three_${{ matrix.tag }}_N${{ matrix.N }}.json
+
+  two:
+    needs: preflight
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        N: [8, 12, 16, 24]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: python -m pip install numpy numba
+      - name: Run two-point control
+        run: >-
+          python scripts/sf055a3q5_piecewise_baseline.py
+          --mode two --N ${{ matrix.N }}
+          --out results/raw/q5/two_N${{ matrix.N }}.json
+      - name: Upload two-point result
+        uses: actions/upload-artifact@v4
+        with:
+          name: sf055a3q5-two-N${{ matrix.N }}
+          path: results/raw/q5/two_N${{ matrix.N }}.json
+
+  aggregate:
+    needs: [three, two]
+    runs-on: ubuntu-latest
+    if: always() && needs.three.result == 'success' && needs.two.result == 'success'
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download matrix
+        uses: actions/download-artifact@v4
+        with:
+          pattern: sf055a3q5-*
+          path: results/collected
+          merge-multiple: true
+      - name: Aggregate under historical frozen criteria
+        id: aggregate
+        continue-on-error: true
+        run: >-
+          python scripts/sf055a3q5_piecewise_aggregate.py
+          --root results/collected
+          --historical results/raw/SF055A3_BASELINE_AGGREGATE_RUN35019599951.json
+          --out results/raw/SF055A3Q5_PIECEWISE_BASELINE_AGGREGATE.json
+      - name: Upload aggregate
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sf055a3q5-aggregate
+          path: results/raw/SF055A3Q5_PIECEWISE_BASELINE_AGGREGATE.json
+      - name: Preserve scientific classification without hiding it
+        if: steps.aggregate.outcome == 'failure'
+        run: echo 'Aggregate produced a terminal non-PASS classification; artifact uploaded.'
