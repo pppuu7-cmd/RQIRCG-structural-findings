@@ -1,0 +1,69 @@
+name: SF055A3Q6P fatal convergence shards
+
+on:
+  push:
+    paths:
+      - '.github/workflows/sf055a3q6p-fatal-shards.yml'
+  workflow_dispatch:
+
+jobs:
+  shards:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    strategy:
+      fail-fast: false
+      max-parallel: 8
+      matrix:
+        include:
+          - {tag: p16N24, p: '0.0625', N: 24, S: 3, s: 0}
+          - {tag: p16N24, p: '0.0625', N: 24, S: 3, s: 1}
+          - {tag: p16N24, p: '0.0625', N: 24, S: 3, s: 2}
+          - {tag: p32N16, p: '0.03125', N: 16, S: 2, s: 0}
+          - {tag: p32N16, p: '0.03125', N: 16, S: 2, s: 1}
+          - {tag: p32N24, p: '0.03125', N: 24, S: 3, s: 0}
+          - {tag: p32N24, p: '0.03125', N: 24, S: 3, s: 1}
+          - {tag: p32N24, p: '0.03125', N: 24, S: 3, s: 2}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install numpy numba
+      - name: Execute unchanged Q6 y shard
+        env:
+          NUMBA_NUM_THREADS: '1'
+        run: >-
+          python scripts/sf055a3q6p_yshard.py
+          --mode shard --p ${{ matrix.p }} --N ${{ matrix.N }}
+          --shard-id ${{ matrix.s }} --nshards ${{ matrix.S }}
+          --out results/raw/q6p/${{ matrix.tag }}_s${{ matrix.s }}.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sf055a3q6p-${{ matrix.tag }}-s${{ matrix.s }}
+          path: results/raw/q6p/${{ matrix.tag }}_s${{ matrix.s }}.json
+
+  merge:
+    needs: shards
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - {tag: p16N24, S: 3}
+          - {tag: p32N16, S: 2}
+          - {tag: p32N24, S: 3}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: sf055a3q6p-${{ matrix.tag }}-*
+          path: results/parts
+          merge-multiple: true
+      - name: Merge exact y shards
+        run: |
+          inputs=$(find results/parts -name '${{ matrix.tag }}_s*.json' -print | sort | tr '\n' ' ')
+          python scripts/sf055a3q6p_yshard.py --mode merge --inputs $inputs --out results/raw/q6p/${{ matrix.tag }}_merged.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sf055a3q6p-${{ matrix.tag }}-merged
+          path: results/raw/q6p/${{ matrix.tag }}_merged.json
