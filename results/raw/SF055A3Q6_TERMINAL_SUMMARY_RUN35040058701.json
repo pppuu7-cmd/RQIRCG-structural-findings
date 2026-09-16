@@ -1,0 +1,52 @@
+{
+  "gate": "SF055A3Q6_RADIAL_MIN2_PIECEWISE_BASELINE",
+  "classification": "BLOCKED_LANE_A_Q6_PIECEWISE_BASELINE_NOT_CONVERGED_SCOPED",
+  "preregistration_commit": "54fe1870177ce8d9155bd0731203197761bed5dc",
+  "workflow_run": 35040058701,
+  "workflow_head": "4b6c6902376e88f49c291813ecc4250edc8f32ee",
+  "aggregate_artifact_id": 10429809775,
+  "aggregate_artifact_digest": "sha256:cfbd1546ec1b0fdc08be2dfce15d6d7660bf3e83ae38f51ea769fe303c9e1485",
+  "preflight_artifact_id": 10424957402,
+  "preflight_artifact_digest": "sha256:89fba3d99d76dd86e7919abdf72439da67027bac209aa731333ff424e9e634fc",
+  "C3_enabled": false,
+  "implementation_controls_pass": true,
+  "finite_difference_control_pass": true,
+  "target_pass": true,
+  "convergence_pass": false,
+  "N16": {
+    "beta_g": -3.4763144983440384,
+    "beta_lambda3": -3.015202432913556,
+    "beta_mu": 0.3224650623712873,
+    "Flow_G_p32": 0.0005545825645617668,
+    "Flow_G_p16": 0.0005467132224362109,
+    "Flow_G_p8": 0.0005191636380852492
+  },
+  "N24": {
+    "beta_g": -7.590697586295343,
+    "beta_lambda3": -4.455236523767682,
+    "beta_mu": 0.3224650623712883,
+    "Flow_G_p32": 0.0005537769479482976,
+    "Flow_G_p16": 0.0005465706425780851,
+    "Flow_G_p8": 0.0005189321802832857
+  },
+  "N16_to_N24_relative_change": {
+    "beta_g": 0.5420296410411126,
+    "beta_lambda3": 0.3232228150339199,
+    "beta_mu": 3.098632499331524e-15,
+    "threshold": 0.002
+  },
+  "N24_target_relative_error": {
+    "beta_g": 0.008106450284486958,
+    "beta_lambda3": 0.004818266531148309,
+    "beta_mu": 7.57443499836589e-15,
+    "threshold": 0.01
+  },
+  "q6p_cross_execution": {
+    "recovery_run": 35132698327,
+    "p16N24_abs_difference": 1.5178830414797062e-18,
+    "p32N16_abs_difference": 2.2768245622195593e-18,
+    "p32N24_abs_difference": 2.0599841277224584e-18
+  },
+  "derivative_truncation_control_still_required": true,
+  "sf055_terminal_pass": false
+}
