@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Q5 sharp-regulator regularity counterexample and Richardson bias control."""
 from __future__ import annotations
-import json, math
+import json
 import sympy as sp
 
 pi=sp.pi
@@ -9,22 +9,22 @@ a=sp.symbols('a', positive=True)
 h=sp.symbols('h', positive=True)
 A,B,C,F0=sp.symbols('A B C F0', real=True)
 
-# S^3 angular measure relative to a fixed unit direction is 4*pi*sqrt(1-u^2) du.
-u=sp.symbols('u', nonnegative=True)
-I1=sp.simplify(4*pi*sp.integrate(u*sp.sqrt(1-u**2),(u,0,1)))
-I2=sp.simplify(4*pi*sp.integrate(u**2*sp.sqrt(1-u**2),(u,0,1)))
-I3=sp.simplify(4*pi*sp.integrate(u**3*sp.sqrt(1-u**2),(u,0,1)))
+# Exact S^3 hemisphere moments. For n>=0,
+# 4*pi*int_0^1 u^n sqrt(1-u^2)du =
+# 2*pi*Gamma((n+1)/2)Gamma(3/2)/Gamma((n+4)/2).
+def hemi(n):
+    return sp.simplify(2*pi*sp.gamma(sp.Rational(n+1,2))*sp.gamma(sp.Rational(3,2))/sp.gamma(sp.Rational(n+4,2)))
+I1,I2,I3=(hemi(n) for n in (1,2,3))
 
 # Q4 shell expansion: radial integrals of excess and excess^2.
 c2=sp.simplify(-I2/((2*pi)**4*a**2))
 c3=sp.simplify((-(I1-sp.Rational(5,3)*I3)/a**2 + sp.Rational(4,3)*I3/a**3)/(2*pi)**4)
 
-# Equal-weight sum over the three canonical rotated directions: each J is identical by O(4).
+# Equal-weight sum over three canonical rotated directions: each J is identical by O(4).
 sym_c2=sp.simplify(3*c2)
 sym_c3=sp.simplify(3*c3)
 
-# Frozen Richardson estimator applied to F(p)=F0+A p^2+B p^3+C p^4 for p>0.
-p=sp.symbols('p', positive=True)
+# Frozen Richardson estimator for F(p)=F0+A p^2+B p^3+C p^4, p>0.
 F=lambda z: F0+A*z**2+B*z**3+C*z**4
 D1=sp.simplify((F(h)-F0)/h**2)
 D2=sp.simplify((F(2*h)-F0)/(2*h)**2)
@@ -39,7 +39,7 @@ c3n=sp.N(c3.subs(a,a0),18)
 biasn=sp.N((sp.Rational(2,3)*c3*h).subs({a:a0,h:h0}),18)
 relbias=sp.N(abs((sp.Rational(2,3)*c3*h/c2).subs({a:a0,h:h0})),18)
 
-# A signed sum with weights summing to zero cancels every rotated copy; this is an extra coefficient relation.
+# Signed zero-sum combination is an explicit extra cancellation relation.
 weights=(sp.Integer(1),sp.Integer(1),sp.Integer(-2))
 negative_c3=sp.simplify(sum(weights)*c3)
 
